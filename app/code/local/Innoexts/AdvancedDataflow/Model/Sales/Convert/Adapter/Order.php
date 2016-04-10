@@ -479,8 +479,8 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
     protected function _load()
     {
         $helper = $this->getHelper();
-        if (!($entityType = $this->getVar('entity_type'))
-            || !(Mage::getResourceSingleton($entityType) instanceof Mage_Core_Model_Mysql4_Abstract)) {
+        $entityType = $this->getVar('entity_type');
+        if (!($entityType) || !(Mage::getResourceSingleton($entityType))) {
             $this->addException($helper->__('Invalid entity specified'), Varien_Convert_Exception::FATAL);
         }
         try {
