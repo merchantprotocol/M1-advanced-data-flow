@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Innoexts
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the InnoExts Commercial License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://innoexts.com/commercial-license-agreement
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@innoexts.com so we can send you a copy immediately.
+ * 
+ * @category    Innoexts
+ * @package     Innoexts_AdvancedDataflow
+ * @copyright   Copyright (c) 2011 Innoexts (http://www.innoexts.com)
+ * @license     http://innoexts.com/commercial-license-agreement  InnoExts Commercial License
+ */
+-->
+<config>
+    <modules>
+        <Innoexts_AdvancedDataflow>
+            <version>1.0.0</version>
+        </Innoexts_AdvancedDataflow>
+    </modules>
+    <admin>
+        <routers>
+            <advanceddataflow>
+                <use>admin</use>
+                <args>
+                    <module>Innoexts_AdvancedDataflow</module>
+                    <frontName>advanceddataflow</frontName>
+                </args>
+            </advanceddataflow>
+        </routers>
+        <fieldsets>
+            <sales_order_dataflow>
+                <entity_id><system>1</system><ignore>1</ignore></entity_id>
+                <protect_code><system>1</system><ignore>1</ignore></protect_code>
+                <shipping_description><system>1</system><ignore>1</ignore></shipping_description>
+                <discount_description><system>1</system><ignore>1</ignore></discount_description>
+                <store_id><system>1</system><ignore>1</ignore></store_id>
+                <store_name><system>1</system><ignore>1</ignore></store_name>
+                <customer_id><system>1</system><ignore>1</ignore></customer_id>
+                <customer_is_guest><system>1</system><ignore>1</ignore></customer_is_guest>
+                <currency_base_id><system>1</system><ignore>1</ignore></currency_base_id>
+                <relation_child_id><system>1</system><ignore>1</ignore></relation_child_id>
+                <relation_child_real_id><system>1</system><ignore>1</ignore></relation_child_real_id>
+                <relation_parent_id><system>1</system><ignore>1</ignore></relation_parent_id>
+                <relation_parent_real_id><system>1</system><ignore>1</ignore></relation_parent_real_id>
+                <original_increment_id><system>1</system><ignore>1</ignore></original_increment_id>
+                <edit_increment><system>1</system><ignore>1</ignore></edit_increment>
+                <quote_id><system>1</system><ignore>1</ignore></quote_id>
+                <quote_address_id><system>1</system><ignore>1</ignore></quote_address_id>
+                <gift_message_id><system>1</system><ignore>1</ignore></gift_message_id>
+                <created_at><ignore>1</ignore></created_at>
+                <updated_at><ignore>1</ignore></updated_at>
+                <currency_code><system>1</system><ignore>1</ignore></currency_code>
+                <currency_rate><system>1</system><ignore>1</ignore></currency_rate>
+                <store_currency_code><system>1</system><ignore>1</ignore></store_currency_code>
+                <store_to_base_rate><system>1</system><ignore>1</ignore></store_to_base_rate>
+                <store_to_order_rate><system>1</system><ignore>1</ignore></store_to_order_rate>
+                <billing_address_id><system>1</system><ignore>1</ignore></billing_address_id>
+                <shipping_address_id><system>1</system><ignore>1</ignore></shipping_address_id>
+            </sales_order_dataflow>
+            <sales_order_address_dataflow>
+                <entity_id><system>1</system><ignore>1</ignore></entity_id>
+                <parent_id><system>1</system><ignore>1</ignore></parent_id>
+                <customer_address_id><system>1</system><ignore>1</ignore></customer_address_id>
+                <quote_address_id><system>1</system><ignore>1</ignore></quote_address_id>
+                <customer_id><system>1</system><ignore>1</ignore></customer_id>
+                <address_type><system>1</system><ignore>1</ignore></address_type>
+                <address_id><system>1</system><ignore>1</ignore></address_id>
+                <gift_message_id><system>1</system><ignore>1</ignore></gift_message_id>
+                <tax_id><system>1</system><ignore>1</ignore></tax_id>
+            </sales_order_address_dataflow>
+            <sales_order_item_dataflow>
+                <item_id><system>1</system><ignore>1</ignore></item_id>
+                <order_id><system>1</system><ignore>1</ignore></order_id>
+                <parent_item_id><system>1</system><ignore>1</ignore></parent_item_id>
+                <quote_item_id><system>1</system><ignore>1</ignore></quote_item_id>
+                <store_id><system>1</system><ignore>1</ignore></store_id>
+                <created_at><system>1</system><ignore>1</ignore></created_at>
+                <updated_at><system>1</system><ignore>1</ignore></updated_at>
+                <product_id><system>1</system><ignore>1</ignore></product_id>
+                <product_type><system>1</system><ignore>1</ignore></product_type>
+                <product_options><system>1</system><ignore>1</ignore></product_options>
+                <name><ignore>1</ignore></name>
+                <description><ignore>1</ignore></description>
+                <is_virtual><ignore>1</ignore></is_virtual>
+                <is_qty_decimal><ignore>1</ignore></is_qty_decimal>
+                <is_nominal><ignore>1</ignore></is_nominal>
+                <gift_message_id><system>1</system><ignore>1</ignore></gift_message_id>
+                <gift_message_available><system>1</system><ignore>1</ignore></gift_message_available>
+                <ext_order_item_id><system>1</system><ignore>1</ignore></ext_order_item_id>
+                <additional_data><system>1</system><ignore>1</ignore></additional_data>
+                <locked_do_invoice><system>1</system><ignore>1</ignore></locked_do_invoice>
+                <locked_do_ship><system>1</system><ignore>1</ignore></locked_do_ship>
+                <sku><required>1</required></sku>
+                <qty_ordered><required>1</required></qty_ordered>
+            </sales_order_item_dataflow>
+            <sales_order_payment_dataflow>
+                <entity_id><system>1</system><ignore>1</ignore></entity_id>
+                <parent_id><system>1</system><ignore>1</ignore></parent_id>
+                <quote_payment_id><system>1</system><ignore>1</ignore></quote_payment_id>
+                <customer_payment_id><system>1</system><ignore>1</ignore></customer_payment_id>
+            </sales_order_payment_dataflow>
+        </fieldsets>
+    </admin>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Innoexts_AdvancedDataflow>
+                    <files>
+                        <default>Innoexts_AdvancedDataflow.csv</default>
+                    </files>
+                </Innoexts_AdvancedDataflow>
+            </modules>
+        </translate>
+        <layout>
+              <updates>
+                  <advanceddataflow>
+                      <file>advanceddataflow.xml</file>
+                  </advanceddataflow>
+              </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <models>
+            <advanceddataflow>
+                <class>Innoexts_AdvancedDataflow_Model</class>
+                <resourceModel>advanceddataflow_mysql4</resourceModel>
+            </advanceddataflow>
+            <advanceddataflow_mysql4>
+                <class>Innoexts_AdvancedDataflow_Model_Mysql4</class>
+            </advanceddataflow_mysql4>
+            <dataflow>
+                <rewrite>
+                    <profile>Innoexts_AdvancedDataflow_Model_Dataflow_Profile</profile>
+                </rewrite>
+            </dataflow>
+        </models>
+        <resources>
+            <advanceddataflow_setup>
+                <setup>
+                    <module>Innoexts_AdvancedDataflow</module>
+                    <class>Innoexts_AdvancedDataflow_Model_Entity_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </advanceddataflow_setup>
+            <advanceddataflow_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </advanceddataflow_write>
+            <advanceddataflow_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </advanceddataflow_read>
+        </resources>
+        <blocks>
+            <advanceddataflow>
+                <class>Innoexts_AdvancedDataflow_Block</class>
+            </advanceddataflow>
+            <adminhtml>
+                <rewrite>
+                    <system_convert_gui_grid>Innoexts_AdvancedDataflow_Block_Adminhtml_System_Convert_Gui_Grid</system_convert_gui_grid>
+                    <system_convert_gui_edit_tab_wizard>Innoexts_AdvancedDataflow_Block_Adminhtml_System_Convert_Gui_Edit_Tab_Wizard</system_convert_gui_edit_tab_wizard>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <advanceddataflow>
+                <class>Innoexts_AdvancedDataflow_Helper</class>
+            </advanceddataflow>
+        </helpers>
+    </global>
+</config>

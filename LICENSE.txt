@@ -1,0 +1,44 @@
+COMMERCIAL LICENSE AGREEMENT
+
+This license is a legal agreement between you (hereinafter “Licensee”) and InnoExts (hereinafter the “Licensor”) for InnoExts 
+extensions, plug-ins, modules, themes (hereinafter “Software”) downloading or using. Licensor reserve the right to change or modify 
+the current document with no prior notice.
+
+PERMITTED USE
+
+Licensor grants Licensee a non-exclusive and non-transferable right to use the Software. One license corresponds to the single 
+Software installation only. Each additional installation requires additional licenses purchased. Licensee entitled customize and 
+modify Software depending on needs.
+
+RESTRICTIONS
+
+Licensee may not redistribute, sell, rent, lease, sub-license, or otherwise transfer rights to any third party. Other person rights 
+granting is prohibited. Licensee shall not remove copyright or other proprietary notices in Software.
+
+TERMINATION
+
+Without prejudice to any other rights, Licensor / Licensee may terminate this agreement if Licensee / Licensor breaches any of its 
+terms and conditions. Upon termination, Licensee shall destroy all copies of the Licensed Software held or controlled by Licensee.
+
+INDEMNITY
+
+Licensee agree to indemnify and hold harmless Licensor for any third-party claims, actions, or any related expenses, damages arising 
+out of Software use or agreement terms violation by Licensee side.
+
+OWNERSHIP
+
+Software is a property of Licensor. Licensee may not claim intellectual or exclusive ownership rights to Software.
+
+REFUND
+
+Licensor offers refund on Software within 30 days of purchase for exceptional cases only: 
+ * Agreement terms violation by Licensor;
+ * Software conflicts with preliminary installed 3rd party extensions, modules, plug-ins, themes;
+Refund may not be considered other way.
+
+DISCLAIMER OF WARRANTY AND LIMITATIONS OF LIABILITY
+
+The Software is provided “as is”, without warranty of any king, either expressed or implied. Licensor does not warrant that the Software or any 
+related service will always be available.
+Licensee assumes all risk associated with the installation and use of the software. In no event shall the Licensor be liable for claims, 
+damages or other liability arising from, out of, or in connection with Software.
