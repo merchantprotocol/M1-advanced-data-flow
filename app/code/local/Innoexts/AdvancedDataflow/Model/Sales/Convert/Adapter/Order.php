@@ -997,8 +997,12 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
     {
         $order = $this->getOrder();
         $order->reset();
-        if (!empty($row['increment_id'])) $order->load($row['increment_id'], 'increment_id');
-        if (!$order->getId() && !empty($row['real_order_id'])) $order->load($row['real_order_id'], 'real_order_id');
+        if (!empty($row['increment_id'])) {
+            $order->load($row['increment_id'], 'increment_id');
+        }
+        if (!$order->getId() && !empty($row['real_order_id'])) {
+            $order->load($row['real_order_id'], 'real_order_id');
+        }
         return $order;
     }
     /**
@@ -1491,6 +1495,23 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
         return $this;
     }
     /**
+     * Get product by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return Mage_Catalog_Model_Product
+     */
+    protected function getProductByOrderItem($orderItem)
+    {
+        $storeId = (int) $orderItem->getStoreId();
+        $productId = (int) $orderItem->getProductId();
+        $product = Mage::getModel('catalog/product')->setStoreId($storeId)->load($productId);
+        if ($product->getId()) {
+            return $product;
+        } else {
+            return null;
+        }
+    }
+    /**
      * Prepare item
      * 
      * @param Mage_Sales_Model_Order $order
@@ -1508,15 +1529,80 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
         $baseCurrency = $order->getData('base_currency');
         $orderCurrency = $order->getData('order_currency');
         $row = $this->extractRow($row, 'item_'.$index, $exclude);
-        if (empty($row['sku'])) return null;
+        if (empty($row['sku'])) {
+            return null;
+        }
         $row = $this->unsetRowIgnoreFields($entityType, $row);
         $this->validateRow($entityType, $row);
         $row = $this->castRow($entityType, $row);
+        
+        $sku = $row['sku'];
+        $childrenSkus = array();
+        if (!empty($row['children_skus'])) {
+            $childrenSkus = explode(',', $row['children_skus']);
+        }
+        $parentSku = null;
+        if (!empty($row['parent_sku'])) {
+            $parentSku = $row['parent_sku'];
+        }
         $product = $this->getProductByItemRow($store, $row);
-        if (!$product) return null;
+        if (!$product) {
+            return null;
+        }
         $orderItem = null;
-        foreach ($order->getAllItems() as $item) { if ($item->getProductId() == $product->getId()) { $orderItem = $item; break; } }
-        if (!$orderItem) $orderItem = Mage::getModel('sales/order_item');
+        if ($order->getId()) {
+            $parentProduct = null;
+            if ($parentSku) {
+                $parentProduct = $this->getProductBySKU($store, $parentSku);
+            }
+            $childrenProducts = array();
+            if (count($childrenSkus)) {
+                foreach ($childrenSkus as $childSku) {
+                    $childProduct = $this->getProductBySKU($store, $childSku);
+                    if ($childProduct) {
+                        $childrenProducts[$childProduct->getId()] = $childProduct;
+                    }
+                }
+            }
+            foreach ($order->getAllItems() as $_orderItem) { 
+                if ($_orderItem->getProductId() == $product->getId()) {
+                    if ($parentProduct) {
+                        $_parentOrderItem = $_orderItem->getParentItem();
+                        if ($_parentOrderItem) {
+                            if ($parentProduct->getId() == $_parentOrderItem->getProductId()) {
+                                $orderItem = $_orderItem;
+                                break;
+                            }
+                        }
+                    } elseif (count($childrenProducts)) {
+                        $_childrenOrderItems = $_orderItem->getChildrenItems();
+                        if (count($_childrenOrderItems)) {
+                            if (count($_childrenOrderItems) == count($childrenProducts)) {
+                                $equalChildren = 0;
+                                foreach ($childrenProducts as $childProduct) {
+                                    foreach ($_childrenOrderItems as $_childOrderItem) {
+                                        if ($_childOrderItem->getProductId() == $childProduct->getId()) {
+                                            $equalChildren++;
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (count($childrenProducts) == $equalChildren) {
+                                    $orderItem = $_orderItem;
+                                    break;
+                                }
+                            }
+                        }
+                    } else {
+                        $orderItem = $_orderItem;
+                        break;
+                    }
+                }
+            }
+        }
+        if (!$orderItem) {
+            $orderItem = Mage::getModel('sales/order_item');
+        }
         $orderItem->setBaseCurrencyCode($order->getBaseCurrencyCode());
         $orderItem->setOrderCurrencyCode($order->getOrderCurrencyCode());
         $row['base_currency_code'] = $baseCurrencyCode;
@@ -1534,22 +1620,11 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
             $orderItem->setIsVirtual(($product->isVirtual() ? 1 : 0));
             $orderItem->setIsQtyDecimal(($product->getStockItem()->getIsQtyDecimal() ? 1 : 0));
             $orderItem->setIsNominal((($product->getIsRecurring() == '1') ? 1 : 0));
-            if (!empty($row['parent_sku'])) {
-                $parentProduct = $this->getProductBySKU($order->getStore(), $row['parent_sku']);
-                if ($parentProduct) {
-                    foreach ($order->getAllItems() as $parentOrderItem) {
-                        if ($parentOrderItem->getProductId() == $parentProduct->getId()) {
-                            $parentOrderItem->setProduct($parentProduct);
-                            $orderItem->setParentItem($parentOrderItem); 
-                            if ($parentOrderItem->getProductType() == 'configurable') {
-                                $this->prepareConfigurableItem($order, $parentOrderItem, $orderItem);
-                            } else if ($parentOrderItem->getProductType() == 'bundle') {
-                                $this->prepareBundleItem($order, $parentOrderItem, $orderItem);
-                            }
-                            break;
-                        }
-                    }
-                }
+            if (count($childrenSkus)) {
+                $orderItem->setChildrenProductsSkus($childrenSkus);
+            }
+            if ($parentSku) {
+                $orderItem->setParentProductSku($parentSku);
             }
         }
         if (!$orderItem->hasWeight()) $orderItem->setWeight($product->getWeight());
@@ -1566,12 +1641,17 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
             'weee_tax_disposition', 'hidden_tax_amount', 'hidden_tax_invoiced', 'hidden_tax_refunded', 'price_incl_tax', 'row_total_incl_tax', 
             'hidden_tax_canceled', 'tax_canceled', 'tax_refunded', 
         );
-        foreach ($amountsKeys as $amountKey) { $row = $this->prepareRowAmount($orderItem, $row, $amountKey, $baseCurrency, $orderCurrency); }
+        foreach ($amountsKeys as $amountKey) { 
+            $row = $this->prepareRowAmount($orderItem, $row, $amountKey, $baseCurrency, $orderCurrency); 
+        }
         $copyKeys = array(
             'weight', 'row_weight', 'free_shipping', 'no_discount', 'applied_rule_ids', 'weee_tax_applied', 
             'qty_ordered', 'qty_backordered', 'qty_canceled', 'qty_invoiced', 'qty_refunded', 'qty_shipped', 
         );
-        foreach ($amountsKeys as $amountKey) { array_push($copyKeys, $amountKey); array_push($copyKeys, 'base_'.$amountKey); }
+        foreach ($amountsKeys as $amountKey) { 
+            array_push($copyKeys, $amountKey); 
+            array_push($copyKeys, 'base_'.$amountKey); 
+        }
         $this->copyData($orderItem, $row, $copyKeys);
         $options = $orderItem->getProductOptions();
         $options['info_buyRequest']['qty'] = $orderItem->getQtyOrdered() * 1;
@@ -1579,6 +1659,46 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
         $orderItem->setProductOptions($options);
         $order->addItem($orderItem);
         return $orderItem;
+    }
+    /**
+     * Prepare items relations
+     * 
+     * @param Mage_Sales_Model_Order $order
+     * @return Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order
+     */
+    protected function prepareItemsRelations($order)
+    {
+        $store = $order->getStore();
+        $orderItems = $order->getAllItems();
+        if (count($orderItems)) {
+            foreach ($orderItems as $orderItem) {
+                $parentSku = $orderItem->getParentProductSku();
+                if ($parentSku) {
+                    $parentProduct = $this->getProductBySKU($store, $parentSku);
+                    if ($parentProduct) {
+                        $product = $orderItem->getProduct();
+                        if ($product->getId()) {
+                            $sku = $product->getSku();
+                            foreach ($order->getAllItems() as $_orderItem) {
+                                $childrenSkus = $_orderItem->getChildrenProductsSkus();
+                                if (count($childrenSkus) && in_array($sku, $childrenSkus)) {
+                                    $_orderItem->setProduct($parentProduct);
+                                    $orderItem->setParentItem($_orderItem); 
+                                    if ($_orderItem->getProductType() == 'configurable') {
+                                        $this->prepareConfigurableItem($order, $_orderItem, $orderItem);
+                                    } else if ($_orderItem->getProductType() == 'bundle') {
+                                        $this->prepareBundleItem($order, $_orderItem, $orderItem);
+                                    }
+                                    break;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        return $this;
     }
     /**
      * Prepare payment
@@ -1629,21 +1749,6 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
         return $orderPayment;
     }
     /**
-     * Debug
-     * 
-     * @param Varien_Object $object
-     */    
-    protected function _deb($object)
-    {
-        $array = array();
-        foreach ($object->getData() as $key => $value) {
-            if (!is_array($value) && !is_object($value) && !is_resource($value)) {
-                $array[$key] = $value;
-            }
-        }
-        echo var_export($array, true);
-    }
-    /**
      * Save row
      * 
      * @param unknown_type $row
@@ -1672,10 +1777,32 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Adapter_Order extends Mage_E
         $this->prepareShippingAddress($order, $row);
         $this->prepareBillingAddress($order, $row);
         $indexes = $this->getItemsRowsIndexes($row);
-        foreach ($indexes as $index) $this->prepareItem($order, $row, $index, array());
+        foreach ($indexes as $index) {
+            $this->prepareItem($order, $row, $index, array());
+        }
+        $this->prepareItemsRelations($order);
         $this->preparePayment($order, $row, array());
-        if (!$order->getShippingAddress()) $order->setIsVirtual(1);
+        if (!$order->getShippingAddress()) {
+            $order->setIsVirtual(1);
+        } else {
+            $order->setIsVirtual(0);
+        }
         $order->save();
         return $this;
+    }
+    /**
+     * Debug
+     * 
+     * @param Varien_Object $object
+     */    
+    protected function _deb($object)
+    {
+        $array = array();
+        foreach ($object->getData() as $key => $value) {
+            if (!is_array($value) && !is_object($value) && !is_resource($value)) {
+                $array[$key] = $value;
+            }
+        }
+        echo var_export($array, true);
     }
 }

@@ -495,6 +495,105 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
         return $this->orderAddressToRow($order, $orderAddress, $this->getBillingAddressPrefix(true));
     }
     /**
+     * Get product by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return Mage_Catalog_Model_Product
+     */
+    protected function getProductByOrderItem($orderItem)
+    {
+        $storeId = (int) $orderItem->getStoreId();
+        $productId = (int) $orderItem->getProductId();
+        $product = Mage::getModel('catalog/product')->setStoreId($storeId)->load($productId);
+        if ($product->getId()) {
+            return $product;
+        } else {
+            return null;
+        }
+    }
+    /**
+     * Get product sku by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return Mage_Catalog_Model_Product
+     */
+    protected function getProductSkuByOrderItem($orderItem)
+    {
+        $product = $this->getProductByOrderItem($orderItem);
+        if ($product) {
+            return $product->getSku();
+        } else {
+            return null;
+        }
+    }
+    /**
+     * Get parent product by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return Mage_Catalog_Model_Product
+     */
+    protected function getParentProductByOrderItem($orderItem)
+    {
+        $parentOrderItem = $orderItem->getParentItem();
+        if ($parentOrderItem) {
+            return $this->getProductByOrderItem($parentOrderItem);
+        } else {
+            return null;
+        }
+    }
+    /**
+     * Get parent product sku by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return string
+     */
+    protected function getParentProductSkuByOrderItem($orderItem)
+    {
+        $product = $this->getParentProductByOrderItem($orderItem);
+        if ($product) {
+            return $product->getSku();
+        } else {
+            return null;
+        }
+    }
+    /**
+     * Get children products by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return array of Mage_Catalog_Model_Product
+     */
+    protected function getChildrenProductsByOrderItem($orderItem)
+    {
+        $products = array();
+        $childrenOrderItems = $orderItem->getChildrenItems();
+        if (count($childrenOrderItems)) {
+            foreach ($childrenOrderItems as $childOrderItem) {
+                $product = $this->getProductByOrderItem($childOrderItem);
+                if ($product) {
+                    $products[$product->getId()] = $product;
+                }
+            }
+        }
+        return $products;
+    }
+    /**
+     * Get children products skus by order item
+     * 
+     * @param Mage_Sales_Model_Order_Item $orderItem
+     * @return array
+     */
+    protected function getChildrenProductsSkusByOrderItem($orderItem)
+    {
+        $skus = array();
+        $products = $this->getChildrenProductsByOrderItem($orderItem);
+        if (count($products)) {
+            foreach ($products as $product) {
+                array_push($skus, $product->getSku());
+            }
+        }
+        return $skus;
+    }
+    /**
      * Order item to row
      * 
      * @param Mage_Sales_Model_Order $order
@@ -506,34 +605,17 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
     {
         $prefix = $this->getItemPrefix(true).($index + 1).'_';
         $row = $this->entityToRow($orderItem, 'sales_order_item', $prefix);
-        $productId = $orderItem->getProductId();
-        if ($productId) {
-            $product = Mage::getModel('catalog/product')->setStoreId($order->getStoreId())->load($productId);
-            if ($product->getId()) {
-                $row[$prefix.'sku'] = $product->getSku();
-                $parentItemId = $orderItem->getParentItemId();
-                if ($parentItemId) {
-                    $parentOrderItem = null;
-                    foreach ($order->getAllItems() as $item) {
-                        if ($parentItemId == $item->getId()) {
-                            $parentOrderItem = $item; break;
-                        }
-                    }
-                    if ($parentOrderItem) {
-                        $parentProductId = $parentOrderItem->getProductId();
-                        if ($parentProductId) {
-                            $parentProduct = Mage::getModel('catalog/product')->setStoreId($order->getStoreId())->load($parentProductId);
-                            if ($parentProduct->getId()) {
-                                $row[$prefix.'parent_sku'] = $parentProduct->getSku();
-                            }
-                            $parentProduct->reset();
-                            unset($parentProduct);
-                        }
-                    }
-                }
+        $sku = $this->getProductSkuByOrderItem($orderItem);
+        if ($sku) {
+            $row[$prefix.'sku'] = $sku;
+            $parentSku = $this->getParentProductSkuByOrderItem($orderItem);
+            if ($parentSku) {
+                $row[$prefix.'parent_sku'] = $parentSku;
             }
-            $product->reset();
-            unset($product);
+            $childrenSkus = $this->getChildrenProductsSkusByOrderItem($orderItem);
+            if (count($childrenSkus)) {
+                $row[$prefix.'children_skus'] = implode(',', $childrenSkus);
+            }
         }
         return $row;
     }
