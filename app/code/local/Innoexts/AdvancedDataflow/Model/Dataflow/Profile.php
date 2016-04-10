@@ -103,6 +103,7 @@ class Innoexts_AdvancedDataflow_Model_Dataflow_Profile extends Mage_Dataflow_Mod
      */
     public function _parseGuiData()
     {
+        $helper = $this->getHelper();
         $nl = "\r\n";
         $tab = "    ";
         $import = $this->getDirection() === 'import';
@@ -122,8 +123,11 @@ class Innoexts_AdvancedDataflow_Model_Dataflow_Profile extends Mage_Dataflow_Mod
                 $fileXml .= $tab.'<var name="host"><![CDATA['.$hostArr[0].']]></var>'.$nl;
                 if (isset($hostArr[1])) $fileXml .= $tab.'<var name="port"><![CDATA['.$hostArr[1].']]></var>'.$nl;
                 if (!empty($p['file']['passive'])) $fileXml .= $tab.'<var name="passive">true</var>'.$nl;
-                if ((!empty($p['file']['file_mode'])) && ($p['file']['file_mode'] == FTP_ASCII || $p['file']['file_mode'] == FTP_BINARY)) 
-                    $fileXml .= $tab.'<var name="file_mode">'.$p['file']['file_mode'].'</var>'.$nl;
+                if ($helper->getVersionHelper()->isGe1510()) {
+                    if ((!empty($p['file']['file_mode'])) && ($p['file']['file_mode'] == FTP_ASCII || $p['file']['file_mode'] == FTP_BINARY)) {
+                        $fileXml .= $tab.'<var name="file_mode">'.$p['file']['file_mode'].'</var>'.$nl;
+                    }
+                }
                 if (!empty($p['file']['user'])) $fileXml .= $tab.'<var name="user"><![CDATA['.$p['file']['user'].']]></var>'.$nl;
                 if (!empty($p['file']['password'])) $fileXml .= $tab.'<var name="password"><![CDATA['.$p['file']['password'].']]></var>'.$nl;
             }

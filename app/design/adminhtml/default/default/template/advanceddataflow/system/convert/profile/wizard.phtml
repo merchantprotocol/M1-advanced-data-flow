@@ -18,7 +18,8 @@
  * @license     http://innoexts.com/commercial-license-agreement  InnoExts Commercial License
  */
 ?>
-<?php $helper = $this->_getHelper(); ?>
+<?php $helper = Mage::helper('advanceddataflow') ?>
+
 <script type="text/javascript">
 //<![CDATA[
 var profileImportOnly = ['profile_number_of_records', 'profile_decimal_separator'];
@@ -27,10 +28,20 @@ function showOption(select)
     select = $(select);
     for (var i = 0, l = select.options.length; i<l; i++) {
         $$('.'+select.id+'_'+select.options[i].value).each(function (el) {
-            el.style.display = select.selectedIndex==i ? '' : 'none';
+            if (select.selectedIndex==i) {
+                $(el).show();
+            } else {
+                $(el).hide();
+            }
+            $(el).select('input,select,textarea').each(function (subEl) {
+                if (select.selectedIndex==i) {
+                    $(subEl).enable();
+                } else {
+                    $(subEl).disable();
+                }
+            });
         });
     }
-
 }
 
 function addFieldMapping()
@@ -261,7 +272,11 @@ Event.observe(window, 'load', function(){
                 <span class="with-tip">
                     <input class="input-text" id="file_path" name="gui_data[file][path]" value="<?php echo $this->getValue('gui_data/file/path') ?>"/>
                     <small class="file_type_file">
+                        <?php if ($helper->getVersionHelper()->isGe1510()) : ?>
                         <?php echo $this->__('(For Type "Local Server" need to use relative path to Magento install var/export or var/import, e.g. var/export, var/import, var/export/some/dir, var/import/some/dir)') ?>
+                        <?php else : ?>
+                        <?php echo $this->__('(Absolute path or Relative to Magento install root, ex. var/export)') ?>
+                        <?php endif; ?>
                     </small>
                 </span>
             </span>
@@ -274,6 +289,8 @@ Event.observe(window, 'load', function(){
                     <label for="file_user"><?php echo $this->__("User name") ?></label>
                     <input class="input-text" id="file_user" name="gui_data[file][user]" value="<?php echo $this->getValue('gui_data/file/user') ?>"/>
                 </span>
+                
+                <?php if ($helper->getVersionHelper()->isGe1510()) : ?>
                 <span class="field-row">
                     <label for="file_password"><?php echo $this->__("Password") ?></label>
                     <input class="input-text" type="password" id="io_password" name="gui_data[file][password]" value="<?php echo $this->getValue('gui_data/file/password') ?>"/>
@@ -285,6 +302,13 @@ Event.observe(window, 'load', function(){
                         <option value="<?php echo FTP_ASCII ?>" <?php echo $this->getSelected('gui_data/file/file_mode', FTP_ASCII) ?>><?php echo $this->__('ASCII') ?></option>
                     </select>
                 </span>
+                <?php else : ?>
+                <span class="field-row">
+                    <label for="file_password"><?php echo $this->__("Password") ?></label>
+                    <input class="input-text" id="io_password" name="gui_data[file][password]" value="<?php echo $this->getValue('gui_data/file/password') ?>"/>
+                </span>
+                <?php endif; ?>
+                
                 <span class="field-row">
                     <label for="file_passive"><?php echo $this->__("Passive mode") ?></label>
                     <select id="file_passive" name="gui_data[file][passive]" onchange="showOption(this)" class="option-control">
@@ -292,6 +316,7 @@ Event.observe(window, 'load', function(){
                         <option value="true" <?php echo $this->getSelected('gui_data/file/passive', true) ?>><?php echo $this->__("Yes") ?></option>
                     </select>
                 </span>
+                
             </div>
         </div>
     </fieldset>
@@ -370,6 +395,8 @@ Event.observe(window, 'load', function(){
         </div>
     </fieldset>
 
+
+    <!-- Field Mapping -->
     <div id="__fieldmapping">
     <div class="entry-edit-head">
     <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__("Field Mapping") ?></h4>
@@ -877,7 +904,6 @@ Event.observe(window, 'load', function(){
         var direction = $('profile_direction').options[$('profile_direction').options.selectedIndex].value;
         var value = $('parse_fieldnames').options[$('parse_fieldnames').options.selectedIndex].value;
         var map = $('map_only_specified').options[$('map_only_specified').options.selectedIndex].value;
-
         if (direction == 'export') {
             if (map) {
                 Element.show($('__fieldmapping'));
@@ -899,7 +925,6 @@ Event.observe(window, 'load', function(){
     function deleteAllAddedMappingFields()
     {
         var type = $('profile_entity_type').options[$('profile_entity_type').options.selectedIndex].value;
-
         var elems = $('map_container_'+type).childElements();
         if (elems.length > 0) for (var idx in elems) {
             if (elems[idx] != undefined && elems[idx].tagName != undefined) {

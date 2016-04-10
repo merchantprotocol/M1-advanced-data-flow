@@ -4,37 +4,37 @@
  *
  * NOTICE OF LICENSE
  *
- * This source file is subject to the InnoExts Commercial License
+ * This source file is subject to the Open Software License (OSL 3.0)
  * that is bundled with this package in the file LICENSE.txt.
  * It is also available through the world-wide-web at this URL:
- * http://innoexts.com/commercial-license-agreement
+ * http://opensource.org/licenses/osl-3.0.php
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
  * to license@innoexts.com so we can send you a copy immediately.
  * 
  * @category    Innoexts
- * @package     Innoexts_AdvancedDataflow
- * @copyright   Copyright (c) 2011 Innoexts (http://www.innoexts.com)
- * @license     http://innoexts.com/commercial-license-agreement  InnoExts Commercial License
+ * @package     Innoexts_InnoCore
+ * @copyright   Copyright (c) 2012 Innoexts (http://www.innoexts.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
 /**
- * Advanced dataflow Helper
- *
+ * Inno core helper
+ * 
  * @category   Innoexts
- * @package    Innoexts_AdvancedDataflow
+ * @package    Innoexts_InnoCore
  * @author     Innoexts Team <developers@innoexts.com>
  */
-class Innoexts_AdvancedDataflow_Helper_Data extends Mage_Core_Helper_Abstract
+class Innoexts_InnoCore_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
-     * Get core helper
+     * Get address helper
      * 
-     * @return Innoexts_InnoCore_Helper_Data
+     * @return Innoexts_InnoCore_Helper_Address
      */
-    public function getCoreHelper()
+    public function getAddressHelper()
     {
-        return Mage::helper('innocore');
+        return Mage::helper('innocore/address');
     }
     /**
      * Get version helper
@@ -43,6 +43,6 @@ class Innoexts_AdvancedDataflow_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getVersionHelper()
     {
-        return $this->getCoreHelper()->getVersionHelper();
+        return Mage::helper('innocore/version');
     }
 }
