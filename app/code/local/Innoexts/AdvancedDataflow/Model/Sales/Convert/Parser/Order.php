@@ -504,7 +504,7 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
     {
         $storeId = (int) $orderItem->getStoreId();
         $productId = (int) $orderItem->getProductId();
-        $product = Mage::getModel('catalog/product')->setStoreId($storeId)->load($productId);
+        $product = Mage::getSingleton('catalog/product')->reset()->setStoreId($storeId)->load($productId);
         if ($product->getId()) {
             return $product;
         } else {
@@ -521,7 +521,9 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
     {
         $product = $this->getProductByOrderItem($orderItem);
         if ($product) {
-            return $product->getSku();
+            $sku = $product->getSku();
+            $product->reset();
+            return $sku;
         } else {
             return null;
         }
@@ -551,30 +553,12 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
     {
         $product = $this->getParentProductByOrderItem($orderItem);
         if ($product) {
-            return $product->getSku();
+            $sku = $product->getSku();
+            $product->reset();
+            return $sku;
         } else {
             return null;
         }
-    }
-    /**
-     * Get children products by order item
-     * 
-     * @param Mage_Sales_Model_Order_Item $orderItem
-     * @return array of Mage_Catalog_Model_Product
-     */
-    protected function getChildrenProductsByOrderItem($orderItem)
-    {
-        $products = array();
-        $childrenOrderItems = $orderItem->getChildrenItems();
-        if (count($childrenOrderItems)) {
-            foreach ($childrenOrderItems as $childOrderItem) {
-                $product = $this->getProductByOrderItem($childOrderItem);
-                if ($product) {
-                    $products[$product->getId()] = $product;
-                }
-            }
-        }
-        return $products;
     }
     /**
      * Get children products skus by order item
@@ -585,10 +569,14 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
     protected function getChildrenProductsSkusByOrderItem($orderItem)
     {
         $skus = array();
-        $products = $this->getChildrenProductsByOrderItem($orderItem);
-        if (count($products)) {
-            foreach ($products as $product) {
-                array_push($skus, $product->getSku());
+        $childrenOrderItems = $orderItem->getChildrenItems();
+        if (count($childrenOrderItems)) {
+            foreach ($childrenOrderItems as $childOrderItem) {
+                $product = $this->getProductByOrderItem($childOrderItem);
+                if ($product) {
+                    array_push($skus, $product->getSku());
+                    $product->reset();
+                }
             }
         }
         return $skus;
@@ -648,10 +636,9 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
             $store = $this->getStoreById($order->getData('store_id'));
             if (!$store) $store = $this->getStoreById(0);
             $row['store'] = $store->getCode();
-            $row = array_merge(
-                $row, $this->orderToRow($order), $this->orderShippingAddressToRow($order, $order->getShippingAddress()), 
-                $this->orderBillingAddressToRow($order, $order->getBillingAddress())
-            );
+            $row = array_merge($row, $this->orderToRow($order));
+            $row = array_merge($row, $this->orderShippingAddressToRow($order, $order->getShippingAddress()));
+            $row = array_merge($row, $this->orderBillingAddressToRow($order, $order->getBillingAddress()));
             $orderItems = $order->getAllItems();
             if (count($orderItems)) {
                 foreach ($orderItems as $index => $orderItem) {
@@ -667,6 +654,8 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order extends Mage_Ea
             $batchExport = $this->getBatchExportModel()->setId(null)
                 ->setBatchId($this->getBatchModel()->getId())->setBatchData($row)
                 ->setStatus(1)->save();
+            $order->reset();
+            unset($row);
         }
         return $this;
     }
