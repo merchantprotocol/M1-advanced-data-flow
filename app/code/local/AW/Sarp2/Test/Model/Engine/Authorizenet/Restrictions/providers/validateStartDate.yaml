@@ -1,0 +1,66 @@
+-
+  - today 00:00:00
+  - UTC
+  - false
+-
+  - yesterday 00:00:00
+  - UTC
+  - false
+-
+  - tomorrow 00:00:00
+  - UTC
+  - true
+-
+  - today 07:00:00
+  - UTC
+  - true
+-
+  - yesterday 07:00:00
+  - UTC
+  - false
+-
+  - tomorrow 07:00:00
+  - UTC
+  - true
+-
+  - +1 year 00:00:00
+  - UTC
+  - true
+-
+  - +1 month 00:00:00
+  - UTC
+  - true
+-
+  - -1 year 00:00:00
+  - UTC
+  - false
+-
+  - -1 month 00:00:00
+  - UTC
+  - false
+-
+  - today 00:00:00
+  - US/Mountain
+  - true
+-
+  - yesterday 00:00:00
+  - US/Mountain
+  - false
+-
+  - tomorrow 00:00:00
+  - US/Mountain
+  - true
+-
+  - today 23:59:59
+  - US/Mountain
+  - true
+-
+  - yesterday 23:59:59
+  - US/Mountain
+  - false
+-
+  - tomorrow 23:59:59
+  - US/Mountain
+  - true
+
+

@@ -27,22 +27,5 @@
  */
 class Innoexts_AdvancedDataflow_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    /**
-     * Get core helper
-     * 
-     * @return Innoexts_InnoCore_Helper_Data
-     */
-    public function getCoreHelper()
-    {
-        return Mage::helper('innocore');
-    }
-    /**
-     * Get version helper
-     * 
-     * @return Innoexts_InnoCore_Helper_Version
-     */
-    public function getVersionHelper()
-    {
-        return $this->getCoreHelper()->getVersionHelper();
-    }
+    
 }

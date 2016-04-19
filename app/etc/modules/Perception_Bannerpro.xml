@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Perception_Bannerpro>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Perception_Bannerpro>
+    </modules>
+</config> 

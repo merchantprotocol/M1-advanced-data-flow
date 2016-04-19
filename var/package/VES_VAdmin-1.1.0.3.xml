@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>VES_VAdmin</name>
+    <version>1.1.0.3</version>
+    <stability>stable</stability>
+    <license/>
+    <channel>community</channel>
+    <extends/>
+    <summary>VAdmin theme by VnEcoms</summary>
+    <description>VAdmin theme by VnEcoms</description>
+    <notes>VAdmin theme by VnEcoms</notes>
+    <authors><author><name>Vnecoms</name><user>auto-converted</user><email>hungvt@vnecoms.com</email></author></authors>
+    <date>2014-05-23</date>
+    <time>18:30:29</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="VES_VAdmin.xml" hash="81aeeae7979e6acbd4d1b7d26c3c685d"/></dir></target><target name="magecommunity"><dir name="VES"><dir name="VAdmin"><dir name="Block"><file name="Color.php" hash="57ac152d6f057d899403da8a810435b4"/><file name="Head.php" hash="0c51305546dfd621a75a3715c3c0bf48"/></dir><dir name="Helper"><file name="Data.php" hash="1279d2f26e44be05f406c234a5a73453"/></dir><dir name="controllers"><dir name="Vadmin"><file name="CssController.php" hash="3db24bcb144b527faf4f5c74f27444d0"/></dir></dir><dir name="etc"><file name="config.xml" hash="072f22480a219fa64a348dd3066f471c"/><file name="system.xml" hash="01dd14841ed7eebd7a7e67614490111c"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><dir name="vnecoms"><file name="vadmin.xml" hash="931ff70afa602c0bb62aac4793bebbbc"/></dir></dir><dir name="template"><dir name="ves_vadmin"><dir name="page"><file name="footer.phtml" hash="8aed79bbf68cd4d360a6b3cc9f43aebb"/><file name="head.phtml" hash="3956417ca590d3a9b23d303086a3a748"/><file name="header.phtml" hash="7360a56810e8dee952cf765214e18266"/><file name="menu.phtml" hash="93bc927591376ea2c00e7e3ce955c29c"/></dir><file name="css.phtml" hash="89c00950d89b1c1172f5b3d2a9469482"/><file name="forgotpassword.phtml" hash="4e91a7acc151b29171efaa0b970f9bbc"/><file name="login.phtml" hash="f5ea3baa7ed16d2ef8c53252509afed0"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="ves_vadmin"><dir name="css"><file name="font-awesome.min.css" hash="69f45e561dcb7f41ca35e4e419e74350"/><file name="styles.css" hash="3f5973e243a75fe71de1e4b1c45b1162"/></dir><dir name="font"><dir name="FontAwesome"><file name="FontAwesome.otf" hash="3f3a623e88cb5c62eaa2367195e98b67"/><file name="fontawesome-webfont.eot" hash="8b27bc96115c2d24350f0d09e6a9433f"/><file name="fontawesome-webfont.svg" hash="0a799148a50bb02c6f380eabd8d97559"/><file name="fontawesome-webfont.ttf" hash="dcb26c7239d850266941e80370e207c1"/><file name="fontawesome-webfont.woff" hash="3293616ec0c605c7c2db25829a0a509e"/></dir></dir><dir name="images"><file name="add.png" hash="7c0b1f1eda3650b51b19a2e1d2b40d5d"/><file name="back.png" hash="f4a301dd01f802e8ef0bd1c7eeb892a4"/><file name="bg.jpg" hash="0197ebe83f870a5db1329a8d879509b6"/><file name="config_tab_dt_bg.png" hash="db40918dc1da1a490b06fde80d755c7f"/><file name="delete.png" hash="2e5dd03c0ca5ca0d9114a9f368d03c5b"/><file name="down_arrow.png" hash="54121733e13d39a16748ba2cada686c9"/><file name="reset.png" hash="7433fd9cf5b71bf0d9d954639df5a7fc"/><file name="save.png" hash="414f2f6c36fc3c4b2323c1d413cd3af8"/><file name="up_arrow.png" hash="ddee1bf16f182382e7688fdc71ff07ca"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

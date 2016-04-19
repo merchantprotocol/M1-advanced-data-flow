@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Innoexts
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the InnoExts Commercial License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://innoexts.com/commercial-license-agreement
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@innoexts.com so we can send you a copy immediately.
+ * 
+ * @category    Innoexts
+ * @package     Innoexts_AdvancedDataflow
+ * @copyright   Copyright (c) 2011 Innoexts (http://www.innoexts.com)
+ * @license     http://innoexts.com/commercial-license-agreement  InnoExts Commercial License
+ */
+-->
+<config>
+    <entities>
+        <sales_order_payment eav="1">
+	        <model>sales/order_payment</model>
+	        <collection_model>sales/order_payment_collection</collection_model>
+	        <table>sales/order_payment</table>
+	        <attributes>
+	            <entity_id translate="title">
+	                <title>Entity Id</title>
+	                <type>integer</type>
+	                <actions><export/></actions>
+	                <sort_order>10</sort_order>
+                    <enabled>1</enabled>
+                </entity_id>
+	            <parent_id translate="title">
+	                <title>Parent Id</title>
+	                <type>integer</type>
+	                <actions><export/></actions>
+	                <sort_order>20</sort_order>
+                    <enabled>1</enabled>
+                </parent_id>
+	            <quote_payment_id translate="title">
+	                <title>Quote Payment Id</title>
+	                <type>integer</type>
+	                <actions><export/></actions>
+	                <sort_order>30</sort_order>
+                    <enabled>1</enabled>
+                </quote_payment_id>
+	            <customer_payment_id translate="title">
+	                <title>Customer Payment Id</title>
+	                <type>integer</type>
+	                <actions><export/></actions>
+	                <sort_order>40</sort_order>
+                    <enabled>1</enabled>
+                </customer_payment_id>
+	            <base_shipping_amount translate="title">
+	                <title>Base Shipping Amount</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>50</sort_order>
+                    <enabled>1</enabled>
+                </base_shipping_amount>
+	            <shipping_amount translate="title">
+	                <title>Shipping Amount</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>60</sort_order>
+                    <enabled>1</enabled>
+                </shipping_amount>
+	            <base_shipping_captured translate="title">
+	                <title>Base Shipping Captured</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>70</sort_order>
+                    <enabled>1</enabled>
+                </base_shipping_captured>
+	            <shipping_captured translate="title">
+	                <title>Shipping Captured</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>80</sort_order>
+                    <enabled>1</enabled>
+                </shipping_captured>
+	            <base_shipping_refunded translate="title">
+	                <title>Base Shipping Refunded</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>90</sort_order>
+                    <enabled>1</enabled>
+                </base_shipping_refunded>
+	            <shipping_refunded translate="title">
+	                <title>Shipping Refunded</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>100</sort_order>
+                    <enabled>1</enabled>
+                </shipping_refunded>
+	            <base_amount_authorized translate="title">
+	                <title>Base Amount Authorized</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>110</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_authorized>
+	            <amount_authorized translate="title">
+	                <title>Amount Authorized</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>120</sort_order>
+                    <enabled>1</enabled>
+                </amount_authorized>
+	            <base_amount_paid translate="title">
+	                <title>Base Amount Paid</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>130</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_paid>
+	            <amount_paid translate="title">
+	                <title>Amount Paid</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>140</sort_order>
+                    <enabled>1</enabled>
+                </amount_paid>
+	            <base_amount_paid_online translate="title">
+	                <title>Base Amount Paid Online</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>150</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_paid_online>
+	            <amount_refunded translate="title">
+	                <title>Amount Refunded</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>160</sort_order>
+                    <enabled>1</enabled>
+                </amount_refunded>
+	            <base_amount_refunded_online translate="title">
+	                <title>Base Amount Refunded Online</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>170</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_refunded_online>
+	            <base_amount_refunded translate="title">
+	                <title>Base Amount Refunded</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>180</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_refunded>
+	            <amount_ordered translate="title">
+	                <title>Amount Ordered</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>190</sort_order>
+                    <enabled>1</enabled>
+                </amount_ordered>
+	            <base_amount_ordered translate="title">
+	                <title>Base Amount Ordered</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>200</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_ordered>
+	            <amount_canceled translate="title">
+	                <title>Amount Canceled</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>210</sort_order>
+                    <enabled>1</enabled>
+                </amount_canceled>
+	            <base_amount_canceled translate="title">
+	                <title>Base Amount Canceled</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>220</sort_order>
+                    <enabled>1</enabled>
+                </base_amount_canceled>
+	            <amount translate="title">
+	                <title>Amount</title>
+	                <type>amount</type>
+	                <actions><export/></actions>
+	                <sort_order>230</sort_order>
+                    <enabled>1</enabled>
+                </amount>
+	            <cc_trans_id translate="title">
+	                <title>Cc Trans Id</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>240</sort_order>
+                    <enabled>1</enabled>
+                </cc_trans_id>
+	            <cc_status translate="title">
+	                <title>Cc Status</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>250</sort_order>
+                    <enabled>1</enabled>
+                </cc_status>
+	            <cc_status_description translate="title">
+	                <title>Cc Status Description</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>260</sort_order>
+                    <enabled>1</enabled>
+                </cc_status_description>
+	            <cc_cid_status translate="title">
+	                <title>Cc Cid Status</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>270</sort_order>
+                    <enabled>1</enabled>
+                </cc_cid_status>
+	            <cc_avs_status translate="title">
+	                <title>Cc Avs Status</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>280</sort_order>
+                    <enabled>1</enabled>
+                </cc_avs_status>
+	            <cc_owner translate="title">
+	                <title>Cc Owner</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>290</sort_order>
+                    <enabled>1</enabled>
+                </cc_owner>
+	            <cc_type translate="title">
+	                <title>Cc Type</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>300</sort_order>
+                    <enabled>1</enabled>
+                </cc_type>
+	            <cc_exp_year translate="title">
+	                <title>Cc Exp Year</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>310</sort_order>
+                    <enabled>1</enabled>
+                </cc_exp_year>
+	            <cc_exp_month translate="title">
+	                <title>Cc Exp Month</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>320</sort_order>
+                    <enabled>1</enabled>
+                </cc_exp_month>
+	            <cc_last4 translate="title">
+	                <title>Cc Last4</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>330</sort_order>
+                    <enabled>1</enabled>
+                </cc_last4>
+	            <cc_secure_verify translate="title">
+	                <title>Cc Secure Verify</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>340</sort_order>
+                    <enabled>1</enabled>
+                </cc_secure_verify>
+	            <cc_ss_start_year translate="title">
+	                <title>Cc Ss Start Year</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>350</sort_order>
+                    <enabled>1</enabled>
+                </cc_ss_start_year>
+	            <cc_ss_start_month translate="title">
+	                <title>Cc Ss Start Month</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>360</sort_order>
+                    <enabled>1</enabled>
+                </cc_ss_start_month>
+	            <cc_ss_issue translate="title">
+	                <title>Cc Ss Issue</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>370</sort_order>
+                    <enabled>1</enabled>
+                </cc_ss_issue>
+	            <cc_approval translate="title">
+	                <title>Cc Approval</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>380</sort_order>
+                    <enabled>1</enabled>
+                </cc_approval>
+	            <cc_number_enc translate="title">
+	                <title>Cc Number Enc</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>390</sort_order>
+                    <enabled>1</enabled>
+                </cc_number_enc>
+	            <cc_raw_request translate="title">
+	                <title>Cc Raw Request</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>400</sort_order>
+                    <enabled>1</enabled>
+                </cc_raw_request>
+	            <cc_debug_request_body translate="title">
+	                <title>Cc Debug Request Body</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>410</sort_order>
+                    <enabled>1</enabled>
+                </cc_debug_request_body>
+	            <cc_raw_response translate="title">
+	                <title>Cc Raw Response</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>420</sort_order>
+                    <enabled>1</enabled>
+                </cc_raw_response>
+	            <cc_debug_response_body translate="title">
+	                <title>Cc Debug Response Body</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>430</sort_order>
+                    <enabled>1</enabled>
+                </cc_debug_response_body>
+	            <cc_debug_response_serialized translate="title">
+	                <title>Cc Debug Response Serialized</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>440</sort_order>
+                    <enabled>1</enabled>
+                </cc_debug_response_serialized>
+	            <method translate="title">
+	                <title>Method</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>450</sort_order>
+                    <enabled>1</enabled>
+                </method>
+	            <address_status translate="title">
+	                <title>Address Status</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>460</sort_order>
+                    <enabled>1</enabled>
+                </address_status>
+	            <additional_data translate="title">
+	                <title>Additional Data</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>470</sort_order>
+                    <enabled>1</enabled>
+                </additional_data>
+	            <additional_information translate="title">
+	                <title>Additional Information</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>480</sort_order>
+                    <enabled>1</enabled>
+                </additional_information>
+	            <protection_eligibility translate="title">
+	                <title>Protection Eligibility</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>490</sort_order>
+                    <enabled>1</enabled>
+                </protection_eligibility>
+	            <last_trans_id translate="title">
+	                <title>Last Trans Id</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>500</sort_order>
+                    <enabled>1</enabled>
+                </last_trans_id>
+	            <account_status translate="title">
+	                <title>Account Status</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>510</sort_order>
+                    <enabled>1</enabled>
+                </account_status>
+	            <echeck_type translate="title">
+	                <title>Echeck Type</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>520</sort_order>
+                    <enabled>1</enabled>
+                </echeck_type>
+	            <echeck_bank_name translate="title">
+	                <title>Echeck Bank Name</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>530</sort_order>
+                    <enabled>1</enabled>
+                </echeck_bank_name>
+	            <echeck_account_type translate="title">
+	                <title>Echeck Account Type</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>540</sort_order>
+                    <enabled>1</enabled>
+                </echeck_account_type>
+	            <echeck_account_name translate="title">
+	                <title>Echeck Account Name</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>550</sort_order>
+                    <enabled>1</enabled>
+                </echeck_account_name>
+	            <echeck_routing_number translate="title">
+	                <title>Echeck Routing Number</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>560</sort_order>
+                    <enabled>1</enabled>
+                </echeck_routing_number>
+	            <ideal_issuer_id translate="title">
+	                <title>Ideal Issuer Id</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>570</sort_order>
+                    <enabled>1</enabled>
+                </ideal_issuer_id>
+	            <ideal_issuer_title translate="title">
+	                <title>Ideal Issuer Title</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>580</sort_order>
+                    <enabled>1</enabled>
+                </ideal_issuer_title>
+	            <ideal_transaction_checked translate="title">
+	                <title>Ideal Transaction Checked</title>
+	                <type>boolean</type>
+	                <actions><export/></actions>
+	                <sort_order>590</sort_order>
+                    <enabled>1</enabled>
+                </ideal_transaction_checked>
+	            <paybox_request_number translate="title">
+	                <title>Paybox Request Number</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>600</sort_order>
+                    <enabled>1</enabled>
+                </paybox_request_number>
+	            <paybox_question_number translate="title">
+	                <title>Paybox Question Number</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>610</sort_order>
+                    <enabled>1</enabled>
+                </paybox_question_number>
+	            <flo2cash_account_id translate="title">
+	                <title>Flo2cash Account Id</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>620</sort_order>
+                    <enabled>1</enabled>
+                </flo2cash_account_id>
+	            <cybersource_token translate="title">
+	                <title>Cybersource Token</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>630</sort_order>
+                    <enabled>1</enabled>
+                </cybersource_token>
+	            <po_number translate="title">
+	                <title>Po Number</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>640</sort_order>
+                    <enabled>1</enabled>
+                </po_number>
+	            <anet_trans_method translate="title">
+	                <title>Anet Trans Method</title>
+	                <type>string</type>
+	                <actions><export/></actions>
+	                <sort_order>650</sort_order>
+                    <enabled>1</enabled>
+                </anet_trans_method>
+	        </attributes>
+	    </sales_order_payment>
+    </entities>
+</config>

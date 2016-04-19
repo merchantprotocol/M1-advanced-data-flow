@@ -1,0 +1,71 @@
+<?php
+	$bannerCollection = $this->getCollection();
+	$configData = Mage::getStoreConfig('bannerpro');
+	if($configData['settings']['time_delay'] != null) {
+		$timeDelay = $configData['settings']['time_delay'];
+	}
+	else {
+ 		$timeDelay = 5000;
+	}
+	$i = 1;
+?>
+<div id="top_banner" style="padding: 0px; background: transparent none repeat scroll 0% 0%; position: relative; height:255px;">
+	<div id="divSimpleSlider">
+		<?php foreach ($bannerCollection as $banner): $effects .= $banner->getEffects().", "; ?>
+			<div class="banner">
+				<a href="<?php echo $banner->getWeblink() ?>" title="<?php echo $banner->getWeblink() ?>">
+					<img title="<?php echo $banner->getTitle() ?>" alt="<?php echo $banner->getTitle() ?>" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . $banner->getFilename() ?>" width="100%" />
+				</a>
+				<?php if ($configData['settings']['show_description'] == '1' && $banner->getText() != ""):?>
+					<div class="banner_content">
+     					<?php echo $banner->getText() ?>
+     				</div>
+				<?php endif; ?>
+			</div>
+    	<?php $i++; endforeach; ?>
+  	</div>
+	<div class="control" id="control">
+		<a id="pause_btn" class="pause" title="Pause">&nbsp;</a>
+		<a id="play_btn" class="no-display" title="Play">&nbsp;</a>
+  	</div>
+  	
+  	<ul class="navigate">
+		<li class="prev"><a href="#" title="Previous">&nbsp;</a></li>
+		<li class="next"><a href="#" title="Next">&nbsp;</a></li>
+  	</ul>
+  	<div class="banner_down">
+		<div id="divSimpleSliderRotate">&nbsp;</div>
+	</div>
+</div>
+<div class="clear-all">&nbsp;</div>
+<script type="text/javascript">
+// <![CDATA[
+	$bn2(document).ready(function() {                   
+	    var slider = $bn2("#divSimpleSlider").cycle({
+	        fx: '<?php echo $effects; ?>',
+	        speed: 1000,
+	        timeout: <?php echo $timeDelay ?>,
+	        prev: '.prev',
+	        next: '.next',
+	        pager: '#divSimpleSliderRotate',
+	        pagerEvent: 'click',
+	        fastOnEvent: false,
+	        pause: 0,
+	        pause_btn: '#pause_btn',
+	        play_btn: '#play_btn',
+			randomizeEffects: false
+	    });                                
+	});
+	$bn2('#pause_btn').click(function() { 
+    	$bn2('#divSimpleSlider').cycle('pause'); 
+		document.getElementById('pause_btn').className = 'no-display';
+		document.getElementById('play_btn').className = 'play';
+	});
+	
+	$bn2('#play_btn').click(function() { 
+    	$bn2('#divSimpleSlider').cycle('resume'); 
+		document.getElementById('play_btn').className = 'no-display';
+		document.getElementById('pause_btn').className = 'pause';
+	});
+// ]]>
+</script>

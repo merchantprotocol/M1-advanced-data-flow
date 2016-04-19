@@ -24,9 +24,6 @@
         <Innoexts_AdvancedDataflow>
             <active>true</active>
             <codePool>local</codePool>
-            <depends>
-                <Innoexts_InnoCore />
-            </depends>
         </Innoexts_AdvancedDataflow>
     </modules>
 </config>

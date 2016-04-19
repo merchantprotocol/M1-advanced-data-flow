@@ -40,27 +40,42 @@ class Innoexts_AdvancedDataflow_Model_Customer_Convert_Parser_Customer_Xml exten
      */
     protected $_entityPluralTag = 'customers';
     /**
-     * Parse node
+     * Get addresses rows indexes
      * 
-     * @param DOMNode $node
-     * @param string $prefix
+     * @param array $row
      * @return array
      */
-    protected function parseNode($node, $prefix = '')
+    protected function getAddressesRowsIndexes($row)
     {
-        if ($node->hasChildNodes()) {
-    	    foreach ($node->childNodes as $attributeNode) {
-                if ($attributeNode->nodeType == 1) {
-                    if (in_array(strtolower($attributeNode->nodeName), array('billing', 'shipping'))) {
-                        $addressRow = parent::parseNode($attributeNode, strtolower($attributeNode->nodeName).'_');
-                        if (count($addressRow)) $row = array_merge($row, $addressRow);
-                    } else {
-                        $row[$attributeNode->nodeName] = (string) $attributeNode->nodeValue;
+        $indexes = array();
+        foreach ($row as $key => $value) {
+            $prefix = 'address_';
+            if (substr($key, 0, strlen($prefix)) == $prefix) {
+                $parts = explode('_', $key);
+                if (count($parts) > 1) {
+                    $index = $parts[1];
+                    if (((int) $index == $index) && !in_array($index, $indexes)) {
+                        array_push($indexes, $index);
                     }
                 }
             }
         }
-        return $row;
+        return $indexes;
+    }
+    /**
+     * Check if address row empty
+     * 
+     * @param array $row
+     * @return boolean
+     */
+    protected function isAddressRowEmpty($row)
+    {
+        $keys = array('firstname');
+        $isEmpty = false;
+        foreach ($keys as $key) {
+            if (empty($row[$key])) { $isEmpty = true; break; }
+        }
+        return $isEmpty;
     }
     /**
      * Read data collection and write to temporary file
@@ -88,10 +103,60 @@ class Innoexts_AdvancedDataflow_Model_Customer_Convert_Parser_Customer_Xml exten
                 $row = $this->unsetRowFields($row, 'shipping');
                 $row['shipping'] = $shippingRow;
             }
+            $indexes = $this->getAddressesRowsIndexes($row);
+            $addressesRows = array();
+            foreach ($indexes as $index) {
+                $prefix = 'address_'.$index;
+                $addressRow = $this->extractRowFields($row, $prefix);
+                if (count($addressRow)) {
+                    $row = $this->unsetRowFields($row, $prefix);
+                    if (!$this->isAddressRowEmpty($addressRow)) {
+                        array_push($addressesRows, array('address' => $addressRow));
+                    }
+                }
+            }
+            if (count($addressesRows)) $row['addresses'] = $addressesRows;
             $io->write($this->arrayToXml(array($this->getEntityTag() => $row, ), 1));
         }
         $io->write($this->getFooterXml());
         $io->close();
         return $this;
+    }
+    /**
+     * Parse node
+     * 
+     * @param DOMNode $node
+     * @param string $prefix
+     * @return array
+     */
+    protected function parseNode($node, $prefix = '')
+    {
+        $row = array();
+        if ($node->hasChildNodes()) {
+    	    foreach ($node->childNodes as $attributeNode) {
+                if ($attributeNode->nodeType == 1) {
+                    $children = array('billing', 'shipping');
+                    $nodeName = strtolower($attributeNode->nodeName);
+                    if (in_array($nodeName, $children)) {
+                        $childRow = parent::parseNode($attributeNode, $nodeName.'_');
+                        if (count($childRow)) $row = array_merge($row, $childRow);
+                    } else if (in_array($nodeName, array('addresses'))) {
+                        if ($attributeNode->hasChildNodes()) {
+                            $index = 1;
+                            foreach ($attributeNode->childNodes as $childAttributeNode) {
+                                if ($childAttributeNode->nodeType == 1) {
+                                    $childRow = parent::parseNode($childAttributeNode, 'address_'.strval($index).'_');
+                                    if (count($childRow)) $row = array_merge($row, $childRow);
+                                    $index++;
+                                }
+                            }
+                        }
+                    } else {
+                        $row[$attributeNode->nodeName] = (string) $attributeNode->nodeValue;
+                    }
+                }
+            }
+        }
+        return $row;
     }
 }

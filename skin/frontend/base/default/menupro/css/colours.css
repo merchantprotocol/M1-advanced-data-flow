@@ -1,0 +1,145 @@
+/* Default color cyan */
+.menu-creator-pro-cyan li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-cyan li:hover > a,
+.menu-creator-pro-cyan li.current > a {
+	background: #2da5da;
+	color: #fff;
+}
+.menu-creator-pro-cyan form .button {
+	background-color: #2da5da;
+}
+.menu-creator-pro-cyan form .input input:focus,
+.menu-creator-pro-cyan form .textarea textarea:focus,
+.menu-creator-pro-cyan form .checkbox input:focus + i {
+	border-color: #2da5da;
+}
+/* Color: Red */
+.menu-creator-pro-red li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-red li:hover > a,
+.menu-creator-pro-red li.current > a {
+	background: #CE3C39;
+	color: #fff;
+}
+.menu-creator-pro-red form .button {
+	background-color: #CE3C39;
+}
+.menu-creator-pro-red form .input input:focus,
+.menu-creator-pro-red form .textarea textarea:focus,
+.menu-creator-pro-red form .checkbox input:focus + i {
+	border-color: #CE3C39;
+}
+/* Color: Orange */
+.menu-creator-pro-orange li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-orange li:hover > a,
+.menu-creator-pro-orange li.current > a {
+	background: #FF732A;
+	color: #fff;
+}
+.menu-creator-pro-orange form .button {
+	background-color: #FF732A;
+}
+.menu-creator-pro-orange form .input input:focus,
+.menu-creator-pro-orange form .textarea textarea:focus,
+.menu-creator-pro-orange form .checkbox input:focus + i {
+	border-color: #FF732A;
+}
+
+/* Color: Green */
+.menu-creator-pro-green li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-green li:hover > a,
+.menu-creator-pro-green li.current > a {
+	background: #42C340;
+	color: #fff;
+}
+.menu-creator-pro-green form .button {
+	background-color: #42C340;
+}
+.menu-creator-pro-green form .input input:focus,
+.menu-creator-pro-green form .textarea textarea:focus,
+.menu-creator-pro-green form .checkbox input:focus + i {
+	border-color: #42C340;
+}
+
+/* Color: Purple */
+.menu-creator-pro-purple li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-purple li:hover > a,
+.menu-creator-pro-purple li.current > a {
+	background: #AE32C6;
+	color: #fff;
+}
+.menu-creator-pro-purple form .button {
+	background-color: #AE32C6;
+}
+.menu-creator-pro-purple form .input input:focus,
+.menu-creator-pro-purple form .textarea textarea:focus,
+.menu-creator-pro-purple form .checkbox input:focus + i {
+	border-color: #AE32C6;
+}
+
+/* Color: Pink */
+.menu-creator-pro-pink li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-pink li:hover > a,
+.menu-creator-pro-pink li.current > a {
+	background: #D4447D;
+	color: #fff;
+}
+.menu-creator-pro-pink form .button {
+	background-color: #D4447D;
+}
+.menu-creator-pro-pink form .input input:focus,
+.menu-creator-pro-pink form .textarea textarea:focus,
+.menu-creator-pro-pink form .checkbox input:focus + i {
+	border-color: #D4447D;
+}
+
+
+/* Color: Yellow */
+.menu-creator-pro-yellow li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-yellow li:hover > a,
+.menu-creator-pro-yellow li.current > a {
+	background: #FFC300;
+	color: #fff;
+}
+.menu-creator-pro-yellow form .button {
+	background-color: #FFC300;
+}
+.menu-creator-pro-yellow form .input input:focus,
+.menu-creator-pro-yellow form .textarea textarea:focus,
+.menu-creator-pro-yellow form .checkbox input:focus + i {
+	border-color: #FFC300;
+}
+
+
+/* Color: Black */
+.menu-creator-pro-black li.parent a.nav-header {
+background:#ccc;
+}
+.menu-creator-pro-black li:hover > a,
+.menu-creator-pro-black li.current > a {
+	background: #000;
+	color: #fff;
+}
+.menu-creator-pro-black form .button {
+	background-color: #000;
+}
+.menu-creator-pro-black form .input input:focus,
+.menu-creator-pro-black form .textarea textarea:focus,
+.menu-creator-pro-black form .checkbox input:focus + i {
+	border-color: #000;
+}
+
+

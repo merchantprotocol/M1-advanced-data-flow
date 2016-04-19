@@ -1,0 +1,21 @@
+-
+  - active
+  - true
+-
+  - expired
+  - true
+-
+  - suspended
+  - true
+-
+  - cancelled
+  - true
+-
+  - terminated
+  - true
+-
+  - my_fake_status
+  - false
+-
+  - canceled
+  - false

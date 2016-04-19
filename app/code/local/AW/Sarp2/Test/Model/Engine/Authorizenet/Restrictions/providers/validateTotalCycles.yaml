@@ -1,0 +1,18 @@
+-
+  - 0
+  - true
+-
+  - 1
+  - true
+-
+  - 9999
+  - true
+-
+  - 10000
+  - false
+-
+  - -1
+  - false
+-
+  - fake
+  - false

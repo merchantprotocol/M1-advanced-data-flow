@@ -1,0 +1,63 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento community edition
+ * aheadWorks does not guarantee correct work of this extension
+ * on any other Magento edition except Magento community edition.
+ * aheadWorks does not provide extension support in case of
+ * incorrect edition usage.
+ * =================================================================
+ *
+ * @category   AW
+ * @package    AW_Mobiletracking
+ * @version    1.0.2
+ * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ */
+
+class AW_All_Model_TabsSorting {
+    public function prepareAWTabs($observer)
+    {
+        $tabsBlock = $observer->getBlock();
+        if ($tabsBlock instanceof Mage_Adminhtml_Block_System_Config_Tabs) {
+            foreach ($tabsBlock->getTabs() as $tab) {
+                if ($tab->getId() != 'awall') {
+                    continue;
+                }
+                $_sections = $tab->getSections()->getItems();
+                $tab->getSections()->clear();
+
+                $_sectionsLabels = array();
+                foreach ($_sections as $key => $_section) {
+                    if (!in_array($key, array('awstore','awall'))) {
+                        $_sectionsLabels[str_replace(' ', '_', $_section->getLabel())] = $_section;
+                    }
+                }
+
+                ksort($_sectionsLabels);
+                foreach ($_sectionsLabels as $_section) {
+                    $tab->getSections()->addItem($_section);
+                }
+
+                if (array_key_exists('awstore', $_sections)) {
+                    $tab->getSections()->addItem($_sections['awstore']);
+                }
+                if (array_key_exists('awall', $_sections)) {
+                    $tab->getSections()->addItem($_sections['awall']);
+                }
+            }
+        }
+        return $this;
+    }
+}

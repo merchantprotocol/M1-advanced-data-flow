@@ -1,0 +1,38 @@
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 2018, cc_type: VI}
+  - true
+-
+  - {cc_number: 4111111111111111, cc_cid: 1234, cc_exp_month: 01, cc_exp_year: 2018, cc_type: AE}
+  - true
+-
+  - {cc_number: 41111111111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 2018, cc_type: VI}
+  - false
+-
+  - {cc_number: 411111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 2018, cc_type: VI}
+  - false
+-
+  - {cc_number: fake, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 2018, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 1234, cc_exp_month: 01, cc_exp_year: 2018, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 2010, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 13, cc_exp_year: 2018, cc_type: VI}
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 0, cc_exp_year: 2018, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 0, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: -1, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: -1, cc_exp_year: 2018, cc_type: VI}
+  - false
+-
+  - {cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 01, cc_exp_year: 2018, cc_type: AE}
+  - false

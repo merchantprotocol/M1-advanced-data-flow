@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <AW_Mobiletracking>
+            <version>1.0.2</version><platform>ce</platform>
+        </AW_Mobiletracking>
+    </modules>
+
+    <admin>
+        <routers>
+            <mobiletracking_admin>
+                <use>admin</use>
+                <args>
+                    <module>AW_Mobiletracking</module>
+                    <frontName>mobiletracking_admin</frontName>
+                </args> 
+            </mobiletracking_admin>
+        </routers>
+    </admin>
+
+    <global>
+       
+        <blocks>
+            <mobiletracking>
+                <class>AW_Mobiletracking_Block</class>
+            </mobiletracking>             
+        </blocks>
+        <models>             
+            <mobiletracking>
+                <class>AW_Mobiletracking_Model</class>
+                <resourceModel>mobiletracking_mysql4</resourceModel>
+            </mobiletracking>
+            <mobiletracking_mysql4>
+                <class>AW_Mobiletracking_Model_Mysql4</class>                
+            </mobiletracking_mysql4>             
+        </models>
+        <helpers>
+            <mobiletracking>
+                <class>AW_Mobiletracking_Helper</class>
+            </mobiletracking>
+        </helpers>
+        <resources>           
+            <mobiletracking_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </mobiletracking_write>
+            <mobiletracking_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </mobiletracking_read>
+        </resources>  
+    </global>
+
+    <frontend>        
+        <layout>
+            <updates>
+                <mobiletracking module="AW_Mobiletracking">
+                    <file>aw_mobiletracking.xml</file>
+                </mobiletracking>
+            </updates>
+        </layout>
+        <routers>
+            <awmobiletracking>
+                <use>standard</use>
+                <args>
+                    <module>AW_Mobiletracking</module>
+                    <frontName>awmobiletracking</frontName>
+                </args>
+            </awmobiletracking>
+        </routers>
+        <translate>
+            <modules>
+                <AW_Mobiletracking>
+                    <files>
+                        <default>AW_Mobiletracking.csv</default>
+                    </files>
+                </AW_Mobiletracking>
+            </modules>
+        </translate>
+    </frontend>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <mobiletracking>
+                    <file>aw_mobiletracking.xml</file>
+                </mobiletracking>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <AW_Mobiletracking>
+                    <files>
+                        <default>AW_Mobiletracking.csv</default>
+                    </files>
+                </AW_Mobiletracking>
+            </modules>
+        </translate>
+         
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <mobiletracking>
+                                            <title>aheadWorks - Mobile Tracking Configuration</title>
+                                        </mobiletracking>
+                                    </children>
+                                </config>
+                            </children>
+                        </system> 
+                      </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+ 
+    <phpunit>
+        <suite>
+            <modules>
+                <AW_Mobiletracking />
+            </modules>
+        </suite>
+    </phpunit>
+
+</config>

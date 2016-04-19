@@ -1,0 +1,54 @@
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country_id: US, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - true
+-
+  - {street1: 3638 Red Freeway, city: Hustler, country_id: US, region_id: 5, postcode: 72667, telephone: (870) 510-6308}
+  - true
+-
+  - {street1: 3638 Red Freeway, city: Hustler, country_id: US, region_id: 5, postcode: 72667, telephone:  (870) 510-6308}
+  - true
+-
+  - {street1: 3638 Red Freeway, city: Hustler, country_id: US, region_id: 5, postcode: 72667, telephone:  (870) 510-6308}
+  - true
+-
+  - {street1: 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638, city: Hustler, country_id: US, region_id: 5, postcode: 72667, telephone:  (870) 510-6308}
+  - false
+-
+  - {firstname: John, lastname: Doe, street1: 3638 Red Freeway, city: Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler, country_id: US, region_id: 5, postcode: 72667, telephone:  (870) 510-6308}
+  - false
+-
+  - {firstname: John, lastname: Doe, street1: 3638 Red Freeway, city: Hustler, country_id: US, region_id: 5, postcode: 72667, telephone: (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308 (870) 510-6308}
+  - false
+-
+  - {firstname: John, lastname: Doe, street1: 3638 Red Freeway, street2: 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638 Red Freeway 3638, city: Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler Hustler, country_id: US, region_id: 5, postcode: 72667, telephone:  (870) 510-6308}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, street2: 6775 Lost Lake Street, city: Bouctouche, country_id: US, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - true
+-
+  - {city: Bouctouche, country_id: US, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - true
+-
+  - {street1: 6775 Lost Lake Street, country_id: US, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country_id: US, postcode: 59959, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country_id: USA, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country_id: US, region_id: 37, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country_id: US, region_id: 37, postcode: 599595995959959599595995959959599595995959959, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country_id: US, region: 12345678901234567890123456789012345678901234567890, postcode: 59959, telephone: (406) 152-7912}
+  - false
+-
+  - {street1: 6775 Lost Lake Street, city: Bouctouche, country: USA, region_id: 37, postcode: 59959, telephone: (406) 152-7912}
+  - false

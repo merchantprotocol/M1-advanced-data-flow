@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<!--
+/**
+ * Open Biz Ltd
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file OPEN-BIZ-LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://mageconsult.net/terms-and-conditions
+ *
+ * @category   Magecon
+ * @package    Magecon_Rma
+ * @version    1.0.0
+ * @copyright  Copyright (c) 2013 Open Biz Ltd (http://www.mageconsult.net)
+ * @license    http://mageconsult.net/terms-and-conditions
+ */
+-->
+
+<layout>
+    <rma_adminhtml_rma_grid>
+        <update handle="formkey"/>
+        <block type="rma/adminhtml_rma_grid" name="adminhtml_rma.grid" output="toHtml"></block>
+    </rma_adminhtml_rma_grid>
+    <rma_adminhtml_rma_index>
+        <reference name="content">
+            <block type="rma/adminhtml_rma" name="rma"></block>
+        </reference>
+    </rma_adminhtml_rma_index>
+    <rma_adminhtml_rma_edit>
+        <reference name="content">
+            <block type="rma/adminhtml_rma_edit" name="customer_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="rma/adminhtml_rma_edit_tabs" name="edit_tabs">
+                <block type="rma/adminhtml_rma_edit_tab_info" name="rma_info" template="rma/rma/edit/info.phtml">
+                    <block type="rma/adminhtml_rma_edit_tab_history" name="rma_history" template="rma/rma/edit/history.phtml" />
+                </block>
+                <action method="addTab">
+                    <name>info</name>
+                    <block>rma_info</block>
+                </action>
+            </block>
+        </reference>
+    </rma_adminhtml_rma_edit>
+    <rma_adminhtml_rma_create_grid>
+        <update handle="formkey"/>
+        <block type="rma/adminhtml_rma_create_grid" name="adminhtml_rma_create.grid" output="toHtml"></block>
+    </rma_adminhtml_rma_create_grid>
+    <rma_adminhtml_rma_create_index>
+        <reference name="content">
+            <block type="rma/adminhtml_rma_create" name="adminhtml_rma_create.grid.container"></block>
+        </reference>
+    </rma_adminhtml_rma_create_index>
+    <rma_adminhtml_rma_create_new>
+        <reference name="content">
+            <block type="rma/adminhtml_rma_create_new" name="adminhtml_rma_create.new.container"></block>
+        </reference>
+        <reference name="left">
+            <block type="rma/adminhtml_rma_create_new_tabs" name="create_tabs"></block>
+        </reference>
+    </rma_adminhtml_rma_create_new>
+    <rma_adminhtml_rma_addcomment>
+        <block type="rma/adminhtml_rma_edit_tab_history" name="rma_history" template="rma/rma/edit/history.phtml" output="toHtml"/>
+    </rma_adminhtml_rma_addcomment>
+    <rma_adminhtml_rma_status_grid>
+        <update handle="formkey"/>
+        <block type="rma/adminhtml_rma_status_grid" name="adminhtml_rma_status.grid" output="toHtml"></block>
+    </rma_adminhtml_rma_status_grid>
+    <rma_adminhtml_rma_status_index>
+        <reference name="content">
+            <block type="rma/adminhtml_rma_status" name="adminhtml_rma_status.grid.container"></block>
+        </reference>
+    </rma_adminhtml_rma_status_index>
+    <rma_adminhtml_rma_status_new>
+        <reference name="content">
+            <block type="rma/adminhtml_rma_status_new" name="adminhtml_rma_status.new.container"></block>
+        </reference>
+    </rma_adminhtml_rma_status_new>
+    <rma_adminhtml_rma_status_edit>
+        <reference name="content">
+            <block type="rma/adminhtml_rma_status_edit" name="adminhtml_rma_status.edit.container"></block>
+        </reference>
+    </rma_adminhtml_rma_status_edit>
+</layout>

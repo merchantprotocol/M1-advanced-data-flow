@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+    <name>EM_DeleteOrder</name>
+    <version>1.0.5</version>
+    <stability>stable</stability>
+    <license>GNU/GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Enhance Magento feature with ability to delete orders</summary>
+    <description>Enhance Magento feature with ability to delete orders</description>
+    <notes>Version 1.0.5:
+- Support delete non-numeric order number.
+
+Version 1.0.4:
+- Refactor directory structure.
+- Fix bug not work if tables have prefix.
+- Fix bug not work if backend url is not admin/</notes>
+    <authors><author><name>EMThemes</name><user>auto-converted</user><email>tvlgiao@gmail.com</email></author></authors>
+    <date>2011-03-07</date>
+    <time>12:51:57</time>
+    <contents><target name="magecommunity"><dir name="EM"><dir name="DeleteOrder"><dir name="Block"><dir name="Adminhtml"><dir name="Sales"><dir name="Order"><file name="Grid.php" hash="0a9a2559b0d0df86061482451927236a"/></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Sales"><file name="OrderController.php" hash="0039cf1dfcaf7eab0a1daf839ae5012e"/></dir></dir></dir><dir name="etc"><file name="config.xml" hash="78b876e905249f6a47e8ce1500b8a5a4"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="EM_DeleteOrder.xml" hash="9e363a45860cf072385c1a0d24b5bc85"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

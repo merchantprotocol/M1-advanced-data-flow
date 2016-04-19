@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <AdminLogger translate="label" module="AdminLogger">
+            <label>PCI Compliance Log</label>
+			<tab>advanced</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+            	<general>
+            		<label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enabled?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </enable>
+                        <auto_prune>
+                            <label>Auto Prune</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </auto_prune>
+                        <auto_prune_delay>
+                            <label>Auto Prune Delay</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <comment>days</comment>
+                        </auto_prune_delay>
+                        <force_initial_data>
+                            <label>Force Initial Data</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </force_initial_data>
+                   </fields>
+            	</general>
+            	<advanced>
+            		<label>PCI Compliance Log Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fields_to_ignore translate="label">
+                            <label>Fields to Ignore in Watch_Logger</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </fields_to_ignore>
+                        <object_to_ignore translate="label">
+                            <label>Object Types to Ignore in Watch_Logger</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </object_to_ignore>
+                        <force_orig_data translate="label">
+                            <label>Force Origin Data</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </force_orig_data>
+					</fields>
+            	</advanced>
+            </groups>
+        </AdminLogger>
+    </sections>
+</config>

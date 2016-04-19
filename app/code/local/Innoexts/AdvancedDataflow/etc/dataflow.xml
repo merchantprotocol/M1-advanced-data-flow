@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Innoexts
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the InnoExts Commercial License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://innoexts.com/commercial-license-agreement
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@innoexts.com so we can send you a copy immediately.
+ * 
+ * @category    Innoexts
+ * @package     Innoexts_AdvancedDataflow
+ * @copyright   Copyright (c) 2011 Innoexts (http://www.innoexts.com)
+ * @license     http://innoexts.com/commercial-license-agreement  InnoExts Commercial License
+ */
+-->
+<config>
+    <entities>
+        <catalog_category>
+            <active>true</active>
+        </catalog_category>
+        <catalog_product>
+            <active>true</active>
+        </catalog_product>
+        <customer_customer_address>
+            <active>true</active>
+        </customer_customer_address>
+        <customer_customer>
+            <active>true</active>
+        </customer_customer>
+        <sales_order>
+            <active>true</active>
+        </sales_order>
+        <sales_order_address>
+            <active>true</active>
+        </sales_order_address>
+        <sales_order_item>
+            <active>true</active>
+        </sales_order_item>
+        <sales_order_payment>
+            <active>true</active>
+        </sales_order_payment>
+    </entities>
+</config>

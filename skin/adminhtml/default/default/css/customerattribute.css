@@ -1,0 +1,71 @@
+/* 
+    Document   : customerattribute
+    Created on : Oct 2, 2013, 1:54:18 PM
+    Author     : QUANGHOA
+    Description:
+        Purpose of the stylesheet follows.
+*/
+table{  border-spacing:0; }
+.content-container{
+    margin:  0 0 15px;
+    border: 1px solid #dadfe0;
+    float: left;
+    width: 100%;
+    padding: 15px 0;
+}
+#attributes-filter{
+    padding: 0 15px;
+    display: block;
+}
+.block-attribute{
+    width: 35%;
+    float: left;
+}
+.attribute{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.select_attribute{float:left;width: 30%;}
+.box_options{
+    position: absolute;
+    top: 4px;
+    left: 30%;
+    z-index: 1000;
+}
+.span_attribute{cursor: pointer;}
+.select_options{
+    text-align: left;
+}
+.box_options select{width: 175px;}
+a.close-box{
+    position: absolute;
+    top: -10px;
+    right: -15px;
+}
+.order-status{
+    width:30%;
+    float:right;
+}
+.button-sets{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.range{
+    float:left; 
+    width: 100%;
+    margin: 15px 0;
+    border-top: 1px solid #dadfe0;
+    padding-top: 10px;
+}
+.range .range-line{float:left;margin-right: 10px;}
+.range .range-line img{cursor: pointer;}
+.store{float: left;margin-right: 20px;}
+.report{float:left;width: 100%;position: relative;}
+/* Thinhnd */
+.table-report{float:left;width: 100%;margin: 15px 0;}
+/*end*/
+.chart{float:left;width: 100%;}
+.buttons-change{float: left;width: 100%;}
+button.show-data{float:left;}

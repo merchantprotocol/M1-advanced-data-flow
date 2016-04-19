@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+    <mobiletracking_block type="mobiletracking/widget_block" translate="name description" module="mobiletracking">
+        <name>Mobile Order Tracking link</name>
+        <is_email_compatible>0</is_email_compatible>
+        <show_in_default>1</show_in_default>
+        <show_in_website>1</show_in_website>
+        <show_in_store>1</show_in_store>
+        
+        <parameters>
+            <link_heading type="complex" translate="label">
+                <visible>1</visible>
+                <label>Widget title</label>
+                <type>Text</type>                 
+                <sort_order>10</sort_order>
+            </link_heading>
+        </parameters>   
+        
+    </mobiletracking_block>
+</widgets> 

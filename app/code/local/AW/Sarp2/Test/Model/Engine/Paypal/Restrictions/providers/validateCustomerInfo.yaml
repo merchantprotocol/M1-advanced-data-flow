@@ -1,0 +1,69 @@
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: 2, firstname: Test2, lastname: Test, email: te@st@example.com, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: 3, firstname: Test3, lastname: Test, email: te@st@example.com, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: 3, firstname: ?Test3, lastname: !Test, email: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest@example.com, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: 1, firstname: Test1Test1Test1Test1Test1Test1Test1Test1Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: 1, firstname: Test1, lastname: TestTestTestTestTestTestTestTestTestTest, email: test@example.com, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: custom, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, telephone: +32312312339999999999999999999999999999999999999999999999, fax: +3231231233}
+  - false
+-
+  - {id: 1, firstname: Test1, lastname: Test, telephone: +3231231233, fax: +32312312339999999999999999999999999999999999999999999999}
+  - false
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 123456789012}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 123456789012345}
+  - false
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 1234567890123, payer_status: verified}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 1234567890123, payer_status: unverified}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 1234567890123, payer_status: custom}
+  - false
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, company: Company name}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, company: Long Company Name127 Long Company Name127 Long Company Name127 Long Company Name127 Long Company Name127 Long Company Name127 Long Company Name127}
+  - false
+-
+  - {id: 1, firstname: Test1, middlename: middlename, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, company: Company name}
+  - true
+-
+  - {id: 1, firstname: Test1, middlename: longmiddlename25longmiddlename25longmiddlename25, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, company: Company name}
+  - false
+-
+  - {id: 1, firstname: Test1, middlename: middlename, lastname: Test, suffix: suffix, email: test@example.com, telephone: +3231231233, fax: +3231231233, company: Company name}
+  - true
+-
+  - {id: 1, firstname: Test1, middlename: middlename, lastname: Test, suffix: LongSuffix12LongSuffix12, email: test@example.com, telephone: +3231231233, fax: +3231231233, company: Company name}
+  - false
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 1234567890123, prefix: Prefix}
+  - true
+-
+  - {id: 1, firstname: Test1, lastname: Test, email: test@example.com, telephone: +3231231233, fax: +3231231233, payer_id: 1234567890123, prefix: LongPrefix20LongPrefix20LongPrefix20LongPrefix20}
+  - false

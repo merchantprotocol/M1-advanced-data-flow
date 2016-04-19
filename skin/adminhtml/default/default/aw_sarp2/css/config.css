@@ -1,0 +1,18 @@
+#row_aw_sarp2_advanced_flushbutton td.scope-label {
+    display : none;
+}
+
+div.aw_sarp2_message {
+    width       : 280px;
+    margin-top  : 10px;
+    text-align  : center;
+    font-weight : bold;
+}
+
+div.aw_sarp2_message.success {
+    color : #468847;
+}
+
+div.aw_sarp2_message.error {
+    color : #b94a48;
+}

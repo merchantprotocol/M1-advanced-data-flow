@@ -1,0 +1,12 @@
+-
+  - {cc_type: VI, cc_owner: CARDHOLDER NAME, cc_last4: 1111, cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 1, cc_exp_year: 2015, cc_ss_issue: 0, cc_ss_start_month: 1, cc_ss_start_year: 2013}
+  - true
+-
+  - {cc_type: AE, cc_owner: CARDHOLDER NAME, cc_last4: 1111, cc_number: 4111111111111111, cc_cid: 1234, cc_exp_month: 1, cc_exp_year: 2015, cc_ss_issue: 0, cc_ss_start_month: 1, cc_ss_start_year: 2013}
+  - true
+-
+  - {cc_type: MC, cc_owner: CARDHOLDER NAME, cc_last4: 1111, cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 1, cc_exp_year: 2015, cc_ss_issue: 0, cc_ss_start_month: 1, cc_ss_start_year: 2013}
+  - true
+-
+  - {cc_type: CUSTOM, cc_owner: CARDHOLDER NAME, cc_last4: 1111, cc_number: 4111111111111111, cc_cid: 123, cc_exp_month: 1, cc_exp_year: 2015, cc_ss_issue: 0, cc_ss_start_month: 1, cc_ss_start_year: 2013}
+  - true

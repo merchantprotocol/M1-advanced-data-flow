@@ -1,0 +1,30 @@
+-
+  - {id: 1, email: customer@example.com, telephone: +3231231233, fax: +3231231233}
+  - true
+-
+  - {id: 1, email: customer@example.com, fax: +3231231233}
+  - true
+-
+  - {id: 1, email: customer@example.com, telephone: +3231231233}
+  - true
+-
+  - {id: 1, email: customer@example.com}
+  - true
+-
+  - {id: 1, email: customerWithNameMoreThan255CharacterscustomerWithNameMoreThan255CharacterscustomerWithNameMoreThan255CharacterscustomerWithNameMoreThan255CharacterscustomerWithNameMoreThan255CharacterscustomerWithNameMoreThan255Characters1111111111111111111111@example.com, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {id: 1, telephone: +3231231233, fax: +3231231233}
+  - false
+-
+  - {email: customer@example.com, telephone: +3231231233, fax: +3231231233}
+  - true
+-
+  - {id: 123456789012345678901, email: customer@example.com, telephone: '+3231231233', fax: '+3231231233'}
+  - false
+-
+  - {id: 1, email: customer@example.com, telephone: '+323123123332312312333231231233', fax: +3231231233}
+  - false
+-
+  - {id: 1, email: customer@example.com, telephone: '+3231231233', fax: '+323123123332312312333231231233'}
+  - false

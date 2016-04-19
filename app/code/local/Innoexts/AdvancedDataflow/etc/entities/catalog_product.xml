@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Innoexts
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the InnoExts Commercial License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://innoexts.com/commercial-license-agreement
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@innoexts.com so we can send you a copy immediately.
+ * 
+ * @category    Innoexts
+ * @package     Innoexts_AdvancedDataflow
+ * @copyright   Copyright (c) 2011 Innoexts (http://www.innoexts.com)
+ * @license     http://innoexts.com/commercial-license-agreement  InnoExts Commercial License
+ */
+-->
+<config>
+    <entities>
+        <catalog_product eav="1">
+	        <model>catalog/product</model>
+	        <collection_model>catalog/product_collection</collection_model>
+	        <table>catalog/product</table>
+	        <attributes>
+	            <name translate="title">
+	                <title>Name</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>10</sort_order>
+	                <static>0</static>
+	            </name>
+	            <sku translate="title">
+	                <title>SKU</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>20</sort_order>
+	                <static>0</static>
+	                <primary>1</primary>
+	                <unique>1</unique>
+	            </sku>
+	            <weight translate="title">
+	                <title>Weight</title>
+	                <type>float</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>30</sort_order>
+	                <static>0</static>
+	            </weight>
+	            <status translate="title">
+	                <title>Status</title>
+	                <type>select</type>
+	                <required><all>1</all></required>
+	                <source>advanceddataflow/catalog_entity_product_attribute_source_status</source>
+	                <actions><all/></actions>
+	                <sort_order>40</sort_order>
+	                <static>0</static>
+	            </status>
+	            <tax_class_id translate="title">
+	                <title>Tax Class</title>
+	                <type>select</type>
+	                <required><all>1</all></required>
+	                <source>advanceddataflow/catalog_entity_product_attribute_source_taxclass</source>
+	                <actions><all/></actions>
+	                <sort_order>50</sort_order>
+	                <static>0</static>
+	            </tax_class_id>
+	            <url_key translate="title">
+	                <title>URL Key</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>60</sort_order>
+	                <static>0</static>
+	            </url_key>
+	            <url_path translate="title">
+	                <title>URL Path</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>70</sort_order>
+	                <static>0</static>
+	            </url_path>
+	            <visibility translate="title">
+	                <title>Visibility</title>
+	                <type>select</type>
+	                <required><all>1</all></required>
+	                <source>advanceddataflow/catalog_entity_product_attribute_source_visibility</source>
+	                <actions><all/></actions>
+	                <sort_order>80</sort_order>
+	                <static>0</static>
+	            </visibility>
+	            <manufacturer translate="title">
+	                <title>Manufacturer</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_product_attribute_source_manufacturer</source>
+	                <actions><all/></actions>
+	                <sort_order>90</sort_order>
+	                <static>0</static>
+	            </manufacturer>
+	            <news_from_date translate="title">
+	                <title>Set Product as New from Date</title>
+	                <type>date</type>
+	                <actions><all/></actions>
+	                <sort_order>100</sort_order>
+	                <static>0</static>
+	            </news_from_date>
+	            <news_to_date translate="title">
+	                <title>Set Product as New to Date</title>
+	                <type>date</type>
+	                <actions><all/></actions>
+	                <sort_order>110</sort_order>
+	                <static>0</static>
+	            </news_to_date>
+	            <price translate="title">
+	                <title>Price</title>
+	                <type>amount</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>120</sort_order>
+	                <static>0</static>
+	            </price>
+	            <cost translate="title">
+	                <title>Cost</title>
+	                <type>amount</type>
+	                <actions><all/></actions>
+	                <sort_order>130</sort_order>
+	                <static>0</static>
+	            </cost>
+	            <special_price translate="title">
+	                <title>Special Price</title>
+	                <type>amount</type>
+	                <actions><all/></actions>
+	                <sort_order>140</sort_order>
+	                <static>0</static>
+	            </special_price>
+	            <special_from_date translate="title">
+	                <title>Special Price From Date</title>
+	                <type>date</type>
+	                <actions><all/></actions>
+	                <sort_order>150</sort_order>
+	                <static>0</static>
+	            </special_from_date>
+	            <special_to_date translate="title">
+	                <title>Special Price To Date</title>
+	                <type>date</type>
+	                <actions><all/></actions>
+	                <sort_order>160</sort_order>
+	                <static>0</static>
+	            </special_to_date>
+	            <enable_googlecheckout translate="title">
+	                <title>Is product available for purchase with Google Checkout</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>170</sort_order>
+	                <static>0</static>
+	            </enable_googlecheckout>
+	            <meta_title translate="title">
+	                <title>Meta Title</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>180</sort_order>
+	                <static>0</static>
+	            </meta_title>
+	            <meta_keyword translate="title">
+	                <title>Meta Keywords</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>190</sort_order>
+	                <static>0</static>
+	            </meta_keyword>
+	            <meta_description translate="title">
+	                <title>Meta Description</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>200</sort_order>
+	                <static>0</static>
+	            </meta_description>
+	            <description translate="title">
+	                <title>Description</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>210</sort_order>
+	                <static>0</static>
+	            </description>
+	            <short_description translate="title">
+	                <title>Short Description</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>220</sort_order>
+	                <static>0</static>
+	            </short_description>
+	            <custom_design translate="title">
+	                <title>Custom Design</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_product_attribute_source_customdesign</source>
+	                <actions><all/></actions>
+	                <sort_order>230</sort_order>
+	                <static>0</static>
+	            </custom_design>
+	            <custom_design_from translate="title">
+	                <title>Active From</title>
+	                <type>date</type>
+	                <actions><all/></actions>
+	                <sort_order>240</sort_order>
+	                <static>0</static>
+	            </custom_design_from>
+	            <custom_design_to translate="title">
+	                <title>Active To</title>
+	                <type>date</type>
+	                <actions><all/></actions>
+	                <sort_order>250</sort_order>
+	                <static>0</static>
+	            </custom_design_to>
+	            <custom_layout_update translate="title">
+	                <title>Custom Layout Update</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>260</sort_order>
+	                <static>0</static>
+	            </custom_layout_update>
+	            <page_layout translate="title">
+	                <title>Page Layout</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_product_attribute_source_pagelayout</source>
+	                <actions><all/></actions>
+	                <sort_order>270</sort_order>
+	                <static>0</static>
+	            </page_layout>
+	            <is_recurring translate="title">
+	                <title>Enable Recurring Profile</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>280</sort_order>
+	                <static>0</static>
+	            </is_recurring>
+	            <gift_message_available translate="title">
+	                <title>Allow Gift Message</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>290</sort_order>
+	                <static>0</static>
+	            </gift_message_available>
+	        </attributes>
+	    </catalog_product>
+    </entities>
+</config>

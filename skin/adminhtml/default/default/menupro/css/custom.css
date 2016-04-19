@@ -1,0 +1,31 @@
+.tab-content {
+position: relative;
+margin: 0 0 15px;
+padding: 39px 19px 14px;
+background-color: #fff;
+border: 1px solid #ddd;
+border-top:0px;
+-webkit-border-radius: 0 0 4px 4px ;
+-moz-border-radius: 0 0 4px 4px ;
+border-radius: 0 0 4px 4px ;
+}
+#navTab {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+#mcpAdd  .required-label {
+
+}
+#mcpAdd  .required-label:after {
+    color: #e32;
+    content: '*';
+    display:inline;
+}
+.form-horizontal .controls.btn-group{display:block;}
+.radio.btn-group input[type="radio"]{display:none;}
+.radio.btn-group > label:first-of-type {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  margin-left: 0;
+}
+#mcpAdd  .control-label{display:inline!important;}

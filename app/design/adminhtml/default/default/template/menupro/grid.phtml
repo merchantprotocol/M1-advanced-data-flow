@@ -1,0 +1,362 @@
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('menupro/js/jquery.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('menupro/js/jquery-ui-1.8.18.custom.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('menupro/js/bootstrap.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('menupro/js/mst.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('menupro/js/sitemap.js'); ?>"></script>
+<?php 
+$messageObj = new MST_Menupro_Block_Adminhtml_Messages();
+echo $messageObj->showMenuMessage();
+?>
+<div id="menupro_form">
+	<input type="hidden" id="current_active_menu" name='current_active_menu' value="<?php echo Mage::getSingleton('core/session')->getActiveMenuId(); Mage::getSingleton('core/session')->setActiveMenuId('');?>"/>
+	<section class="span3">
+		<div class='tree-menu-list'>
+		<a href="http://www.menucreatorpro.com" target="_blank" style="text-align:center;">
+			<img src="<?php echo $this->getSkinUrl('menupro/images/menucreatorpro.png');?>" alt="" >
+		</a>
+		<?php	
+			/*Display all menu here*/
+			$menu = Mage::getModel("menupro/sitemap")->menuLists();
+			echo $menu;
+		?>
+		</div>
+		<div class="bottom-tree-button">
+			<button type="button" class="btn btn-small btn-primary" onclick="MCP.updateMenu();"><span><span><i class="icon-edit icon-white"></i> Save order position </span></span></button>
+			<button type="button" onclick="MCP.expandAll();" class="btn btn-small btn-info"><span><span>Expand all </span></span></button>
+			<button type="button" onclick="MCP.collapseAll();" class="btn btn-small btn-info"><span><span>Collapse all </span></span></button>
+		</div>
+		<div class='hint'>
+			<span>Hint: Use Ctrl+z to undo a mistake!</span>
+		</div>
+	</section>
+	<section class="span9" id="mcpAdd">
+		<form id="edit_form" method="post" action="<?php echo Mage::helper("adminhtml")->getUrl("menupro/adminhtml_menupro/save/");?>" enctype="multipart/form-data">
+			<div>
+				<?php $adminobj= new Mage_Adminhtml_Block_Template(); ?>
+				<input type="hidden" value="<?php echo $adminobj->getFormKey() ?>" name="form_key">
+				<input type="hidden" value="" name="menu_id" id="menu_id">
+				<input type='hidden' id='separator_line' name='separator_line' value='<?php echo Mage::helper('menupro')->getSeparatorLine(); ?>'/>
+				<?php
+				$baseUrl =  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK);
+				$validUrl = Mage::helper('menupro')->getValidUrl($baseUrl, Mage::app()->getStore()->isCurrentlySecure());
+				$baseUrl = $validUrl;
+				?>
+				<input type='hidden' id='baseurl' name='baseurl' value='<?php echo $baseUrl ?>'/>
+				<input type='hidden' id='skin_baseurl' name='skin_baseurl' value='<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>'/>
+			</div>
+			<legend id='menupto-title'>Manage Menu: New Menu Item</legend>
+			<fieldset>
+				<div class="span5 offset3">
+					<button type="button" class="btn btn-small" onclick="location.reload();"><span><span><i class="icon-plus-sign"></i> Add new </span></span></button>
+					<button type="button" class="btn btn-small btn-primary" onclick="editForm.submit();"><span><span><i class="icon-edit icon-white"></i> Save </span></span></button>
+					<!--<button class="btn btn-small" type="submit"><span><span><i class="icon-check "></i> Save & Close </span></span></button>-->
+					<button type="button" class="btn btn-small btn-danger" onclick="location.reload();"><span><span><i class="icon-remove-sign"></i> Cancel </span></span></button>
+					<a href="http://menucreatorpro.com/wiki" target='_blank' class="btn btn-small btn-info"><span><span><i class="icon-question-sign"></i> Help </span></span></a>
+				</div>
+			
+				<ul class="nav nav-tabs" id="navTab">
+					<li class="active"><a href="#details"><strong>Details</strong></a></li>
+					<li><a href="#advanced"><strong>Advanced options</strong></a></li>
+				</ul>
+				<div class="tab-content">
+				<!-- BEGIN FIRST TAB CONTENT -->
+					<div class="tab-pane active form-horizontal" id="details">
+						<div class="span6">
+							<div class="control-group">
+								<label class="control-label required-label" data-toggle="tooltip" data-placement = "bottom" title="The type of link: CMS Page, Category Page, Form ...">Menu item type </label>
+								<div class="controls">
+								   <select  class="span3 required-entry select" name="type" id="type">
+										<option value = ''>Please select ---</option>
+										<optgroup label="Top url types">
+											<?php
+											$menuTypes = Mage::helper('menupro')->getMenuTypes();
+											foreach($menuTypes as $key => $value){
+												echo "<option value='" . $key . "'>$value</option>";
+											}
+											?>
+										</optgroup>
+										<optgroup label="Most used links">
+											<?php
+											$mostUsedLink = Mage::helper('menupro')->getMostUsedLinks();
+											foreach($mostUsedLink as $key => $value){
+												echo "<option value='" . $key . "'>$value</option>";
+											}
+											?>
+										</optgroup>	
+									</select>
+								</div>
+							</div>
+							
+							<div class="control-group" style="display:none;">
+								<label class="control-label required-label">Select CMS page</label>
+								<div class="controls">
+								   <select  class="span3 required-entry" name="cms_page" id="cms_page">
+										<option value = ''>Please select ---</option>
+										<?php 
+											$cms = Mage::getSingleton("menupro/cms")->getCmsCollectionsForGrid();
+											foreach($cms as $key=>$value){
+												echo "<option value='".$key."'>".$value."</option>";
+											}
+										?>
+									</select>
+								</div>
+							</div>
+							
+							<div class="control-group" style="display:none;">
+								<label class="control-label required-label">Select static block</label>
+								<div class="controls">
+								   <select  class="span3 required-entry" name="static_block" id="static_block">
+										<option value = ''>Please select ---</option>
+										<?php 
+											$staticblock=Mage::getSingleton("menupro/staticblock")->getStaticBlockCollectionsForGrid();
+											foreach ($staticblock as $key=>$value){
+												echo "<option value='".$key."'>".$value."</option>";
+											}
+										?>
+									</select>
+								</div>
+							</div>
+							
+							<div class="control-group" style="display:none;">
+								<label class="control-label required-label">Select category page</label>
+								<div class="controls">
+								   <select  class="span3 required-entry" name="category_id" id="category_id">
+										<option value = ''>Please select ---</option>
+										<?php 
+											$categories = Mage::getModel('menupro/categories')->getCategoryOptions();
+											foreach ($categories as $key=>$value){
+												echo "<option value='".$key."'>".$value."</option>";
+											}
+										?>
+									</select>
+								</div>
+							</div>
+							<div class="control-group" style="display:none;">
+								
+								<div class="controls">
+									<input type="checkbox" style="margin-top: 0px;" tabindex="1" onclick="this.value = this.checked ? 1 : 2;" value="" name="autosub" id="autosub">
+									<span class="autosub-label"> Auto show sub-categories</span>
+								</div>
+							</div>
+							<div class="control-group" style="display:none;">
+								
+								<div class="controls">
+									<input type="checkbox" style="margin-top: 0px;" tabindex="1" onclick="MCP.useCategoryTitle();" value="" name="use_category_title" id="use_category_title">
+									<span class="use-category-title-label"> Change menu title </span>
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label required-label" data-toggle="tooltip" data-placement = "bottom" title="The title of menu item that will display in the menu">Menu title </label>
+								<div class="controls">
+								   <input type="text" id="title" name="title"  class="span3 required-entry" placeholder="Enter title here...">
+								</div>
+							</div>
+                            <div class="control-group">
+								<label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="Enter custom class to apply custom style for this menu. ">Add custom class</label>
+								<div class="controls ">
+									<input type="text" class="span3 input-text" value="" placeholder="class-name-a  class-name-b .." name="class_subfix" id="class_subfix">
+								</div>
+							</div>	
+							<div class="control-group" style="display:none;">
+								<label class="control-label required-label" >Custom url </label>
+								<div class="controls">
+									<input type="hidden" class="" value="" name="url_value" id="url_value">
+									<input type="text" id="custom_urlvalue" value="" name="custom_urlvalue"  class="span3 required-entry" placeholder="Enter url here...">
+								</div>
+							</div>
+							
+							<div class="control-group" style="display:none;">
+								<label class="control-label required-label" >Product Id</label>
+								<div class="controls">
+									<input type="text" id="product_id" value="" name="product_id"  class="span3 required-entry" placeholder="Enter product id...">
+								</div>
+							</div>
+							
+							<div class="control-group">
+								<label class="control-label required-label"  data-toggle="tooltip" data-placement = "bottom" title="Set publication status.">Status </label>
+								<div class="controls ">
+								   <select name='status' id='status' class="span3 required-entry">
+									  <option value = '1'>Enabled</option>
+									  <option value = '2'>Disabled</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label required-label"  data-toggle="tooltip" data-placement = "bottom" title="Select which group of menu will appear in.">Assign menu group</label>
+								<div class="controls ">
+									<select name="group_id" id="group_id" class="span3 required-entry" onchange='MCP.filterByGroupId(this.value); MCP.switchColumnLayout();'>
+										<option value ="">Please select ---</option>
+										<?php 
+										$groupData = Mage::getSingleton('menupro/groupmenu')->getAllGroupArray();
+										foreach ($groupData as $group) {
+											echo "<option menu_type='". $group['menu_type'] ."' value='".$group['value']."'>".$group['label']."</option>";
+										}
+										?>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label required-label"  data-toggle="tooltip" data-placement = "bottom" title="Select a parent item.">Parent item</label>
+								<div class="controls">
+									<select name="parent_id" id="parent_id" class="span3 required-entry" onchange="MCP.switchColumnLayout()">
+										<option value = "">Please select ---</option>
+										<?php 
+											$parentNames = Mage::getModel('menupro/menupro')->getParentOptions();
+											foreach ($parentNames as $key => $value){
+												echo "<option level='". $value['level'] ."' group='".$value['group_id']."' value='".$key."'>".$value['title']."</option>";
+											}
+										?>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label required-label" data-toggle="tooltip" data-placement = "bottom" title="Select which store menu item will appear in.">Visible in</label>
+								<div class="controls">
+								   <?php echo Mage::getModel("menupro/menupro")->storeSwitcherMulti()?>
+								</div>
+							</div>
+							<div class="control-group" style="display:none;">
+								<label class="control-label required-label"  data-toggle="tooltip" data-placement = "bottom" title="Select sub menu items column layout."><span id="column_label">Sub column layout</span></label>
+								<div class="controls ">
+									<select class="span3 required-entry" name="dropdown_columns" id="dropdown_columns">
+										<option value = "">Please select ---</option>
+										<option value = "0">No sub item</option>
+										<option value = "1">1 Column</option>
+										<option value = "2">2 Columns</option>
+										<option value = "3">3 Columns</option>
+										<option value = "4">4 Columns</option>
+										<option value = "5">5 Columns</option>
+										<option value = "6">6 Columns</option>
+										<option value = "7">7 Columns</option> 
+										<option value = "8">8 Columns</option>
+										<option value = "9">9 Columns</option>
+										<option value = "10">10 Columns</option>
+										<option value = "11">11 Columns</option>
+										<option value = "12">12 Columns</option>
+										<option value = "100">Full page width [only item in first level]</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="The option allow to hide the menu title.">Hide text title</label>
+								<div class="controls ">
+									<select class="span3 required-entry" name="hide_sub_header" id="hide_sub_header">
+									  <option value = "2">No</option>
+									  <option value = "1">Yes</option>
+									</select>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				  <!-- END FIRST TAB CONTENT -->
+				  <!-- BEGIN SECOND TAB CONTENT -->
+				  <div class="tab-pane form-horizontal" id="advanced">
+					<div class="span4">
+							<div class="control-group">
+								<label class="control-label" data-toggle="tooltip" data-placement = "bottom" title="The access customer group that is allowed to view this item">Access permission</label>
+								<div class="controls">
+								   <select name="permission" id="permission"  class="span3">
+										<?php 
+										$permissions = Mage::getModel('menupro/permission')->getPermissionCollections();
+										foreach ($permissions as $permission) {
+											echo "<option value='" . $permission['value'] . "'>". $permission['label'] . "</option>";
+										}
+										?>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="Target browser window when item is clicked.">Target window </label>
+								<div class="controls ">
+								   <select class="span3" name="target" id="target">
+										<option value = "1">Parent</option>
+										<option value = "2">New Window</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="Show or hide this menu item on phone devices.">Hide on Phone </label>
+								<div class="controls ">
+								   <select class="span3" name="hide_phone" id="hide_phone">
+										<option value = "2">No</option>
+										<option value = "1">Yes</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="Show or hide this menu item on tablet devices.">Hide on Tablet </label>
+								<div class="controls ">
+								   <select class="span3" name="hide_tablet" id="hide_tablet">
+										<option value = "2">No</option>
+										<option value = "1">Yes</option>
+									</select>
+								</div>
+							</div>
+                            <div class="control-group">
+                                <label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="Search Engine Optimization. Example result: <a href='' title='[Title for SEO]'>Menu title</a> ">Custom link title</label>
+                                <div class="controls ">
+                                    <input type="text" class="span3 input-text" value="" placeholder="Custom item title for SEO" name="description" id="description">
+                                </div>
+                            </div>
+							<div class="control-group">
+								<label class="control-label" data-toggle="tooltip" data-placement = "bottom" title="Upload small image will display beside menu item title">Upload item thumbnail </label>
+								<div class="controls">
+									<input type="file" class="input-file span3" value="" name="image" id="image">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label"  data-toggle="tooltip" data-placement = "bottom" title="Enter font icon class[Example use font icon from font-awesome]">Use font icon instead image thumbnail?</label>
+								<div class="controls ">
+									<input type="text" class="span3 input-text" value="" placeholder="Enter font icon class. eg: fa-home" name="icon_class" id="icon_class">
+								</div>
+							</div>							
+							<div class="control-group">
+								<label class="control-label" data-toggle="tooltip" data-placement = "bottom" title="Enable/Disable the Menu icon.">Show/hide thumbnail</label>
+								<div class="controls">
+								   <select class=" span3" name="image_status" id="image_status">
+									  <option value = "">Please select ---</option>
+									  <option value = "1">Show</option>
+									  <option value = "2">Hide</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" data-toggle="tooltip" data-placement = "bottom" title="Set menu item float left or right. Only apply for first level.">Text Align</label>
+								<div class="controls">
+								   <select class=" span3" name="text_align" id="text_align">
+									  <option value = "left">Left</option>
+									  <option value = "right">Right</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				  <!-- END SECOND TAB CONTENT -->
+				</div>
+				<div class="span5 offset3">
+					<button type="button" class="btn btn-small" onclick="location.reload();"><span><span><i class="icon-plus-sign"></i> Add new </span></span></button>
+					<button type="button" class="btn btn-small btn-primary" onclick="editForm.submit();"><span><span><i class="icon-edit icon-white"></i> Save </span></span></button>
+					<!--<button class="btn btn-small" type="submit"><span><span><i class="icon-check "></i> Save & Close </span></span></button>-->
+					<button type="button" class="btn btn-small btn-danger" onclick="location.reload();"><span><span><i class="icon-remove-sign"></i> Cancel </span></span></button>
+					<a href="http://menucreatorpro.com/wiki-document" target='_blank' class="btn btn-small btn-info"><span><span><i class="icon-question-sign"></i> Help </span></span></a>
+				</div>
+				<script type="text/javascript">
+					
+					var editForm = new varienForm('edit_form', '');
+					
+					var navTab = jQuery.noConflict();
+					navTab(document).ready(function($) {
+						$('#navTab a').click(function (e) {
+							e.preventDefault();
+							$(this).tab('show');
+						})
+						$('.tab-pane label').tooltip();
+					});
+					
+				</script>
+		  </fieldset>
+		</form>
+	</section>
+</div>	

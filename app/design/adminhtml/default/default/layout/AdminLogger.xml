@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminlogger_admin_grid>
+        <reference name="content">
+            <block type="AdminLogger/Grid" name="adminloggertaskgrid" template="AdminLogger/Grid.phtml">
+           </block>
+        </reference>
+    </adminlogger_admin_grid>
+</layout>

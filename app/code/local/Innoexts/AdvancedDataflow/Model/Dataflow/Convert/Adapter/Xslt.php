@@ -129,7 +129,7 @@ class Innoexts_AdvancedDataflow_Model_Dataflow_Convert_Adapter_Xslt extends Mage
         return Mage::getBaseDir().DS.rtrim($this->getXsltPath(), '\\/').DS.$this->getXsltFilename();
     }
     /**
-     * Get 
+     * Get available php functions
      * 
      * @return array
      */
@@ -172,6 +172,7 @@ class Innoexts_AdvancedDataflow_Model_Dataflow_Convert_Adapter_Xslt extends Mage
     protected function debug($output)
     {
         ob_end_clean();
+        if (substr($output, 0, 5) == '<?xml') header('Content-Type: text/xml; charset=utf-8');
         die($output);
     }
     /**
@@ -217,7 +218,6 @@ class Innoexts_AdvancedDataflow_Model_Dataflow_Convert_Adapter_Xslt extends Mage
         $batchModel = Mage::getSingleton('dataflow/batch');
         $io = $batchModel->getIoAdapter();
         $dataFile = $io->getFile(true);
-        # $dataFile = Mage::getBaseDir().'/var/export/orders.xml';
         try {
             $resource = $this->getResource();
             $this->loadDomDocument($dataFile);
@@ -231,11 +231,6 @@ class Innoexts_AdvancedDataflow_Model_Dataflow_Convert_Adapter_Xslt extends Mage
             } else {
                 $output = $domDocument->saveHTML();
             }
-            /*
-            ob_end_clean();
-            header('Content-Type: text/xml; charset=utf-8');
-            die($output);
-            */
             $io->open(true);
             $io->write($output);
             $io->close();

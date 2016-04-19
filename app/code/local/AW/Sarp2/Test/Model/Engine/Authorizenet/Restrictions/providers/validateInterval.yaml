@@ -1,0 +1,100 @@
+-
+  - days
+  - 1
+  - false
+-
+  - days
+  - 6
+  - false
+-
+  - days
+  - 7
+  - true
+-
+  - days
+  - 365
+  - true
+-
+  - days
+  - 0
+  - false
+-
+  - days
+  - -1
+  - false
+-
+  - days
+  - 366
+  - false
+-
+  - months
+  - 1
+  - true
+-
+  - months
+  - 12
+  - true
+-
+  - months
+  - 0
+  - false
+-
+  - months
+  - 13
+  - false
+-
+  - months
+  - -1
+  - false
+-
+  - fake
+  - -1
+  - false
+-
+  - fake
+  - 0
+  - false
+-
+  - fake
+  - 1
+  - false
+-
+  - fake
+  - 12
+  - false
+-
+  - fake
+  - 365
+  - false
+-
+  - fake
+  - 366
+  - false
+-
+  - years
+  - 1
+  - false
+-
+  - weeks
+  - 1
+  - false
+-
+  - day
+  - 7
+  - false
+-
+  - week
+  - 1
+  - false
+-
+  - month
+  - 1
+  - false
+-
+  - 7
+  - days
+  - false
+-
+  - 1
+  - months
+  - false

@@ -1,0 +1,24 @@
+-
+  - 0
+  - false
+-
+  - 1
+  - true
+-
+  - 0.1
+  - true
+-
+  - -5
+  - false
+-
+  - string
+  - false
+-
+  - 10001
+  - true
+-
+  - 55
+  - true
+-
+  - 55.55
+  - true

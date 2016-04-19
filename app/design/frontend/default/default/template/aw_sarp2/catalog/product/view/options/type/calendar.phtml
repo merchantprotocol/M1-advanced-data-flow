@@ -1,0 +1,92 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This software is designed to work with Magento community edition and
+ * its use on an edition other than specified is prohibited. aheadWorks does not
+ * provide extension support in case of incorrect edition use.
+ * =================================================================
+ *
+ * @category   AW
+ * @package    AW_Sarp2
+ * @version    2.0.3
+ * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ */
+?><script type="text/javascript">
+    // Calendar fix
+    if (window.calendarSetupObject) {
+        <?php if ($this->isDisablePreviousDates()): ?>
+        calendarSetupObject.dateStatusFunc = function (date) {
+            var now = new Date();
+            now.setHours(0, 0, 0, 0);
+            date.setHours(0, 0, 0, 0);
+            return (date.getTime() < now.getTime());
+        };
+        <?php endif; ?>
+        <?php if (!$this->isShowsTime()): ?>
+        calendarSetupObject.showsTime = false;
+        <?php endif; ?>
+        Calendar.setup(calendarSetupObject);
+    }
+
+    // Validation fix
+    Validation.addAllThese(
+        [
+            ['validate-datetime-<?php echo AW_Sarp2_Helper_Subscription::SUBSCRIPTION_START_DATE_PRODUCT_OPTION_ID ?>', 'This is a required option', function (v) {
+                var selectedPeriodElement = Form.getInputs('product_addtocart_form', 'radio', 'options[<?php echo AW_Sarp2_Helper_Subscription::SUBSCRIPTION_TYPE_SELECTOR_PRODUCT_OPTION_ID ?>]').find(
+                    function (el) {
+                        return el.checked;
+                    }
+                );
+                var selectedPeriod = selectedPeriodElement.getValue();
+                if (selectedPeriod != 0) {
+                    var dateTimeParts = $$('.datetime-picker[id^="options_-3722"]');
+                    for (var i = 0; i < dateTimeParts.length; i++) {
+                        if (dateTimeParts[i].value == "") return false;
+                    }
+                }
+                return true;
+            }]
+        ]
+    );
+
+    // Hide calendar
+    var awSarp2SelectPeriodOptionWrapper = $('options-<?php echo AW_Sarp2_Helper_Subscription::SUBSCRIPTION_TYPE_SELECTOR_PRODUCT_OPTION_ID ?>-list');
+    var awSarp2SelectPeriodGroup = awSarp2SelectPeriodOptionWrapper.up('dd');
+    var awSarp2CalendarLabelContainer = awSarp2SelectPeriodGroup.next('dt');
+    var awSarp2CalendarInputContainer = awSarp2SelectPeriodGroup.next('dd');
+    var awSarp2TypeChanged = function () {
+        if (this.getValue() == 0) {
+            awSarp2CalendarInputContainer && awSarp2CalendarInputContainer.hide();
+            awSarp2CalendarLabelContainer && awSarp2CalendarLabelContainer.hide();
+            awSarp2SelectPeriodGroup.addClassName('last');
+        } else {
+            awSarp2CalendarInputContainer && awSarp2CalendarInputContainer.show();
+            awSarp2CalendarLabelContainer && awSarp2CalendarLabelContainer.show();
+            awSarp2SelectPeriodGroup.removeClassName('last');
+        }
+    };
+
+    $$('#product-options-wrapper input[type=radio][name^=options[<?php echo AW_Sarp2_Helper_Subscription::SUBSCRIPTION_TYPE_SELECTOR_PRODUCT_OPTION_ID ?>]]').each(function (option) {
+        option.observe('click', awSarp2TypeChanged.bind(option));
+    });
+</script>
+
+<style type="text/css">
+    /* Style fix for EE */
+    .calendar .disabled:after {
+        background-color: transparent !important;
+        content: none;
+    }
+</style>

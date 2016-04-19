@@ -1,0 +1,64 @@
+-
+  - now
+  - UTC
+  - true
+-
+  - now
+  - Europe/Minsk
+  - true
+-
+  - +5 hours
+  - UTC
+  - true
+-
+  - +5 hours
+  - Europe/Minsk
+  - true
+-
+  - +1 week
+  - UTC
+  - true
+-
+  - +1 week
+  - Europe/Minsk
+  - true
+-
+  - +1 week 3 days 7 hours 5 seconds
+  - UTC
+  - true
+-
+  - +1 week 3 days 7 hours 5 seconds
+  - Europe/Minsk
+  - true
+-
+  - next Monday
+  - UTC
+  - true
+-
+  - next Monday
+  - Europe/Minsk
+  - true
+-
+  - today
+  - UTC
+  - true
+-
+  - today
+  - Europe/Minsk
+  - true
+-
+  - yesterday
+  - UTC
+  - false
+-
+  - yesterday
+  - Europe/Minsk
+  - false
+-
+  - tomorrow
+  - UTC
+  - true
+-
+  - tomorrow
+  - Europe/Minsk
+  - true

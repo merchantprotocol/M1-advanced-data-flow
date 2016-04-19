@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <mobiletracking translate="label">
+            <label>Mobile Order Tracking</label>
+            <tab>awall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>101</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General settings</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>4</sort_order>
+                    <fields>   
+                   
+                        <tracking_icon translate="label">
+							<label>Image</label>
+							<frontend_type>image</frontend_type>
+							<backend_model>adminhtml/system_config_backend_image</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">aw_mobiletracking</upload_dir>
+                            <comment>Allowed file types: PNG, GIF, JPG, and JPEG</comment>
+							<base_url type="media" scope_info="1">aw_mobiletracking</base_url>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tracking_icon>
+                    
+                        <tracking_url translate="label comment">  
+                            <label>Order tracking URL</label>
+                            <comment><![CDATA[Layout directive]]></comment>
+                            <frontend_type>note</frontend_type>                             
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                        </tracking_url>
+                    </fields>
+                </general>                
+            </groups>
+        </mobiletracking>
+    </sections>
+</config>

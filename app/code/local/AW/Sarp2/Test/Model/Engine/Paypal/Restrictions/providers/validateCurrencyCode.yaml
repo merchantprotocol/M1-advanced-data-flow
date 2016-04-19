@@ -1,0 +1,64 @@
+#Australian Dollar
+-
+  - AUD
+  - true
+#Canadian Dollar
+-
+  - CAD
+  - true
+#Czech Koruna
+-
+  - CZK
+  - true
+#Danish Krone
+-
+  - DKK
+  - true
+#Euro
+-
+  - EUR
+  - true
+#Hong Kong Dollar
+-
+  - HKD
+  - true
+#Hungarian Forint
+-
+  - HUF
+  - true
+#Japanese Yen
+-
+  - JPY
+  - true
+#Norwegian Krone
+-
+  - NOK
+  - true
+#New Zealand Dollar
+-
+  - NZD
+  - true
+#Polish Zloty
+-
+  - PLN
+  - true
+#Pound Sterling
+-
+  - GBP
+  - true
+#Singapore Dollar
+-
+  - SGD
+  - true
+#Swedish Krona
+-
+  - SEK
+  - true
+#Swiss Franc
+-
+  - CHF
+  - true
+#U.S. Dollar
+-
+  - USD
+  - true

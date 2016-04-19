@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <bannerpro_adminhtml_bannerpro_index>
+        <reference name="content">
+            <block type="bannerpro/adminhtml_bannerpro" name="bannerpro" />
+        </reference>
+    </bannerpro_adminhtml_bannerpro_index>
+</layout>

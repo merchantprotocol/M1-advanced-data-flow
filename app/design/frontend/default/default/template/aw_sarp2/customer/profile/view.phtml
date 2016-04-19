@@ -1,0 +1,64 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This software is designed to work with Magento community edition and
+ * its use on an edition other than specified is prohibited. aheadWorks does not
+ * provide extension support in case of incorrect edition use.
+ * =================================================================
+ *
+ * @category   AW
+ * @package    AW_Sarp2
+ * @version    2.0.3
+ * @copyright  Copyright (c) 2010-2012 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/AW-LICENSE.txt
+ */
+?><?php echo $this->getMessagesBlock()->toHtml(); ?>
+<?php $profile = $this->getProfile(); ?>
+<div class="page-title title-buttons">
+    <h1><?php echo $this->__('Subscription #%s', $profile->getReferenceId()); ?></h1>
+    <?php echo $this->getChildHtml('buttons'); ?>
+</div>
+<dl class="order-info">
+    <dt><?php echo $this->__('About This Profile:') ?></dt>
+    <dd>
+        <ul id="order-info-tabs">
+            <li class="current"><strong><?php echo $this->__('Subscription Information'); ?></strong></li>
+            <li><a href="<?php echo $this->getUrl('*/*/orders', array('_current' => true)); ?>"><?php echo $this->__('Related Orders'); ?></a></li>
+        </ul>
+    </dd>
+</dl>
+<div class="col2-set order-info-box">
+    <div class="col-1">
+        <?php echo $this->getReferenceHtml(); ?>
+    </div>
+    <div class="col-2">
+        <?php echo $this->getPurchaseHtml(); ?>
+    </div>
+</div>
+<div class="col2-set order-info-box">
+    <div class="col-1">
+        <?php echo $this->getScheduleHtml(); ?>
+    </div>
+    <div class="col-2">
+        <?php echo $this->getPaymentsHtml(); ?>
+    </div>
+</div>
+<div class="col2-set order-info-box">
+    <div class="col-1">
+        <?php echo $this->getBillingHtml(); ?>
+    </div>
+    <div class="col-2">
+        <?php echo $this->getShippingHtml(); ?>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default >
+        <reference name="head" >
+            <action method="addItem"><type>skin_js</type><name>menupro/js/jquery.touchwipe.1.1.1.js</name></action>
+            <action method="addItem" ifconfig="menupro/setting/enable" ><type>skin_js</type><name>menupro/js/responsive_menu.js</name></action>
+            <action method="addItem" ifconfig="menupro/setting/enable" ><type>skin_css</type><name>menupro/css/menu-creator-pro.css</name></action><action method="addItem" ifconfig="menupro/setting/enable" ><type>skin_css</type><name>menupro/css/ie7.css</name><params/><if>lt IE 8</if></action>			
+            <action method="addItem" ifconfig="menupro/setting/sidemenu" ><type>skin_js</type><name>menupro/js/jquery.sidr.min.js</name></action>
+            <action method="addItem" ifconfig="menupro/setting/sidemenu" ><type>skin_css</type><name>menupro/css/jquery.sidr.light.css</name></action>
+			
+	</reference>
+            <!-- SAMPLE XML TO REPLACE DEFAULT TOP MENU -->
+            <!-- <reference name="top.menu" >
+                    <action method="unsetChild"  ifconfig="menupro/setting/enable"><name>catalog.topnav</name></action>
+
+                    <block type="menupro/menu" ifconfig="menupro/setting/enable" name="menupro_dropdown"  template="menupro/menupro.phtml" >
+                            <action method="setData" ifconfig="menupro/setting/enable"><name>group_id</name><value>1</value></action>
+                    </block>
+        </reference> -->
+    </default>
+</layout>   

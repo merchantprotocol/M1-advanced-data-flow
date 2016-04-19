@@ -115,9 +115,7 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order_Xml extends Inn
                     }
                 }
             }
-            if (count($itemsRows)) {
-                $row['items'] = $itemsRows;
-            }
+            if (count($itemsRows)) $row['items'] = $itemsRows;
             $paymentExcludeFields = array('payment_authorization_amount', 'payment_authorization_expiration');
             $paymentRow = $this->extractRowFields($row, 'payment', $paymentExcludeFields);
             if (count($paymentRow)) {
@@ -125,7 +123,6 @@ class Innoexts_AdvancedDataflow_Model_Sales_Convert_Parser_Order_Xml extends Inn
                 $row['payment'] = $paymentRow;
             }
             $io->write($this->arrayToXml(array($this->getEntityTag() => $row, ), 1));
-            unset($row);
         }
         $io->write($this->getFooterXml());
         $io->close();

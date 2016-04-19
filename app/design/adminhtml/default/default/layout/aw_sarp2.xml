@@ -1,0 +1,156 @@
+<layout version="0.1.0">
+    <aw_recurring_admin_adminhtml_subscription_type_index>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_subscription_type" />
+        </reference>
+    </aw_recurring_admin_adminhtml_subscription_type_index>
+    <aw_recurring_admin_adminhtml_subscription_type_new>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>aw_sarp2/js/aw_engine.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_subscription_type_new" name="type_new" />
+        </reference>
+        <reference name="left">
+            <block type="aw_sarp2/adminhtml_subscription_type_new_tabs" name="type_new_tabs">
+                <block type="aw_sarp2/adminhtml_subscription_type_new_tab_settings" name="tab_settings" />
+                <action method="addTab"><name>type_settings</name><block>tab_settings</block></action>
+            </block>
+        </reference>
+    </aw_recurring_admin_adminhtml_subscription_type_new>
+    <aw_recurring_admin_adminhtml_subscription_type_edit>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>aw_sarp2/js/aw_field_dependence.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_subscription_type_edit" name="type_edit" />
+        </reference>
+        <reference name="left">
+            <block type="aw_sarp2/adminhtml_subscription_type_edit_tabs" name="type_edit_tabs">
+                <block type="aw_sarp2/adminhtml_subscription_type_edit_tab_general" name="tab_general" />
+                <action method="addTab"><name>type_general</name><block>tab_general</block></action>
+                <block type="aw_sarp2/adminhtml_subscription_type_edit_tab_schedule" name="tab_schedule" />
+                <action method="addTab"><name>type_schedule</name><block>tab_schedule</block></action>
+                <block type="aw_sarp2/adminhtml_subscription_type_edit_tab_profiles" name="tab_profiles">
+                    <block type="aw_sarp2/adminhtml_subscription_type_edit_tab_profiles_grid" name="profiles_grid" />
+                </block>
+                <action method="addTab"><name>type_profiles</name><block>tab_profiles</block></action>
+            </block>
+        </reference>
+    </aw_recurring_admin_adminhtml_subscription_type_edit>
+    <aw_recurring_admin_adminhtml_subscription_type_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aw_sarp2/adminhtml_subscription_type_edit_tab_profiles_grid" name="profiles_grid" />
+        </block>
+    </aw_recurring_admin_adminhtml_subscription_type_grid>
+    <aw_recurring_admin_adminhtml_subscription_index>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_subscription" />
+        </reference>
+    </aw_recurring_admin_adminhtml_subscription_index>
+    <aw_recurring_admin_adminhtml_subscription_new>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_subscription_new" />
+        </reference>
+    </aw_recurring_admin_adminhtml_subscription_new>
+    <aw_recurring_admin_adminhtml_subscription_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aw_sarp2/adminhtml_subscription_new_grid" name="product_grid" />
+        </block>
+    </aw_recurring_admin_adminhtml_subscription_grid>
+    <aw_recurring_admin_adminhtml_subscription_edit>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>aw_sarp2/js/aw_type.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>aw_sarp2/js/aw_field_dependence.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_subscription_edit" name="subscription_edit" />
+        </reference>
+        <reference name="left">
+            <block type="aw_sarp2/adminhtml_subscription_edit_tabs" name="subscription_edit_tabs">
+                <block type="aw_sarp2/adminhtml_subscription_edit_tab_general" name="tab_general" />
+                <action method="addTab"><name>subscription_general</name><block>tab_general</block></action>
+                <block type="aw_sarp2/adminhtml_subscription_edit_tab_types" name="tab_types" />
+                <action method="addTab"><name>subscription_types</name><block>tab_types</block></action>
+            </block>
+        </reference>
+    </aw_recurring_admin_adminhtml_subscription_edit>
+    <aw_recurring_admin_adminhtml_profile_index>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_profile" />
+        </reference>
+    </aw_recurring_admin_adminhtml_profile_index>
+    <aw_recurring_admin_adminhtml_profile_view>
+        <reference name="content">
+            <block type="aw_sarp2/adminhtml_profile_view" name="profile_view" />
+        </reference>
+        <reference name="left">
+            <block type="aw_sarp2/adminhtml_profile_view_tabs" name="profile_view_tabs">
+                <block type="aw_sarp2/adminhtml_profile_view_tab_info" name="tab_info" template="aw_sarp2/profile/view/tab/info.phtml">
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_info_reference" name="reference" />
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_info_purchase" name="purchase" />
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_info_schedule" name="schedule" />
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_info_payments" name="payments" />
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_info_billing" name="billing" />
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_info_shipping" name="shipping" />
+                </block>
+                <action method="addTab"><name>profile_info</name><block>tab_info</block></action>
+                <block type="aw_sarp2/adminhtml_profile_view_tab_orders" name="tab_orders">
+                    <block type="aw_sarp2/adminhtml_profile_view_tab_orders_grid" name="orders_grid" />
+                </block>
+                <action method="addTab"><name>profile_orders</name><block>tab_orders</block></action>
+            </block>
+        </reference>
+    </aw_recurring_admin_adminhtml_profile_view>
+    <aw_recurring_admin_adminhtml_profile_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aw_sarp2/adminhtml_profile_view_tab_orders_grid" name="orders_grid" />
+        </block>
+    </aw_recurring_admin_adminhtml_profile_grid>
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+            <block type="aw_sarp2/adminhtml_customer_edit_tab_profiles" name="tab_profiles">
+                <block type="aw_sarp2/adminhtml_customer_edit_tab_profiles_grid" name="profiles_grid" />
+            </block>
+            <action method="addTab"><name>customer_profiles</name><block>tab_profiles</block></action>
+        </reference>
+    </adminhtml_customer_edit>
+    <aw_recurring_admin_adminhtml_customer_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aw_sarp2/adminhtml_customer_edit_tab_profiles_grid" name="profiles_grid" />
+        </block>
+    </aw_recurring_admin_adminhtml_customer_grid>
+
+    <adminhtml_system_config_edit>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>aw_sarp2/js/aw_flushbutton.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>aw_sarp2/css/config.css</name></action>
+        </reference>
+    </adminhtml_system_config_edit>
+    <default>
+        <reference name="root">
+            <block type="adminhtml/notification_toolbar"
+                   name="notification_toolbar"
+                   as="notification_toolbar"
+                   template="aw_sarp2/notification/toolbar.phtml">
+                <block type="adminhtml/notification_toolbar"
+                       name="real_notification_toolbar"
+                       as="native_notification_toolbar"
+                       acl="system/adminnotification/show_toolbar"
+                       template="notification/toolbar.phtml" />
+            </block>
+        </reference>
+    </default>
+</layout>

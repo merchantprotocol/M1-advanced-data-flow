@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MST_Menupro>
+            <version>4.0.5</version>
+        </MST_Menupro>
+    </modules>
+    <frontend>
+        <routers>
+            <menupro>
+                <use>standard</use>
+                <args>
+                    <module>MST_Menupro</module>
+                    <frontName>menupro</frontName>
+                </args>
+            </menupro>
+        </routers>
+        <layout>
+            <updates>
+                <menupro>
+                    <file>menupro.xml</file>
+                </menupro>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <menupro>
+                <use>admin</use>
+                <args>
+                    <module>MST_Menupro</module>
+                    <frontName>menupro</frontName>
+                </args>
+            </menupro>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <menupro module="menupro">
+                <title>MenuPro</title>
+                <sort_order>71</sort_order>
+                <children>
+					<manage_group>
+						<title>Manage Menu Groups</title>
+                        <sort_order>1</sort_order>
+						<children>
+							<newgroup module="menupro">
+								<title>Add New Menu Group</title>
+								<sort_order>10</sort_order>
+								<action>menupro/adminhtml_groupmenu/new</action>
+							</newgroup>
+							<groupmenu module="menupro">
+								<title>Manage Menu Groups</title>
+								<sort_order>20</sort_order>
+								<action>menupro/adminhtml_groupmenu/index</action>
+							</groupmenu>
+						</children>
+					</manage_group>
+                    <menupro module="menupro">
+                        <title>Manage Menu Items</title>
+                        <sort_order>30</sort_order>
+                        <action>menupro/adminhtml_menupro</action>
+                    </menupro>
+                    <setting module="menupro">
+                        <title>MCP Setting</title>
+                        <sort_order>40</sort_order>
+                        <action>adminhtml/system_config/edit/section/menupro</action>
+                    </setting>
+                </children>
+            </menupro>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+						<menupro module="menupro">
+							<title>MenuPro</title>
+							<sort_order>71</sort_order>
+							<children>
+								<manage_group>
+									<title>Manage Menu Groups</title>
+									<sort_order>1</sort_order>
+									<children>
+										<newgroup module="menupro">
+											<title>Add New Menu Group</title>
+											<sort_order>10</sort_order>
+											<action>menupro/adminhtml_groupmenu/new</action>
+										</newgroup>
+										<groupmenu module="menupro">
+											<title>Manage Menu Groups</title>
+											<sort_order>20</sort_order>
+											<action>menupro/adminhtml_groupmenu/index</action>
+										</groupmenu>
+									</children>
+								</manage_group>
+								<menupro module="menupro">
+									<title>Manage Menu Items</title>
+									<sort_order>30</sort_order>
+									<action>menupro/adminhtml_menupro</action>
+								</menupro>
+								<setting module="menupro">
+									<title>MenuPro Setting</title>
+									<sort_order>40</sort_order>
+									<action>adminhtml/system_config/edit/section/menupro</action>
+								</setting>
+							</children>
+						</menupro>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <menupro>
+                    <file>menupro.xml</file>
+                </menupro>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <models>
+            <menupro>
+                <class>MST_Menupro_Model</class>
+                <resourceModel>menupro_mysql4</resourceModel>
+            </menupro>
+            <menupro_mysql4>
+                <class>MST_Menupro_Model_Mysql4</class>
+                <entities>
+                    <menupro>
+                        <table>menupro</table>
+                    </menupro>
+                    <groupmenu>
+                        <table>groupmenu</table>
+                    </groupmenu>
+					<license>
+                        <table>menupro_license</table>
+                    </license>
+                </entities>
+            </menupro_mysql4>
+        </models>
+        <resources>
+            <menupro_setup>
+                <setup>
+                    <module>MST_Menupro</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </menupro_setup>
+            <menupro_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </menupro_write>
+            <menupro_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </menupro_read>
+        </resources>
+        <blocks>
+            <menupro>
+                <class>MST_Menupro_Block</class>
+            </menupro>
+        </blocks>
+        <helpers>
+            <menupro>
+                <class>MST_Menupro_Helper</class>
+            </menupro>
+        </helpers>
+    </global>
+	<default>
+		<menupro>
+			<setting>                
+				<enable>1</enable>         
+				<jquery>1</jquery>         
+				<sidemenu>1</sidemenu>         
+			</setting>
+			<performance>
+				<develop_mode>1</develop_mode>
+			</performance>
+		</menupro>
+	</default>
+</config>

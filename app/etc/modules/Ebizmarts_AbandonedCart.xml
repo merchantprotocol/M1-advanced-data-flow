@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * https://github.com/ebizmarts/magemonkey
+ */
+  -->
+<config>
+    <modules>
+        <Ebizmarts_AbandonedCart>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Ebizmarts_AbandonedCart>
+    </modules>
+</config>

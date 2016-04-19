@@ -1,0 +1,18 @@
+-
+  - Active
+  - true
+-
+  - Pending
+  - true
+-
+  - Cancelled
+  - true
+-
+  - Suspended
+  - true
+-
+  - Expired
+  - true
+-
+  - Custom
+  - false

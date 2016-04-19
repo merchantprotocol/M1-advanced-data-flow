@@ -1,0 +1,24 @@
+-
+  - {firstname: John, lastname: Doe, company: aheadWorks, street1: Leninskay N, city: Mogilev, region_id: MG, postcode: 123435, country: Republic of Belarus}
+  - true
+-
+  - {firstname: Longname51Longname51Longname51Longname51Longname511, lastname: Doe, company: aheadWorks, street1: Leninskay N, city: Mogilev, region_id: MG, postcode: 123435, country: Republic of Belarus}
+  - false
+-
+  - {firstname: John, lastname: Longname51Longname51Longname51Longname51Longname511, company: aheadWorks, street1: Leninskay N, city: Mogilev, region_id: MG, postcode: 123435, country: Republic of Belarus}
+  - false
+-
+  - {firstname: John, lastname: Doe, company: Longname51Longname51Longname51Longname51Longname511, street1: Leninskay N, city: Mogilev, region_id: MG, postcode: 123435, country: Republic of Belarus}
+  - false
+-
+  - {firstname: John, lastname: Doe, company: aheadWorks, street1: Longname61Longname61Longname61Longname61Longname61Longname611, city: Mogilev, region_id: MG, postcode: 123435, country: Republic of Belarus}
+  - false
+-
+  - {firstname: John, lastname: Doe, company: aheadWorks, street1: Leninskay N, city: Longname41Longname41Longname41Longname411, region_id: MGLONG, postcode: 123435, country: Republic of Belarus}
+  - false
+-
+  - {firstname: John, lastname: Doe, company: aheadWorks, street1: Leninskay N, city: Mogilev, region_id: MG, postcode: Longname21Longname211, country: Republic of Belarus}
+  - false
+-
+  - {firstname: John, lastname: Doe, company: aheadWorks, street1: Leninskay N, city: Mogilev, region_id: MG, postcode: 123435, country: Longname61Longname61Longname61Longname61Longname61Longname611}
+  - false

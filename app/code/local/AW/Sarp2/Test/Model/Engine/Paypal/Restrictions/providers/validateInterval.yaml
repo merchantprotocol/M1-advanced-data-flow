@@ -1,0 +1,80 @@
+-
+  - Day
+  - 0
+  - false
+-
+  - Day
+  - 1
+  - true
+-
+  - Day
+  - 365
+  - true
+-
+  - Day
+  - 370
+  - false
+-
+  - Week
+  - 0
+  - false
+-
+  - Week
+  - 1
+  - true
+-
+  - Week
+  - 52
+  - true
+-
+  - Week
+  - 53
+  - false
+-
+  - SemiMonth
+  - 0
+  - false
+-
+  - SemiMonth
+  - 1
+  - true
+-
+  - SemiMonth
+  - 2
+  - false
+-
+  - Month
+  - 0
+  - false
+-
+  - Month
+  - 1
+  - true
+-
+  - Month
+  - 12
+  - true
+-
+  - Month
+  - 13
+  - false
+-
+  - Year
+  - 0
+  - false
+-
+  - Year
+  - 1
+  - true
+-
+  - Year
+  - 2
+  - false
+-
+  - Custom
+  - 1
+  - false
+-
+  - Custom
+  - 0
+  - false

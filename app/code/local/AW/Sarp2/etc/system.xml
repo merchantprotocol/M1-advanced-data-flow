@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <aw_sarp2 module="aw_sarp2">
+            <label>Subscriptions and Recurring Payments</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <subscription_engine translate="label">
+                            <label>Subscription Engine</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>aw_sarp2/source_engine</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </subscription_engine>
+                    </fields>
+                </settings>
+                <advanced translate="label">
+                    <label>Advanced Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <flushbutton>
+                            <frontend_model>aw_sarp2/adminhtml_system_configuration_flushbutton</frontend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </flushbutton>
+                    </fields>
+                </advanced>
+            </groups>
+        </aw_sarp2>
+        <payment>
+            <groups>
+                <authorizenet>
+                    <fields>
+                        <md5_hash translate="label">
+                            <label>MD5 Hash value</label>
+                            <frontend_type>obscure</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </md5_hash>
+                    </fields>
+                </authorizenet>
+            </groups>
+        </payment>
+    </sections>
+</config>
