@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Enigma_All>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Enigma_All>
-    </modules>
-</config>

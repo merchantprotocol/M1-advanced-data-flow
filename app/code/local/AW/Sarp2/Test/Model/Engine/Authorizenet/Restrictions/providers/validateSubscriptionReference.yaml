@@ -1,9 +1,0 @@
--
-  - validReferenceName
-  - true
--
-  - invalidReferenceNameWithSizeMoreThan20Symbols
-  - false
--
-  - validReferenceName20
-  - true

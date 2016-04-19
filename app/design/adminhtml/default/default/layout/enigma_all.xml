@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<layout>
-	<default>
-        <reference name="head">
-        	<action method="addCss"><name>enigma_all/css/window.css</name></action>            
-        </reference>
-    </default>
-</layout>	

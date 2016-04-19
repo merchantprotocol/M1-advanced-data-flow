@@ -1,9 +1,0 @@
--
-  - validReferenceName
-  - true
--
-  - invalidReferenceNameWithSizeMoreThan50Symbols11111123
-  - false
--
-  - validReferenceNameWith50Symols11111111111111111111
-  - true

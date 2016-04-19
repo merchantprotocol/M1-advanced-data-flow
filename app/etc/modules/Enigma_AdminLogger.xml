@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Enigma_AdminLogger>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Enigma_AdminLogger>
-    </modules>
-</config> 
