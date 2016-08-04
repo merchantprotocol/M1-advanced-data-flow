@@ -1,9 +1,0 @@
-<?php
-$groupId = $this->getGroupId ();
-if ($this->helper('menupro')->isDevelopMode()) {
-	echo "<nav id='navigation'>";
-	echo $this->getMenuHtml($groupId);
-	echo "</nav>";
-} else {
-	echo $this->getStaticHtml($groupId);
-}

@@ -1,32 +1,58 @@
-# M1-advanced-data-flow
+# Magento v1x New Extension Configuration
 
-Data exchange occupies a special place in the electronic commerce. It requires much attention and time. Therefore import / export of data should be automated as much as possible. Magento provides simple wizard-like tool for generation of some basic import / export profiles operating on products or customers entities. Magento migration processes are introduced with profiles. Each profile is a combination of actions (adapters / parsers / mappers) to transfer data from one format into another. The Magento enables customers and products (with or without an inventory) to be exported / imported using CSVM or Excel XML formats. The Advanced Dataflow Magento extension is a set of additional adapters and parsers to increase Magento Dataflow flexibility. This dataflow advanced profile extends default bounds to cover more requirements. The most essential Advanced Dataflow feature is orders import and export. It appends orders to list of available entities to migrate. Facilitate your e-business with this Magento module. Make your data exchange process with offline sale management system more flexible.
+Drop this into each new extension repository to provide it with all of the files necessary for users. This repository shall contain licensing information, general installation and uninstallation notes necessary for the user.
 
-[InnoExts.com Product Listing](http://innoexts.com/promotion/advanced-dataflow/)
-[New Demo Server](http://demo.merchantprotocol.com/M1-advanced-data-flow)
+## Version Control
 
-## Features
- - Orders import and export
- - Orders profiles builder
- - XML format introduced
- - XSLT adapter to convert XML into custom CSV / XML format
- - CURL HTTP adapters
- - Date / Time IO adapter version
- - XSL templates samples
+This change log and release versions will be managed according to [keepachangelog.com](http://keepachangelog.com/) and [Semantic Versioning 2.0.0](http://semver.org/).  **Magento.Major.Minor.Fixes**
 
-## Requirements
-    Magento	1.5.0.1, 1.5.1.0, 1.6.0.0, 1.6.1.0, 1.6.2.0
+## Magento Compatible Versions
 
-## Compatibility
-Extension | bool
------|-----
-Multi-Warehouse | Yes
-Multi-Warehouse Plus | Yes
-Zones Manager | No
-Customer Groups Manager | No
-Advanced Pricing | Yes
-Currency Pricing | Yes
-Zone Pricing | Yes
-Store View Pricing | Yes
-Currency Geo Filter | Yes
-Shipping Table Rates | Yes
+* *Magento Enterprise Edition* **1.13.x** ~ **1.14.x**
+* *Magento Community Edition* **1.6.x** ~ **1.9.x**
+
+## System Requirements
+
+* PHP 5.4 >
+
+## Installation
+
+### Installation with [Modman](https://github.com/colinmollenhour/modman)
+
+In the Magento root folder start a modman repository:
+
+```bash
+modman init
+```
+
+Clone the module directly from github repository:
+
+```bash
+modman clone git@github.com:merchantprotocol/M1.git
+```
+
+### Manual installation
+
+Clone the project in any folder on your computer and copy the entire contents of the src folder in the Magento root directory:
+
+```bash
+cp -R path/module/src/* magento/path/
+```
+
+## Contributing
+
+1. Create a fork!
+2. Create a branch for the features: `git checkout -b my-new-feature`
+3. Make commit yours changes: `git commit -am 'Add some feature'`
+4. Give a push to branch: `git push origin my-new-feature`
+5. Create a pull request
+
+## Credits
+
+Author||Version
+--- | --- | ---
+**Jonathon Byrd** | jonathon@merchantprotocol.com | `1.0.0.0`
+
+## License
+
+All code is protected and belongs to **Merchant Protocol**.
