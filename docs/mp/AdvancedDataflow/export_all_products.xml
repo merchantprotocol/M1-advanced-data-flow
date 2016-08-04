@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>steve_4</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>69.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>69.9900</minimal_price>
+		<name>Steven by Steve Madden Pryme Pump</name>
+		<url_key>steven-by-steve-madden-pryme-pump-4</url_key>
+		<meta_title>Steven by Steve Madden Pryme Pump</meta_title>
+		<meta_description>Steven by Steve Madden Pryme Pump</meta_description>
+		<thumbnail>/s/t/steven-by-steve-madden-pryme-pump-4.jpg</thumbnail>
+		<small_image>/s/t/steven-by-steve-madden-pryme-pump-3.jpg</small_image>
+		<image>/s/t/steven-by-steve-madden-pryme-pump-2.jpg</image>
+		<manufacturer>Steve Madden</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>steven-by-steve-madden-pryme-pump-4.html</url_path>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<shoe_size>4</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<custom_layout_update></custom_layout_update>
+		<model>B000NOGIKY</model>
+		<description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe. It also features smooth linings, a fully cushioned insole, a sexy covered stiletto heel, and a lightly textured dress leather outsole. Any way you wear the Pryme, you're certain to catch a lot of attention.</description>
+		<in_depth>A prime example of chic style. Patent leather upper. Round toe. 3-1/2 inch covered heel. Flex leather sole. Imported.</in_depth>
+		<meta_keyword>Steven by Steve Madden Pryme Pump</meta_keyword>
+		<short_description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe</short_description>
+		<qty>441.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Steven by Steve Madden Pryme Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>nine_3</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>89.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>89.9900</minimal_price>
+		<name>Nine West Women's Lucero Pump</name>
+		<url_key>nine-west-women-s-lucero-pump-3</url_key>
+		<meta_title>Nine West Women's Lucero Pump</meta_title>
+		<meta_description>Nine West Women's Lucero Pump</meta_description>
+		<thumbnail></thumbnail>
+		<small_image></small_image>
+		<image></image>
+		<manufacturer>Nine West</manufacturer>
+		<gift_message_available>No</gift_message_available>
+		<options_container>Block after Info Column</options_container>
+		<custom_design></custom_design>
+		<url_path>nine-west-women-s-lucero-pump-3.html</url_path>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<shoe_size>3</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<model>B000LJQVF8</model>
+		<description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp, leather linings, and a cushioned insole for long-wearing comfort. The stiletto heel radiates a subtle hint of sensuality, so sass up your jean and t-shirt look or nighttime attire with this hot pump and you'll be absolutely unforgettable.</description>
+		<in_depth>The perfect pump will suit any ensemble. Leather upper. 3-3/4 inch stacked heel. Man-made sole. Imported.</in_depth>
+		<meta_keyword>Nine West Women's Lucero Pump</meta_keyword>
+		<custom_layout_update></custom_layout_update>
+		<short_description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp</short_description>
+		<qty>805.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Nine West Women's Lucero Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>configurable</type>
+		<category_ids>17</category_ids>
+		<sku>steve</sku>
+		<has_options>1</has_options>
+		<weight>2.0000</weight>
+		<price>69.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>69.9900</minimal_price>
+		<name>Steven by Steve Madden Pryme Pump</name>
+		<url_key>steven-by-steve-madden-pryme-pump</url_key>
+		<meta_title>Steven by Steve Madden Pryme Pump</meta_title>
+		<meta_description>Steven by Steve Madden Pryme Pump</meta_description>
+		<thumbnail>/s/t/steven-by-steve-madden-pryme-pump.jpg</thumbnail>
+		<small_image>/s/t/steven-by-steve-madden-pryme-pump.jpg</small_image>
+		<image>/s/t/steven-by-steve-madden-pryme-pump.jpg</image>
+		<manufacturer>Steve Madden</manufacturer>
+		<options_container>Product Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>steven-by-steve-madden-pryme-pump.html</url_path>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<gender>Womens</gender>
+		<status>Enabled</status>
+		<shoe_type>Dress</shoe_type>
+		<color>Red</color>
+		<model>B000NOGIKY</model>
+		<meta_keyword>Steven by Steve Madden Pryme Pump</meta_keyword>
+		<short_description>This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe</short_description>
+		<description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe. It also features smooth linings, a fully cushioned insole, a sexy covered stiletto heel, and a lightly textured dress leather outsole. Any way you wear the Pryme, you're certain to catch a lot of attention.</description>
+		<in_depth>A prime example of chic style. Patent leather upper. Round toe. 3-1/2 inch covered heel. Flex leather sole. Imported.</in_depth>
+		<custom_layout_update></custom_layout_update>
+		<qty>961.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Steven by Steve Madden Pryme Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>configurable</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>steve_5</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>69.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>69.9900</minimal_price>
+		<name>Steven by Steve Madden Pryme Pump</name>
+		<url_key>steven-by-steve-madden-pryme-pump-5</url_key>
+		<meta_title>Steven by Steve Madden Pryme Pump</meta_title>
+		<meta_description>Steven by Steve Madden Pryme Pump</meta_description>
+		<thumbnail>/s/t/steven-by-steve-madden-pryme-pump-2.jpg</thumbnail>
+		<small_image>/s/t/steven-by-steve-madden-pryme-pump-1.jpg</small_image>
+		<image>/s/t/steven-by-steve-madden-pryme-pump.jpg</image>
+		<manufacturer>Steve Madden</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>steven-by-steve-madden-pryme-pump-5.html</url_path>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<shoe_size>5</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<status>Enabled</status>
+		<model>B000NOGIKY</model>
+		<description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe. It also features smooth linings, a fully cushioned insole, a sexy covered stiletto heel, and a lightly textured dress leather outsole. Any way you wear the Pryme, you're certain to catch a lot of attention.</description>
+		<in_depth>A prime example of chic style. Patent leather upper. Round toe. 3-1/2 inch covered heel. Flex leather sole. Imported.</in_depth>
+		<meta_keyword>Steven by Steve Madden Pryme Pump</meta_keyword>
+		<short_description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>641.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Steven by Steve Madden Pryme Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>steve_6</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>69.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>69.9900</minimal_price>
+		<name>Steven by Steve Madden Pryme Pump</name>
+		<url_key>steven-by-steve-madden-pryme-pump-6</url_key>
+		<meta_title>Steven by Steve Madden Pryme Pump</meta_title>
+		<meta_description>Steven by Steve Madden Pryme Pump</meta_description>
+		<thumbnail>/s/t/steven-by-steve-madden-pryme-pump-2.jpg</thumbnail>
+		<small_image>/s/t/steven-by-steve-madden-pryme-pump-1.jpg</small_image>
+		<image>/s/t/steven-by-steve-madden-pryme-pump.jpg</image>
+		<manufacturer>Steve Madden</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>steven-by-steve-madden-pryme-pump-6.html</url_path>
+		<shoe_size>6</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<model>B000NOGIKY</model>
+		<description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe. It also features smooth linings, a fully cushioned insole, a sexy covered stiletto heel, and a lightly textured dress leather outsole. Any way you wear the Pryme, you're certain to catch a lot of attention.</description>
+		<in_depth>A prime example of chic style. Patent leather upper. Round toe. 3-1/2 inch covered heel. Flex leather sole. Imported.</in_depth>
+		<meta_keyword>Steven by Steve Madden Pryme Pump</meta_keyword>
+		<short_description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>537.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Steven by Steve Madden Pryme Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>steve_7</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>69.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>69.9900</minimal_price>
+		<name>Steven by Steve Madden Pryme Pump</name>
+		<url_key>steven-by-steve-madden-pryme-pump-7</url_key>
+		<meta_title>Steven by Steve Madden Pryme Pump</meta_title>
+		<meta_description>Steven by Steve Madden Pryme Pump</meta_description>
+		<thumbnail>/s/t/steven-by-steve-madden-pryme-pump-2.jpg</thumbnail>
+		<small_image>/s/t/steven-by-steve-madden-pryme-pump-1.jpg</small_image>
+		<image>/s/t/steven-by-steve-madden-pryme-pump.jpg</image>
+		<manufacturer>Steve Madden</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>steven-by-steve-madden-pryme-pump-7.html</url_path>
+		<color>Red</color>
+		<shoe_size>7</shoe_size>
+		<visibility>Not Visible Individually</visibility>
+		<gender>Womens</gender>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<model>B000NOGIKY</model>
+		<description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe. It also features smooth linings, a fully cushioned insole, a sexy covered stiletto heel, and a lightly textured dress leather outsole. Any way you wear the Pryme, you're certain to catch a lot of attention.</description>
+		<in_depth>A prime example of chic style. Patent leather upper. Round toe. 3-1/2 inch covered heel. Flex leather sole. Imported.</in_depth>
+		<meta_keyword>Steven by Steve Madden Pryme Pump</meta_keyword>
+		<short_description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>808.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Steven by Steve Madden Pryme Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>steve_8</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>69.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>69.9900</minimal_price>
+		<name>Steven by Steve Madden Pryme Pump</name>
+		<url_key>steven-by-steve-madden-pryme-pump-8</url_key>
+		<meta_title>Steven by Steve Madden Pryme Pump</meta_title>
+		<meta_description>Steven by Steve Madden Pryme Pump</meta_description>
+		<thumbnail>/s/t/steven-by-steve-madden-pryme-pump-2.jpg</thumbnail>
+		<small_image>/s/t/steven-by-steve-madden-pryme-pump-1.jpg</small_image>
+		<image>/s/t/steven-by-steve-madden-pryme-pump.jpg</image>
+		<manufacturer>Steve Madden</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>steven-by-steve-madden-pryme-pump-8.html</url_path>
+		<shoe_size>8</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<model>B000NOGIKY</model>
+		<description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe. It also features smooth linings, a fully cushioned insole, a sexy covered stiletto heel, and a lightly textured dress leather outsole. Any way you wear the Pryme, you're certain to catch a lot of attention.</description>
+		<in_depth>A prime example of chic style. Patent leather upper. Round toe. 3-1/2 inch covered heel. Flex leather sole. Imported.</in_depth>
+		<meta_keyword>Steven by Steve Madden Pryme Pump</meta_keyword>
+		<short_description>Nothing will turn his head faster than you wearing the sexy Pryme pump from Steven by Steve Madden. This daring pump has a pretty patent leather upper with light shirring, a double stitch detail surrounding the collar, and a vampy almond shaped toe</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>718.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Steven by Steve Madden Pryme Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>configurable</type>
+		<category_ids>17</category_ids>
+		<sku>nine</sku>
+		<has_options>1</has_options>
+		<weight>2.0000</weight>
+		<price>89.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>89.9900</minimal_price>
+		<name>Nine West Women's Lucero Pump</name>
+		<url_key>nine-west-women-s-lucero-pump</url_key>
+		<meta_title>Nine West Women's Lucero Pump</meta_title>
+		<meta_description>Nine West Women's Lucero Pump</meta_description>
+		<thumbnail>/n/i/nine-west-women-s-lucero-pump.jpg</thumbnail>
+		<small_image>/n/i/nine-west-women-s-lucero-pump.jpg</small_image>
+		<image>/n/i/nine-west-women-s-lucero-pump.jpg</image>
+		<manufacturer>Nine West</manufacturer>
+		<options_container>Product Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>nine-west-women-s-lucero-pump.html</url_path>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<gender>Womens</gender>
+		<status>Enabled</status>
+		<shoe_type>High Heels</shoe_type>
+		<color>Red</color>
+		<model>B000LJQVF8</model>
+		<meta_keyword>Nine West, Women, Lucero, Pump</meta_keyword>
+		<short_description>This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp</short_description>
+		<description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp, leather linings, and a cushioned insole for long-wearing comfort. The stiletto heel radiates a subtle hint of sensuality, so sass up your jean and t-shirt look or nighttime attire with this hot pump and you'll be absolutely unforgettable.</description>
+		<in_depth>The perfect pump will suit any ensemble. Leather upper. 3-3/4 inch stacked heel. Man-made sole. Imported.</in_depth>
+		<custom_layout_update></custom_layout_update>
+		<qty>384.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Nine West Women's Lucero Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>configurable</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>nine_4</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>89.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>89.9900</minimal_price>
+		<name>Nine West Women's Lucero Pump</name>
+		<url_key>nine-west-women-s-lucero-pump-4</url_key>
+		<meta_title>Nine West Women's Lucero Pump</meta_title>
+		<meta_description>Nine West Women's Lucero Pump</meta_description>
+		<thumbnail></thumbnail>
+		<small_image></small_image>
+		<image></image>
+		<manufacturer>Nine West</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>nine-west-women-s-lucero-pump-4.html</url_path>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<shoe_size>4</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<model>B000LJQVF8</model>
+		<description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp, leather linings, and a cushioned insole for long-wearing comfort. The stiletto heel radiates a subtle hint of sensuality, so sass up your jean and t-shirt look or nighttime attire with this hot pump and you'll be absolutely unforgettable.</description>
+		<in_depth>The perfect pump will suit any ensemble. Leather upper. 3-3/4 inch stacked heel. Man-made sole. Imported.</in_depth>
+		<meta_keyword>Nine West Women's Lucero Pump</meta_keyword>
+		<short_description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>379.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Nine West Women's Lucero Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>nine_5</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>89.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>89.9900</minimal_price>
+		<name>Nine West Women's Lucero Pump</name>
+		<url_key>nine-west-women-s-lucero-pump-5</url_key>
+		<meta_title>Nine West Women's Lucero Pump</meta_title>
+		<meta_description>Nine West Women's Lucero Pump</meta_description>
+		<thumbnail></thumbnail>
+		<small_image></small_image>
+		<image></image>
+		<manufacturer>Nine West</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>nine-west-women-s-lucero-pump-5.html</url_path>
+		<gender>Womens</gender>
+		<color>Red</color>
+		<shoe_size>5</shoe_size>
+		<shoe_type>High Heels</shoe_type>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Not Visible Individually</visibility>
+		<model>B000LJQVF8</model>
+		<description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp, leather linings, and a cushioned insole for long-wearing comfort. The stiletto heel radiates a subtle hint of sensuality, so sass up your jean and t-shirt look or nighttime attire with this hot pump and you'll be absolutely unforgettable.</description>
+		<custom_layout_update></custom_layout_update>
+		<in_depth>The perfect pump will suit any ensemble. Leather upper. 3-3/4 inch stacked heel. Man-made sole. Imported.</in_depth>
+		<meta_keyword>Nine West Women's Lucero Pump</meta_keyword>
+		<short_description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp</short_description>
+		<qty>312.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Nine West Women's Lucero Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shoes</attribute_set>
+		<type>simple</type>
+		<category_ids>17</category_ids>
+		<sku>nine_6</sku>
+		<has_options>0</has_options>
+		<weight>2.0000</weight>
+		<price>89.9900</price>
+		<cost>29.9900</cost>
+		<minimal_price>89.9900</minimal_price>
+		<name>Nine West Women's Lucero Pump</name>
+		<url_key>nine-west-women-s-lucero-pump-6</url_key>
+		<meta_title>Nine West Women's Lucero Pump</meta_title>
+		<meta_description>Nine West Women's Lucero Pump</meta_description>
+		<thumbnail></thumbnail>
+		<small_image></small_image>
+		<image></image>
+		<manufacturer>Nine West</manufacturer>
+		<options_container>Block after Info Column</options_container>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<url_path>nine-west-women-s-lucero-pump-6.html</url_path>
+		<gender>Womens</gender>
+		<shoe_type>High Heels</shoe_type>
+		<visibility>Not Visible Individually</visibility>
+		<color>Red</color>
+		<shoe_size>6</shoe_size>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp, leather linings, and a cushioned insole for long-wearing comfort. The stiletto heel radiates a subtle hint of sensuality, so sass up your jean and t-shirt look or nighttime attire with this hot pump and you'll be absolutely unforgettable.</description>
+		<short_description>The Lucero pump from Nine West may just leave him at a loss for words. This flirty pump has a leather upper, a pretty almond-shaped toe with a slight V-cut vamp</short_description>
+		<custom_layout_update></custom_layout_update>
+		<model>B000LJQVF8</model>
+		<in_depth>The perfect pump will suit any ensemble. Leather upper. 3-3/4 inch stacked heel. Man-made sole. Imported.</in_depth>
+		<meta_keyword>Nine West Women's Lucero Pump</meta_keyword>
+		<qty>979.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Nine West Women's Lucero Pump</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Shirts T</attribute_set>
+		<type>configurable</type>
+		<category_ids>4</category_ids>
+		<sku>oc</sku>
+		<has_options>1</has_options>
+		<cost>2.0000</cost>
+		<minimal_price>10.0000</minimal_price>
+		<weight>0.4400</weight>
+		<price>100.0000</price>
+		<name>The Only Children: Paisley T-Shirt</name>
+		<url_key>the-only-children-paisley-t-shirt</url_key>
+		<meta_title>The Only Children: Paisley T-Shirt</meta_title>
+		<meta_description>The Only Children: Paisley T-Shirt</meta_description>
+		<thumbnail>/t/h/the-only-children-paisley-t-shirt.jpg</thumbnail>
+		<small_image>/t/h/the-only-children-paisley-t-shirt.jpg</small_image>
+		<image>/t/h/the-only-children-paisley-t-shirt.jpg</image>
+		<gift_message_available>No</gift_message_available>
+		<custom_design></custom_design>
+		<options_container>Product Info Column</options_container>
+		<url_path>the-only-children-paisley-t-shirt.html</url_path>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<gender>Mens</gender>
+		<color>White</color>
+		<model>paisley</model>
+		<meta_keyword>The Only Children: Paisley T-Shirt</meta_keyword>
+		<short_description>Printed on American Apparel Classic style 5495 California cotton T shirt.</short_description>
+		<description><![CDATA[<ul>
+<ul class="disc">
+<li>6.1 oz. 100% preshrunk heavyweight cotton <br></li>
+<li>Double-needle sleeves and bottom hem</li>
+</ul>]]></description>
+		<custom_layout_update></custom_layout_update>
+		<qty>555.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>The Only Children: Paisley T-Shirt</product_name>
+		<store_id>0</store_id>
+		<product_type_id>configurable</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Default</attribute_set>
+		<type>simple</type>
+		<category_ids>25</category_ids>
+		<sku>ac674</sku>
+		<has_options>0</has_options>
+		<price>99.0000</price>
+		<minimal_price>99.0000</minimal_price>
+		<weight>42.0000</weight>
+		<name>SLR Camera Tripod</name>
+		<url_key>slr-camera-tripod</url_key>
+		<small_image>/s/l/slr-camera-tripod.jpg</small_image>
+		<thumbnail>/s/l/slr-camera-tripod.jpg</thumbnail>
+		<image>/s/l/slr-camera-tripod.jpg</image>
+		<gift_message_available>No</gift_message_available>
+		<options_container>Block after Info Column</options_container>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<custom_design></custom_design>
+		<url_path>slr-camera-tripod.html</url_path>
+		<status>Enabled</status>
+		<tax_class_id>Taxable Goods</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<meta_keyword></meta_keyword>
+		<custom_layout_update></custom_layout_update>
+		<description>Sturdy, lightweight tripods are designed to meet the needs of amateur and professional photographers and videographers.</description>
+		<short_description>Sturdy, lightweight tripods are designed to meet the needs of amateur and professional photographers and videographers.</short_description>
+		<qty>162.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>100.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>SLR Camera Tripod</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>RAM</attribute_set>
+		<type>simple</type>
+		<category_ids>15,31</category_ids>
+		<sku>512dimm</sku>
+		<has_options>0</has_options>
+		<price>99.9900</price>
+		<weight>1.0000</weight>
+		<name>Crucial 512MB PC4200 DDR2 533MHz Memory</name>
+		<url_key>crucial-512mb-pc4200-ddr2-533mhz-memory</url_key>
+		<gift_message_available>No</gift_message_available>
+		<ram_size>512MB</ram_size>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/c/r/crucial-512mb-pc4200-ddr2-533mhz-memory.jpg</thumbnail>
+		<small_image>/c/r/crucial-512mb-pc4200-ddr2-533mhz-memory.jpg</small_image>
+		<image>/c/r/crucial-512mb-pc4200-ddr2-533mhz-memory.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>crucial-512mb-pc4200-ddr2-533mhz-memory.html</url_path>
+		<manufacturer>Crucial</manufacturer>
+		<status>Enabled</status>
+		<tax_class_id>default</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<meta_keyword></meta_keyword>
+		<description>Crucial 512MB PC4200 DDR2 533MHz Memory
+Crucial Technologies is part of Micron, the largest DRAM manufacturer in the U.S. and one of the largest in the world. Because they actually manufacture memory, they have unparalleled expertise in the upgrade industry. Crucial is the only consumer memory upgrade supplier that is part of a major DRAM manufacturer.
+
+Every single Crucial memory module is tested before it goes out their doors. Crucial chips are individually tested under varying temperatures, voltages, and operational conditions for performance and functionality.</description>
+		<short_description>Crucial 512MB PC4200 DDR2 533MHz Memory
+Crucial Technologies is part of Micron, the largest DRAM manufacturer in the U.S. and one of the largest in the world. Because they actually manufacture memory, they have unparalleled expertise in the upgrade industry. Crucial is the only consumer memory upgrade supplier that is part of a major DRAM manufacturer.
+
+Every single Crucial memory module is tested before it goes out their doors. Crucial chips are individually tested under varying temperatures, voltages, and operational conditions for performance and functionality.</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>130.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Crucial 512MB PC4200 DDR2 533MHz Memory</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>CPU</attribute_set>
+		<type>simple</type>
+		<category_ids>33</category_ids>
+		<sku>amda64</sku>
+		<has_options>0</has_options>
+		<price>98.9900</price>
+		<weight>1.0000</weight>
+		<name>AMD A64 X2 3800+ 2.0GHz OEM</name>
+		<url_key>amd-a64-x2-3800-2-0ghz-oem</url_key>
+		<gift_message_available>No</gift_message_available>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/a/m/amd-a64-x2-3800-2-0ghz-oem.jpg</thumbnail>
+		<small_image>/a/m/amd-a64-x2-3800-2-0ghz-oem.jpg</small_image>
+		<image>/a/m/amd-a64-x2-3800-2-0ghz-oem.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>amd-a64-x2-3800-2-0ghz-oem.html</url_path>
+		<status>Enabled</status>
+		<tax_class_id>default</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<manufacturer>AMD</manufacturer>
+		<cpu_speed>2.0 GHz</cpu_speed>
+		<meta_keyword></meta_keyword>
+		<description>Frustrated by staring at the hourglass icon as soon as you try to work on more than three programs at once, especially when you’re working with digital media? Increase your performance with the AMD Athlon™ 64 X2 dual core processor. Work or play with multiple programs without any stalling or waiting. Dual-core technology is like having two processors, and two working together is better and faster than one working alone. Do more in less time with the AMD Athlon 64 X2 dual-core processor.</description>
+		<short_description>AMD Athlon 64 X2 3800+ Processor ADO3800IAA5CZ - 2.0GHz, 2 x 512KB Cache, 1000MHz (2000 MT/s) FSB, Windsor, Dual Core, OEM, Socket AM2, Processor</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>299.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>AMD A64 X2 3800+ 2.0GHz OEM</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>CPU</attribute_set>
+		<type>simple</type>
+		<category_ids>33</category_ids>
+		<sku>intelc2d</sku>
+		<has_options>0</has_options>
+		<price>98.9900</price>
+		<weight>1.0000</weight>
+		<name>Intel C2D E8400 3.0GHz Retail</name>
+		<url_key>intel-c2d-e8400-3-0ghz-retail</url_key>
+		<gift_message_available>No</gift_message_available>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/i/n/intel-c2d-e8400-3-0ghz-retail.jpg</thumbnail>
+		<small_image>/i/n/intel-c2d-e8400-3-0ghz-retail.jpg</small_image>
+		<image>/i/n/intel-c2d-e8400-3-0ghz-retail.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>intel-c2d-e8400-3-0ghz-retail.html</url_path>
+		<status>Enabled</status>
+		<tax_class_id>default</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<manufacturer>Intel</manufacturer>
+		<cpu_speed>3.0 GHz</cpu_speed>
+		<short_description>Intel® Core™2 Duo processor is the new brand name for our next-generation energy-efficient performance desktop and mobile processors.</short_description>
+		<custom_layout_update></custom_layout_update>
+		<meta_keyword></meta_keyword>
+		<description>Intel® Core™2 Duo processor is the new brand name for our next-generation energy-efficient performance desktop and mobile processors. Formerly known by their codenames Conroe and Merom, the Intel® Core™2 processors for desktop and mobile computers are based on the Intel® Core™ microarchitecture, Intel's new industry-leading foundation for all mobile, desktop and server platforms moving forward.</description>
+		<qty>844.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Intel C2D E8400 3.0GHz Retail</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Hard Drive</attribute_set>
+		<type>simple</type>
+		<category_ids>29</category_ids>
+		<sku>250gb5400</sku>
+		<has_options>0</has_options>
+		<price>99.0000</price>
+		<weight>1.0000</weight>
+		<name>Seagate 250GB HD - 5400RPM</name>
+		<url_key>250gb-5400rpm</url_key>
+		<gift_message_available>No</gift_message_available>
+		<harddrive_speed>250 GB</harddrive_speed>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/s/e/seagate-250gb-hd-5400rpm.jpg</thumbnail>
+		<small_image>/s/e/seagate-250gb-hd-5400rpm.jpg</small_image>
+		<image>/s/e/seagate-250gb-hd-5400rpm.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>250gb-5400rpm.html</url_path>
+		<manufacturer>Seagate</manufacturer>
+		<status>Enabled</status>
+		<tax_class_id>default</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<hardrive>5400 rpm</hardrive>
+		<meta_keyword></meta_keyword>
+		<description>1 TB - 7200RPM, SATA 3.0Gb/s, 32MB Cache</description>
+		<short_description>1 TB - 7200RPM, SATA 3.0Gb/s, 32MB Cache</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>362.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Seagate 250GB HD - 5400RPM</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Default</attribute_set>
+		<type>simple</type>
+		<category_ids>34</category_ids>
+		<sku>microsoftnatural</sku>
+		<has_options>0</has_options>
+		<price>99.9900</price>
+		<weight>1.0000</weight>
+		<name>Microsoft Natural Ergonomic Keyboard 4000</name>
+		<url_key>microsoft-natural-ergonomic-keyboard-4000</url_key>
+		<gift_message_available>No</gift_message_available>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/m/i/microsoft-natural-ergonomic-keyboard-4000.jpg</thumbnail>
+		<small_image>/m/i/microsoft-natural-ergonomic-keyboard-4000.jpg</small_image>
+		<image>/m/i/microsoft-natural-ergonomic-keyboard-4000.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>microsoft-natural-ergonomic-keyboard-4000.html</url_path>
+		<manufacturer>Microsoft</manufacturer>
+		<status>Enabled</status>
+		<tax_class_id>None</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<description>The most comfortable ergonomic keyboard on the market! We just made a great deal for this Microsoft Natural ergonomic keyboard. And we know you’re going to love it. This newest addition to the world’s best selling line of ergonomic keyboards features a natural wrist alignment that will make your day! Just one touch allows you to perform a wealth of common but important tasks such as opening documents and replying to e-mail. The Microsoft Natural Model 4000 ergonomic keyboard also features an improved number pad with easy-to-reach symbols such left and right, equal sign and back space placed just above the number pad. Easy-access to the Internet. Multimedia keys. Lockable F keys and much more (see complete list of additional features below). Don’t you think it’s time to go natural? Microsoft’s Natural Ergonomic Model 4000 Keyboard. Available right here, for the best price!</description>
+		<short_description>The most comfortable ergonomic keyboard on the market! We just made a great deal for this Microsoft Natural ergonomic keyboard.</short_description>
+		<custom_layout_update></custom_layout_update>
+		<meta_keyword></meta_keyword>
+		<qty>275.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Microsoft Natural Ergonomic Keyboard 4000</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Default</attribute_set>
+		<type>simple</type>
+		<category_ids>34</category_ids>
+		<sku>logitechcord</sku>
+		<has_options>0</has_options>
+		<price>79.9900</price>
+		<weight>1.0000</weight>
+		<name>Logitech Cordless Optical Trackman</name>
+		<url_key>microsoft-wireless-optical-mouse-5000</url_key>
+		<gift_message_available>No</gift_message_available>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/l/o/logitech-cordless-optical-trackman.jpg</thumbnail>
+		<small_image>/l/o/logitech-cordless-optical-trackman.jpg</small_image>
+		<image>/l/o/logitech-cordless-optical-trackman.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>microsoft-wireless-optical-mouse-5000.html</url_path>
+		<status>Enabled</status>
+		<tax_class_id>default</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<manufacturer>Logitech</manufacturer>
+		<color>Brown</color>
+		<meta_keyword></meta_keyword>
+		<description>Our most advanced trackball yet: a comfortable, cordless, finger-operated trackball that works where you need it. Save space and eliminate desktop clutter. Take advantage of extra buttons that help you navigate around Windows and the web more easily. And with Logitech's patented optical technology, you get virtually maintenance-free precision and smooth tracking.</description>
+		<short_description>Our most advanced trackball yet. It's comfortable, cordless, finger-operated and works where you need it. Save space and eliminate desktop clutter.</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>618.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Logitech Cordless Optical Trackman</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+	<product>
+		<store>admin</store>
+		<websites>base</websites>
+		<attribute_set>Default</attribute_set>
+		<type>simple</type>
+		<category_ids>34</category_ids>
+		<sku>micronmouse5000</sku>
+		<has_options>0</has_options>
+		<price>59.9900</price>
+		<weight>1.0000</weight>
+		<name>Microsoft Wireless Optical Mouse 5000</name>
+		<url_key>microsoft-wireless-optical-mouse-5000</url_key>
+		<gift_message_available>No</gift_message_available>
+		<meta_title></meta_title>
+		<meta_description></meta_description>
+		<thumbnail>/m/i/microsoft-wireless-optical-mouse-5000.jpg</thumbnail>
+		<small_image>/m/i/microsoft-wireless-optical-mouse-5000.jpg</small_image>
+		<image>/m/i/microsoft-wireless-optical-mouse-5000.jpg</image>
+		<custom_design></custom_design>
+		<options_container>Block after Info Column</options_container>
+		<url_path>microsoft-wireless-optical-mouse-5001.html</url_path>
+		<status>Enabled</status>
+		<tax_class_id>default</tax_class_id>
+		<visibility>Catalog, Search</visibility>
+		<manufacturer>Microsoft</manufacturer>
+		<color>Black</color>
+		<meta_keyword></meta_keyword>
+		<description>Experience smoother tracking and wireless freedom. Navigate with enhanced precision with this ergonomic High Definition Optical mouse. Easily enlarge and edit detail with the new Magnifier and enjoy more than six months of battery life.</description>
+		<short_description>Experience smoother tracking and wireless freedom. Navigate with enhanced precision with this ergonomic High Definition Optical mouse.</short_description>
+		<custom_layout_update></custom_layout_update>
+		<qty>760.0000</qty>
+		<min_qty>0.0000</min_qty>
+		<use_config_min_qty>1</use_config_min_qty>
+		<is_qty_decimal>0</is_qty_decimal>
+		<backorders>0</backorders>
+		<use_config_backorders>1</use_config_backorders>
+		<min_sale_qty>1.0000</min_sale_qty>
+		<use_config_min_sale_qty>1</use_config_min_sale_qty>
+		<max_sale_qty>0.0000</max_sale_qty>
+		<use_config_max_sale_qty>1</use_config_max_sale_qty>
+		<is_in_stock>1</is_in_stock>
+		<low_stock_date>0000-00-00 00:00:00</low_stock_date>
+		<notify_stock_qty></notify_stock_qty>
+		<use_config_notify_stock_qty>1</use_config_notify_stock_qty>
+		<manage_stock>0</manage_stock>
+		<use_config_manage_stock>1</use_config_manage_stock>
+		<stock_status_changed_automatically>0</stock_status_changed_automatically>
+		<use_config_qty_increments>1</use_config_qty_increments>
+		<qty_increments>0.0000</qty_increments>
+		<use_config_enable_qty_increments>1</use_config_enable_qty_increments>
+		<enable_qty_increments>0</enable_qty_increments>
+		<product_name>Microsoft Wireless Optical Mouse 5000</product_name>
+		<store_id>0</store_id>
+		<product_type_id>simple</product_type_id>
+		<product_status_changed>0</product_status_changed>
+		<product_changed_websites></product_changed_websites>
+	</product>
+</products>

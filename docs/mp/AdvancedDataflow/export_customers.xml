@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+	<customer>
+		<website>base</website>
+		<email>john.doe@innoexts.com</email>
+		<group_id>General</group_id>
+		<gender>Male</gender>
+		<firstname>John</firstname>
+		<lastname>Doe</lastname>
+		<password_hash>8c523aab676933d49cffffd67723e3cd:Vr</password_hash>
+		<prefix></prefix>
+		<middlename></middlename>
+		<suffix></suffix>
+		<taxvat></taxvat>
+		<created_in>default</created_in>
+		<is_subscribed>0</is_subscribed>
+		<group>General</group>
+		<billing>
+			<prefix></prefix>
+			<firstname>John</firstname>
+			<middlename></middlename>
+			<lastname>Doe</lastname>
+			<suffix></suffix>
+			<street_full>5202 Ocean Blvd</street_full>
+			<city>Sarasota</city>
+			<region>Florida</region>
+			<country>US</country>
+			<postcode>34242</postcode>
+			<telephone>941-284-8494</telephone>
+			<company>InnoExts</company>
+			<fax></fax>
+		</billing>
+		<shipping>
+			<prefix></prefix>
+			<firstname>John</firstname>
+			<middlename></middlename>
+			<lastname>Doe</lastname>
+			<suffix></suffix>
+			<street_full>5202 Ocean Blvd</street_full>
+			<city>Sarasota</city>
+			<region>Florida</region>
+			<country>US</country>
+			<postcode>34242</postcode>
+			<telephone>941-284-8494</telephone>
+			<company>InnoExts</company>
+			<fax></fax>
+		</shipping>
+	</customer>
+</customers>
