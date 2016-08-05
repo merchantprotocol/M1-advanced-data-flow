@@ -1,3 +1,11 @@
+# M1 Advanced Data flow
+
+ - [Buy It](https://merchantprotocol.com/store/magento-extensions/magento-v1-0/advanced-dataflow.html)
+ - [Demo It](http://demo.merchantprotocol.com/M1-advanced-data-flow)
+ - [Forum: Talk About It](https://merchantprotocol.com/forums/forum/magento-plugin-forum/advanced-dataflow/)
+
+The “Advanced Dataflow” extension is a set of additional adapters and parsers to increase the Magento Dataflow flexibility. As you may know, Magento migration processes are introduced with profiles. Each profile is a combination of actions (adapters / parsers / mappers) to transfer data from one format into another. The adapters and parsers variety makes the migration process flexible. Magento enables customers and products (with or without an inventory) to be exported / imported using CSV or Excel XML formats. The “Advanced Dataflow” extends default bounds to cover more needs. The most essential “Advanced Dataflow” feature is the order import and export. It appends orders to list of available entities to migrate.
+
 # Magento v1x New Extension Configuration
 
 Drop this into each new extension repository to provide it with all of the files necessary for users. This repository shall contain licensing information, general installation and uninstallation notes necessary for the user.
