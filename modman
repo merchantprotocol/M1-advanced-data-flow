@@ -1,0 +1,4 @@
+app/code/local/Innoexts/AdvancedDataflow/ app/code/local/Innoexts/AdvancedDataflow/
+app/design/adminhtml/default/default/template/advanceddataflow/ app/design/adminhtml/default/default/template/advanceddataflow/
+app/etc/modules/Innoexts_AdvancedDataflow.xml app/etc/modules/Innoexts_AdvancedDataflow.xml
+app/locale/en_US/Innoexts_AdvancedDataflow.csv app/locale/en_US/Innoexts_AdvancedDataflow.csv
