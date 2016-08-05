@@ -1,4 +1,4 @@
-# M1 Advanced Data flow
+# M1 Advanced Dataflow
 
  - [Buy It](https://merchantprotocol.com/store/magento-extensions/magento-v1-0/advanced-dataflow.html)
  - [Demo It](http://demo.merchantprotocol.com/M1-advanced-data-flow)
