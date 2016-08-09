@@ -38,7 +38,7 @@ class Innoexts_AdvancedDataflow_Model_Mysql4_Sales_Order_Attribute_Collection ex
      *
      * @var string
      */
-    protected $_entityTypeCode = 'sales_order';
+    protected $_entityTypeCode = 'order';
     /**
      * Return customer entity type instance
      *
