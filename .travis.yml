@@ -1,0 +1,158 @@
+language: php
+php:
+  - 5.6
+
+## Environment Variables
+env:
+  global:
+    - REPO_NAME=M1-advanced-data-flow
+    - DEPLOYDIR=/var/www/html/M1-advanced-data-flow/
+    - RELEASE_VERSION=1.9.2.3
+    - DEPLOYHOST=merchantdemos
+  matrix:
+    - MAGE=1.9.2.3
+
+## Only Test these branches
+branches:
+  only:
+    - master
+    - /^[0-9\.]*/
+
+ ## Run INTEGRATION tests
+#addons:
+#  sauce_connect: true
+
+before_script:
+  - MAGE_DIR=$(pwd)
+
+ ## Deleting the extension from the main folder
+  - sudo rm -rf ./*
+  - sudo rm -rf ./.git
+  - sudo rm -rf ./.gitignore
+
+ ## Move SSH config file
+  - sudo cp .travis/install-ssh-config ~/.ssh/config
+  - sudo cp .travis/install-ssh-config /root/.ssh/config
+
+ ## Composer Installation for PHPUnit and  Mage-CI
+  # Copy travis composer.json to test only module
+  - sudo cp -f .travis/composer.json composer.json
+  # Install dependencies
+  - composer install
+
+ ## Install Magento and Extensions
+  # Download and Install magento version with prepared DB dump
+  - sudo bin/mage-ci install $MAGE_DIR $MAGE magento -c
+  # Install the M1-core for all extensions
+  - sudo bin/mage-ci install-module $MAGE_DIR git@github.com:merchantprotocol/M1-core.git
+  # Install the primary extension through modman
+  - sudo bin/mage-ci install-module $MAGE_DIR git@github.com:merchantprotocol/$REPO_NAME.git
+
+  # Install New Customer Configuration Repo
+  - sudo bin/mage-ci install-module $MAGE_DIR git@github.com:merchantprotocol/M1-new-customer-configuration.git
+  # Install Credential Deployment Files
+  - sudo bin/mage-ci install-module $MAGE_DIR git@github.com:merchantprotocol/M1-travis-deployment-files.git
+
+ ## Set the Magento file permissions before we begin preparing the tests
+  - sudo chown -R www-data.www-data $MAGE_DIR
+  - sudo chmod -R 777 $MAGE_DIR
+
+ ## Setup Client Side PHPUnit Testing
+  # Configure EcomDev_PHPUnit module
+  - sudo bin/mage-ci shell $MAGE_DIR ecomdev-phpunit.php -a magento-config --db-name magento --same-db 1 --base-url http://127.0.0.1/
+  # Enable test suite
+  - sudo bin/mage-ci shell $MAGE_DIR ecomdev-phpunit.php -a change-status --enable
+
+ ## Setup webserver for SauceLabs/Selenium Functional Testing
+  - export SAUCE_TUNNEL_IDENTIFIER=$TRAVIS_JOB_NUMBER
+  - export SAUCE_DONT_VERIFY_CERTS=1
+  - sudo apt-get update > /dev/null
+  - sudo apt-get install -y --force-yes apache2 libapache2-mod-fastcgi libcurl3 php5-curl php5-gd php5-mcrypt php5-mysql > /dev/null
+  # enable php-fpm
+  - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
+  - sudo a2enmod rewrite actions fastcgi alias headers expires deflate
+  - sudo echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - sudo /etc/init.d/php5-fpm restart
+  # configure apache virtual hosts
+  - sudo cp -f .modman/M1-travis-deployment-files/travis-ci-apache /etc/apache2/sites-available/default
+  - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
+  - sudo service apache2 restart
+
+ ## Setup Magento Cron Job to run every minute
+  - sudo crontab -l > magentocron
+  # echo new cron into cron file
+  - echo "*/1 * * * * sh $(pwd)/cron.sh" >> magentocron
+  # install new cron file
+  - sudo crontab magentocron
+  - sudo rm magentocron
+
+ ## Setup Saucelabs PHPUnit testing
+  # Install and run the selenium tests with saucelabs
+  - git clone https://github.com/merchantprotocol/PHP-Sausage-Selenium.git sauce
+  - composer install -d sauce
+  - sudo chmod -R 777 $MAGE_DIR
+
+ ## Magento Selenium Tests in /dev/tests/functional
+#  - composer install -d dev/tests/functional/
+  # Warning: Protocol 'file' for external XML entity is disabled for security reasons.
+  # This may be changed using the hhvm.libxml.ext_entity_whitelist ini setting.
+  # @see https://github.com/magento/magento2/issues/810
+#  - sudo chmod 777 /etc/hhvm/php.ini
+#  - echo "hhvm.libxml.ext_entity_whitelist = file,http" >> /etc/hhvm/php.ini
+
+script:
+
+ ## Run PHP UNIT tests against Magento
+  #- sudo bin/mage-ci phpunit $MAGE_DIR --colors --coverage-text -d display_errors=1
+ ## Run sauce functional phpunit tests
+  #- sudo make -C sauce
+ ## Run Magento Selenium tests
+  #- sudo bin/mage-ci phpunit $MAGE_DIR/dev/tests/functional --colors --coverage-text -d display_errors=1
+ ## Consider a Code Analyzer https://scrutinizer-ci.com/tour/measure-and-improve-code-quality
+  - ls -la
+
+after_script:
+
+ ## Dump the error logs so that we know how to fix any problems
+  - sudo cat /var/log/httpd-error.log
+  - sudo cat var/log/exception.log
+  - sudo cat var/log/system.log
+  - sudo cat var/report/*
+
+after_success:
+
+ ## Tag and distribute the release
+  - sudo chmod +x $MAGE_DIR/.modman/M1-travis-deployment-files/release.sh
+  - sudo bash $MAGE_DIR/.modman/M1-travis-deployment-files/release.sh $MAGE_DIR $REPO_NAME
+
+before_deploy:
+
+ ## Move SSH config file
+  - sudo cp .modman/M1-travis-deployment-files/deploy-ssh-config ~/.ssh/config
+  - sudo cp .modman/M1-travis-deployment-files/deploy-ssh-config /root/.ssh/config
+
+deploy:
+
+ ## Deploy to Staging server using rsync
+  provider: script
+  skip_cleanup: true
+  script: sudo rsync -aq --delete --exclude '.git' --exclude 'app/etc/local.xml' --rsync-path='sudo rsync' $MAGE_DIR/ $DEPLOYHOST:$DEPLOYDIR
+  on:
+    tags: true
+    php: '5.6'
+
+after_deploy:
+
+ ## Deploy to Demo Server
+  #Chown to Apache and set perms per Magento recommendation
+  - ssh -t -t $DEPLOYHOST "sudo bash $DEPLOYDIR/.modman/M1-travis-deployment-files/set-perms.sh $DEPLOYDIR"
+  - ssh -t -t $DEPLOYHOST "sudo bash rm -rf $DEPLOYDIR/.modman/M1-travis-deployment-files"
+  - ssh -t -t $DEPLOYHOST "sudo bash rm -rf $DEPLOYDIR/.modman/M1-new-customer-configuration"
+
+  # Clear the Magento Cache
+  - ssh -t -t $DEPLOYHOST "sudo rm -rf $DEPLOYDIR/var/cache/*"
+  - ssh -t -t $DEPLOYHOST "sudo rm -rf $DEPLOYDIR/var/session/*"
+  # Restart Apache
+  - ssh -t -t $DEPLOYHOST "sudo service httpd restart"
+  # Reindex all Magento
+  - ssh -t -t $DEPLOYHOST "sudo php $DEPLOYDIR/shell/indexer.php --reindexall"
