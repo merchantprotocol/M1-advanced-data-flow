@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/merchantprotocol/M1-advanced-data-flow/tree/HEAD)
 
-[Full Changelog](https://github.com/merchantprotocol/M1-advanced-data-flow/compare/1.1.0...HEAD)
+[Full Changelog](https://github.com/merchantprotocol/M1-advanced-data-flow/compare/1.1.0+build.3...HEAD)
+
+**Merged pull requests:**
+
+- Travis Build script [\#11](https://github.com/merchantprotocol/M1-advanced-data-flow/pull/11) ([alancarvalho](https://github.com/alancarvalho))
+- Move files from local to community [\#9](https://github.com/merchantprotocol/M1-advanced-data-flow/pull/9) ([alancarvalho](https://github.com/alancarvalho))
+
+## [1.1.0+build.3](https://github.com/merchantprotocol/M1-advanced-data-flow/tree/1.1.0+build.3) (2017-01-14)
+[Full Changelog](https://github.com/merchantprotocol/M1-advanced-data-flow/compare/1.1.0...1.1.0+build.3)
 
 **Closed issues:**
 
