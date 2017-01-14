@@ -29,7 +29,7 @@
     <modules>
         <Innoexts_AdvancedDataflow>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Innoexts_AdvancedDataflow>
     </modules>
 </config>
