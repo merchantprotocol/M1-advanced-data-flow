@@ -1,0 +1,101 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><style id="xml-viewer-style">/* Copyright 2014 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+div.header {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+div.collapsible &gt; div.hidden {
+    display:none;
+}
+
+.pretty-print {
+    margin-top: 1em;
+    margin-left: 20px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+#webkit-xml-viewer-source-xml {
+    display: none;
+}
+
+.collapsible-content {
+    margin-left: 1em;
+}
+.comment {
+    white-space: pre;
+}
+
+.button {
+    -webkit-user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    vertical-align: bottom;
+}
+
+.collapse-button {
+    background: url("data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' fill='#909090' width='10' height='10'&gt;&lt;path d='M0 0 L8 0 L4 7 Z'/&gt;&lt;/svg&gt;");
+    height: 10px;
+}
+
+.expand-button {
+    background: url("data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' fill='#909090' width='10' height='10'&gt;&lt;path d='M0 0 L0 8 L7 4 Z'/&gt;&lt;/svg&gt;");
+    height: 10px;
+}
+</style></head><body><div id="webkit-xml-viewer-source-xml"><customers xmlns="">
+	<customer>
+		<website>base</website>
+		<email>john.doe@innoexts.com</email>
+		<group_id>General</group_id>
+		<gender>Male</gender>
+		<firstname>John</firstname>
+		<lastname>Doe</lastname>
+		<password_hash>8c523aab676933d49cffffd67723e3cd:Vr</password_hash>
+		<prefix/>
+		<middlename/>
+		<suffix/>
+		<taxvat/>
+		<created_in>default</created_in>
+		<is_subscribed>0</is_subscribed>
+		<group>General</group>
+		<billing>
+			<prefix/>
+			<firstname>John</firstname>
+			<middlename/>
+			<lastname>Doe</lastname>
+			<suffix/>
+			<street_full>5202 Ocean Blvd</street_full>
+			<city>Sarasota</city>
+			<region>Florida</region>
+			<country>US</country>
+			<postcode>34242</postcode>
+			<telephone>941-284-8494</telephone>
+			<company>InnoExts</company>
+			<fax/>
+		</billing>
+		<shipping>
+			<prefix/>
+			<firstname>John</firstname>
+			<middlename/>
+			<lastname>Doe</lastname>
+			<suffix/>
+			<street_full>5202 Ocean Blvd</street_full>
+			<city>Sarasota</city>
+			<region>Florida</region>
+			<country>US</country>
+			<postcode>34242</postcode>
+			<telephone>941-284-8494</telephone>
+			<company>InnoExts</company>
+			<fax/>
+		</shipping>
+	</customer>
+</customers></div><div class="header"><span>This XML file does not appear to have any style information associated with it. The document tree is shown below.</span><br /></div><div class="pretty-print"><div class="collapsible" id="collapsible0"><div class="expanded"><div class="line"><span class="button collapse-button"></span><span class="html-tag">&lt;customers&gt;</span></div><div class="collapsible-content"><span class="text"></span><div class="collapsible" id="collapsible1"><div class="expanded"><div class="line"><span class="button collapse-button"></span><span class="html-tag">&lt;customer&gt;</span></div><div class="collapsible-content"><span class="text"></span><div class="line"><span class="html-tag">&lt;website&gt;</span><span class="text">base</span><span class="html-tag">&lt;/website&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;email&gt;</span><span class="text">john.doe@innoexts.com</span><span class="html-tag">&lt;/email&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;group_id&gt;</span><span class="text">General</span><span class="html-tag">&lt;/group_id&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;gender&gt;</span><span class="text">Male</span><span class="html-tag">&lt;/gender&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;firstname&gt;</span><span class="text">John</span><span class="html-tag">&lt;/firstname&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;lastname&gt;</span><span class="text">Doe</span><span class="html-tag">&lt;/lastname&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;password_hash&gt;</span><span class="text">8c523aab676933d49cffffd67723e3cd:Vr</span><span class="html-tag">&lt;/password_hash&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;prefix/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;middlename/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;suffix/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;taxvat/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;created_in&gt;</span><span class="text">default</span><span class="html-tag">&lt;/created_in&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;is_subscribed&gt;</span><span class="text">0</span><span class="html-tag">&lt;/is_subscribed&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;group&gt;</span><span class="text">General</span><span class="html-tag">&lt;/group&gt;</span></div><span class="text"></span><div class="collapsible" id="collapsible2"><div class="expanded"><div class="line"><span class="button collapse-button"></span><span class="html-tag">&lt;billing&gt;</span></div><div class="collapsible-content"><span class="text"></span><div class="line"><span class="html-tag">&lt;prefix/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;firstname&gt;</span><span class="text">John</span><span class="html-tag">&lt;/firstname&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;middlename/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;lastname&gt;</span><span class="text">Doe</span><span class="html-tag">&lt;/lastname&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;suffix/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;street_full&gt;</span><span class="text">5202 Ocean Blvd</span><span class="html-tag">&lt;/street_full&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;city&gt;</span><span class="text">Sarasota</span><span class="html-tag">&lt;/city&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;region&gt;</span><span class="text">Florida</span><span class="html-tag">&lt;/region&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;country&gt;</span><span class="text">US</span><span class="html-tag">&lt;/country&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;postcode&gt;</span><span class="text">34242</span><span class="html-tag">&lt;/postcode&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;telephone&gt;</span><span class="text">941-284-8494</span><span class="html-tag">&lt;/telephone&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;company&gt;</span><span class="text">InnoExts</span><span class="html-tag">&lt;/company&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;fax/&gt;</span></div><span class="text"></span></div><div class="line"><span class="html-tag">&lt;/billing&gt;</span></div></div><div class="collapsed hidden"><div class="line"><span class="button expand-button"></span><span class="html-tag">&lt;billing&gt;</span><span class="text">...</span><span class="html-tag">&lt;/billing&gt;</span></div></div></div><span class="text"></span><div class="collapsible" id="collapsible3"><div class="expanded"><div class="line"><span class="button collapse-button"></span><span class="html-tag">&lt;shipping&gt;</span></div><div class="collapsible-content"><span class="text"></span><div class="line"><span class="html-tag">&lt;prefix/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;firstname&gt;</span><span class="text">John</span><span class="html-tag">&lt;/firstname&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;middlename/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;lastname&gt;</span><span class="text">Doe</span><span class="html-tag">&lt;/lastname&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;suffix/&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;street_full&gt;</span><span class="text">5202 Ocean Blvd</span><span class="html-tag">&lt;/street_full&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;city&gt;</span><span class="text">Sarasota</span><span class="html-tag">&lt;/city&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;region&gt;</span><span class="text">Florida</span><span class="html-tag">&lt;/region&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;country&gt;</span><span class="text">US</span><span class="html-tag">&lt;/country&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;postcode&gt;</span><span class="text">34242</span><span class="html-tag">&lt;/postcode&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;telephone&gt;</span><span class="text">941-284-8494</span><span class="html-tag">&lt;/telephone&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;company&gt;</span><span class="text">InnoExts</span><span class="html-tag">&lt;/company&gt;</span></div><span class="text"></span><div class="line"><span class="html-tag">&lt;fax/&gt;</span></div><span class="text"></span></div><div class="line"><span class="html-tag">&lt;/shipping&gt;</span></div></div><div class="collapsed hidden"><div class="line"><span class="button expand-button"></span><span class="html-tag">&lt;shipping&gt;</span><span class="text">...</span><span class="html-tag">&lt;/shipping&gt;</span></div></div></div><span class="text"></span></div><div class="line"><span class="html-tag">&lt;/customer&gt;</span></div></div><div class="collapsed hidden"><div class="line"><span class="button expand-button"></span><span class="html-tag">&lt;customer&gt;</span><span class="text">...</span><span class="html-tag">&lt;/customer&gt;</span></div></div></div><span class="text"></span></div><div class="line"><span class="html-tag">&lt;/customers&gt;</span></div></div><div class="collapsed hidden"><div class="line"><span class="button expand-button"></span><span class="html-tag">&lt;customers&gt;</span><span class="text">...</span><span class="html-tag">&lt;/customers&gt;</span></div></div></div></div></body></html>
