@@ -126,8 +126,8 @@
                     <ul class="contents__sidebar_list_inset">
                         <li><a href="#sec1" class="nav-link active">Overview</a></li>
                         <li class="">
-                            <a href="#sec3" class="nav-link">
-                                Single Mode
+                            <a href="#sec2" class="nav-link">
+                                Profiles
                             </a>
                         </li>
                         <li class="">
@@ -380,144 +380,50 @@
                             
                             
                             
-                            
-                            
-                            
-                            
-                            
-                            
-                            
+
                         </div>
                     </div>
                     <div class="separator"></div>
                     <!---- SECTION - END ---->
 
-                    <div id="sec3" class="section">
-                        <h2 class="section-head">Single Mode</h2>
-                        <p class="lead">
-                            The given article is devoted to the Multi-Warehouse Magento extension's Single Mode Options.
-                        </p>
-                        <img src="System_Configuration_Catalog_Warehouses_SingleModeOptions.png" class="img-responsive" />
-                        <div class="space"></div>
-                        <br>
-                        <p>
-                          In the previous article, we used the illustration to show the block diagram in Figure 1. Options Overview:
-                        </p>
-                        <div class="space"></div>
-                        <img class="img-responsive" src="multiple-warehouse-figure-1-1.png" />
-                        <div class="space"></div>
-                        <p>
-                            The purpose of this paper is to explain the Single Mode Options. Let’s take a look at the following schematic diagram.
-                        </p>
-                        <div class="space"></div>
-                        <img class="img-responsive" src="Fig_2_1.png" />
-                        <div class="space"></div>
-                        <p>
-                            In the Configuration article, we mentioned that a customer may be assigned to a particular warehouse. 
-                            You can configure this option per delivery method: Assigned Areas, Nearest, Assigned Stores, Manual Selection.
-                        </p>
-                        <p>
-                            Let’s represent the initial data in tabular form:
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Customer</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip / Postal Code</th>
-                            <th>Country</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>John Doe</td>
-                            <td>Colby</td>
-                            <td>Kansas</td>
-                            <td>67701</td>
-                            <td>United States</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <p>
-                             <strong>Table 1 Customer Data</strong>
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Warehouse</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip / Postal Code</th>
-                            <th>Country</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Colorado</td>
-                            <td>Denver</td>
-                            <td>Colorado</td>
-                            <td>80202</td>
-                            <td>United States</td>
-                            </tr>
-                            <tr>
-                            <td>Kansas</td>
-                            <td>Kansas City</td>
-                            <td>Kansas</td>
-                            <td>66117</td>
-                            <td>United States</td>
-                            </tr>
-                            <tr>
-                            <td>New York</td>
-                            <td>New York</td>
-                            <td>New York</td>
-                            <td>10118</td>
-                            <td>United States</td>
-                            </tr>
-                            <tr>
-                            <td>California</td>
-                            <td>Sacramento</td>
-                            <td>California</td>
-                            <td>95866</td>
-                            <td>United States</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <p>
-                            <strong>Table 2 Warehouse Data</strong>
-                        </p>
-
-                        <br>
+                    
+                    
+                    <div id="sec2" class="section">
+                        <h2 class="section-head">Profiles</h2>
                         
-                        <h4>Assigned Areas</h4>
                         <p>
-                            If this option is enabled, the Areas tab becomes visible to the warehouse editor. 
-                            You assign a customer to a warehouse by area (region, state, etc). In this case, that 
-                            will be Kansas, since this warehouse is located in the customer’s state. The system tracks 
-                            the customer’s location using Customer Locator feature.
+                            In menu: System -> Import / Export -> Dataflow – Profiles
                         </p>
-                        <br>
-                        <h4>Nearest</h4>
                         <p>
-                           Use this option to assign a customer to the closest warehouse. In this case, the system automatically 
-                           chooses Colorado because it's nearest to John Doe’s location. 
+                            The profiles manager has the additional “Orders” entity type and 2 corresponding profiles to import and export orders.
                         </p>
-                        <br>
-                        <h4>Assigned Stores</h4>
+                        <div class="space"></div>
+                        <img class="img-responsive" src="Advanced_Dataflow/Profiles-Grid.png" />
+                        <div class="space"></div>
+                        <h2>Export Orders</h2>
                         <p>
-                            As you know, each website is a collection of store views that share the same customer, order information 
-                            and shopping cart details. This option may be useful if you have multiple store views in your website and 
-                            want to map these views to the warehouses. The stores tab is available for a warehouse editor if this 
-                            method is active. This way a customer will be assigned to a warehouse according to the current store view.
+                            The “Export Orders” profile wizard is similar to “Export Customers” and “Export Products” profiles but with 
+                            their own filters based on shipping, billing, items or orders attributes itself. Select the “Run Profile” 
+                            tab and push the “Run Profile in Popup” button. The output file should be like this.
                         </p>
-                        <br>
-                        <h4>Manual Selection</h4>
+                        <div class="space"></div>
+                        <img class="img-responsive" src="Profiles-Export-Orders-1-Box.png" />
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <img class="img-responsive" src="Profiles-Export-Orders-2-Box.png" />
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <img class="img-responsive" src="Profiles-Export-Orders-Run-Profile.png" />
+                        <div class="space"></div>
+                        <h2>Import Orders</h2>
                         <p>
-                            This method allows a customer to choose the appropriate warehouse manually. If this option is enabled, 
-                            then Your Warehouse box becomes visible to a customer.
+                            Choose input method in “File Information” section and data format.
                         </p>
+                        <div class="space"></div>
+                        <img class="img-responsive" src="Profiles-Import-Orders-Box.png" />
+                        <div class="space"></div>
                         
-
+                       
                        
                     </div>
                     
