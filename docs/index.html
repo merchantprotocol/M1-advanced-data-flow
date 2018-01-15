@@ -131,8 +131,8 @@
                             </a>
                         </li>
                         <li class="">
-                            <a href="#sec4" class="nav-link">
-                                Multiple Mode Delivery Methods
+                            <a href="#sec3" class="nav-link">
+                                XML Data Format
                             </a>
                         </li>
                         <li class="">
@@ -430,324 +430,50 @@
 
                     <div class="separator"></div>
 
-                    <div id="sec4" class="section">
-                        <h2 class="section-head">Multiple Mode Delivery Methods</h2>
-                        <p class="lead">
-                            In previous articles we have considered: Main Options and Single Mode Options for the 
-                            Multi-Warehouse Magento module. This article deals with the Multiple Mode Options.
-                        </p>
-                        <br>
-                        <img class="img-responsive" src="System_Configuration_Catalog_Warehouses_MultipleModeOptions.png" />
-                        <div class="space"></div>
+                    <div id="sec3" class="section">
+                        <h2 class="section-head">XML Data Format</h2>
                         <p>
-                            Figure 1. Options Overview shows a schematic illustration of the Multi-Warehouse options
-                        </p>
-                        <img class="img-responsive" src="multiple-warehouse-figure-1-1.png" />
-                        <div class="space"></div>
-                        <p>
-                            In turn,
-                        </p>
-                        <div class="space"></div>
-                        <img class="img-responsive" src="Fig_3_1.png" />
-                        <div class="space"></div>
-                        <p>
-                           For convenience, this article will be split into two parts. The first part is dedicated to the Delivery Method.
+                            XML, the commonly used data format, is integrated into the Dataflow. It's available in profile wizard additionally to CSV and Excel XML standart formats.
                         </p>
                         <p>
-                           Initial data:
+                            The next 3 parsers are implementing XML data format handling for 3 types of entities:
                         </p>
+                        <pre><code class="hljs">advanceddataflow/sales_convert_parser_order_xml – Orders
+                        advanceddataflow/catalog_convert_parser_product_xml – Products
+                        advanceddataflow/customer_convert_parser_customer_xml – Customers
+                        </code></pre>
                         <p>
-                            The customer John Doe from Colby (Kansas) wants to buy two products: Item A and Item B. You have two warehouses, 
-                            one is in Colorado and the other in Kansas.
+                            For example, the action to parse orders XML is:
                         </p>
-                        <div class="space"></div>
-                        <h4>Lowest Shipping</h4>
-                        <div class="space"></div>
+                        <pre><code class="hljs handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">action</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"advanceddataflow/sales_convert_parser_order_xml"</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">"parse"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">var</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"adapter"</span>&gt;</span>advanceddataflow/sales_convert_adapter_order<span class="hljs-tag">&lt;/<span class="hljs-title">var</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-title">var</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"method"</span>&gt;</span>parse<span class="hljs-tag">&lt;/<span class="hljs-title">var</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-title">action</span>&gt;</span>
+                        </span></code></pre>
                         <p>
-                           The system checks the item's shipping prices for each warehouse and suggests the combination that gives the lowest shipping cost. 
-                           Let's assume each product's shipping price is static for each warehouse and doesn’t vary. 
+                            XML samples:
                         </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Warehouse</th>
-                            <th>Item A</th>
-                            <th>Item B</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Colorado</td>
-                            <td>$1.00</td>
-                            <td>$1.00</td>
-                            </tr>
-                            <tr>
-                            <td>Kansas</td>
-                            <td>$1.50</td>
-                            <td>$1.50</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 3. Lowest Shipping – Shipping Prices</strong>
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Items</th>
-                            <th>Item B: $1.00 (Colorado)</th>
-                            <th>Item B: $1.50 (Kansas)</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Item A: $1.00 (Colorado)</td>
-                            <td>$1.00 + $1.00 = $2.00</td>
-                            <td>$1.00 + $1.50 = $2.50</td>
-                            </tr>
-                            <tr>
-                            <td>Item A: $1.50 (Kansas)</td>
-                            <td>$1.50 + $1.00 = $2.50</td>
-                            <td>$1.50 + $1.50 = $3.00</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 4. Lowest Shipping – Summary Shipping Prices</strong>
-                        </p>
-                        <p>
-                            In this instance, John Doe will get Item A and Item B at the prices of the Colorado 
-                            warehouse. If, for example, Item B's shipping price in Kansas were $0.50, the system 
-                            would suggest the Item A from the Colorado and the Item B from the Kansas.
-                        </p>
-                        <div class="space"></div>
-                        <h4>Lowest Tax</h4>
-                        <div class="space"></div>
-                        <p>
-                            If you select this delivery method option, Multi-Warehouse will set warehouses to their lowest tax basis.
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Warehouse</th>
-                            <th>Item A</th>
-                            <th>Item B</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Colorado</td>
-                            <td>$2.00</td>
-                            <td>$2.00</td>
-                            </tr>
-                            <tr>
-                            <td>Kansas</td>
-                            <td>$1.00</td>
-                            <td>$1.00</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 5. Lowest Tax – Taxes</strong>
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Items</th>
-                            <th>Item B: $2.00 (Colorado)</th>
-                            <th>Item B: $1.00 (Kansas)</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Item A: $2.00 (Colorado)</td>
-                            <td>$2.00 + $2.00 = $4.00</td>
-                            <td>$2.00 + $1.00 = $3.00</td>
-                            </tr>
-                            <tr>
-                            <td>Item A: $1.00 (Kansas)</td>
-                            <td>$1.00 + $2.00 = $3.00</td>
-                            <td>$1.00 + $1.00 = $2.00</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 6. Lowest Tax – Summary Taxes</strong>
-                        </p>
-                        <p>
-                            In this case, the order will be shipped from Kansas.
-                        </p>
-                        <p>
-                            <strong>Lowest Subtotal</strong>
-                        </p>
-                        <p>
-                            You may sell the same product at different prices depending 
-                            on the warehouse location. In the example below, you're offering 
-                            discounts on Item A and Item B for the Colorado and Kansas warehouses.
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Warehouse</th>
-                            <th>Item A</th>
-                            <th>Item B</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Colorado</td>
-                            <td>Price:	$10.00 Discount:	$0.00 Final Price:	$10.00</td>
-                            <td>Price:	$10.00 Discount:	$1.00 Final Price:	$9.00</td>
-                            </tr>
-                            <tr>
-                            <td>Kansas</td>
-                            <td>Price:	$10.00 Discount:	$1.00 Final Price:	$9.00</td>
-                            <td>Price:	$10.00 Discount:	$0.00 Final Price:	$10.00</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <br />
-                        <p>
-                            <strong>Table 7. Lowest Subtotal – Prices</strong>
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Items</th>
-                            <th>Item B: $9.00 (Colorado)</th>
-                            <th>Item B: $10.00 (Kansas)</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Item A: $10.00 (Colorado)</td>
-                            <td>$10.00 + $9.00 = $19.00</td>
-                            <td>$10.00 + $10.00 = $20.00</td>
-                            </tr>
-                            <tr>
-                            <td>Item A: $9.00 (Kansas)</td>
-                            <td>$9.00 + $9.00 = $18.00</td>
-                            <td>$9.00 + $10.00 = $19.00</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 8. Lowest Subtotal – Summary Prices</strong>
-                        </p>
-                        <p>
-                            The Multi-Warehouse Magento extension will specify the lowest price 
-                            on every item and suggest it to the consumer (John Doe).
-                        </p>
-                        <p>
-                            In this case, the system will offer:
-                        </p>
+                        <h3>Orders</h3>
                         <ul>
-                            <li>Shipping of the Item A from the Kansas (Final Price: $9.00)</li>
-                            <li>Shipping of the Item B from the Colorado (Final Price: $9.00)</li>
-                         </ul>
-                        <div class="space"></div>
-                        <h4>Lowest Grand Total</h4>
-                        <div class="space"></div>
-                        <p>
-                            The system selects products from warehouses by the lowest cart price. 
-                            There are a number of factors that impact the total sale price of a product. 
-                            Amongst them: tax, shipping price and discount. Each product has an individual 
-                            final price according to the warehouse in which it is stored.
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Warehouse</th>
-                            <th>Item A</th>
-                            <th>Item B</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Colorado</td>
-                            <td>Price	$10.00 Tax	$2.00 Discount	$0.00 Shipping	$1.00 Final Price	$13.00</td>
-                            <td>Price	$10.00 Tax	$2.00 Discount	$1.00 Shipping	$1.00 Final Price	$12.00</td>
-                            </tr>
-                            <tr>
-                            <td>Kansas</td>
-                            <td>Price	$10.00 Tax	$1.00 Discount	$1.00 Shipping	$1.50 Final Price	$11.50</td>
-                            <td>Price	$10.00 Tax	$1.00 Discount	$0.00 Shipping	$1.50 Final Price	$12.50</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 9. Lowest Grand Total – Prices</strong>
-                        </p>
-                        <p>
-                            This Multi-Warehouse extension calculates all the factors and suggests the optimal solution. 
-                            In this example, that will be the lowest cart price (sum price of items A and B).
-                        </p>
-                        <table>
-                            <thead>
-                            <tr>
-                            <th>Items</th>
-                            <th>Item B: $12.00 (Colorado)</th>
-                            <th>Item B: $12.50 (Kansas)</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                            <td>Item A: $13.00 (Colorado)</td>
-                            <td>$13.00 + $12.00 = $25.00</td>
-                            <td>$13.00 + $12.50 = $25.50</td>
-                            </tr>
-                            <tr>
-                            <td>Item A: $11.50 (Kansas)</td>
-                            <td>$11.50 + $12.00 = $23.50</td>
-                            <td>$11.50 + $12.50 = $24.00</td>
-                            </tr>
-                            </tbody>
-                         </table>
-                        <div class="space"></div>
-                        <p>
-                            <strong>Table 10. Lowest Grand Total – Summary Prices</strong>
-                        </p>
-                        <p>
-                            As you can see in Table 10, the lowest cart price is $23.50. 
-                            Thus, item A will be shipped from the Kansas warehouse and item B from Colorado.
-                        </p>
-                        <div class="space"></div>
-                        <h4>Priority</h4>
-                        <p>
-                            You have multiple warehouses, the main warehouse could be in Colorado and the rest 
-                            in states such as Kansas, New York and California.
-                        </p>
-                        <p>
-                            In the administrator panel follow: Catalog -> Manage Warehouses.
-                        </p>
-                        <img class="img-responsive" src="multiple-warehouse-warehouse-manage-700x217.png" />
-                        <p>
-                            The smallest number means the highest priority. In the screenshot above, we can see the following warehouse priority:
-                        </p>
-                        <ol>
-                            <li>Colorado</li>
-                            <li>Kansas</li>
-                            <li>New York</li>
-                            <li>California</li>
-                        </ol>
-                        <p>
-                            The Priority option lets you offer the customer (John Doe) the products (Item A and Item B) from the warehouses in order 
-                            of priority, starting with the highest priority warehouse first. If one of the products is out of stock (Colorado), the system 
-                            will offer this item from another warehouse (Kansas) according to priority and so on.
-                        </p>
-                        <div class="space"></div>
-                        <h4>Manual Selection</h4>
-                        <p>
-                            You can allow visitors to select a warehouse for each product individually.
-                        </p>
-                        <img class="img-responsive" src="multiple-warehouse-cart-multiple-mode-manual-selection-700x398.png" />
+                        <li>
+                        <a href="export_orders.xml">orders.xml</a>
+                        </li>
+                        </ul>
+                        <h3>Products</h3>
+                        <ul>
+                        <li>
+                        <a href="export_all_products.xml">products.xml</a>
+                        </li>
+                        </ul>
+                        <h3>Customers</h3>
+                        <ul>
+                        <li>
+                        <a href="export_customers.xml">customers.xml</a>
+                        </li>
+                        </ul>
+                        
+                            
+                            
                         
 
 
