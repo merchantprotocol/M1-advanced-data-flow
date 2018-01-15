@@ -186,23 +186,205 @@
                         <h2 class="section-head">Overview</h2> <!--- SECTION TITLE --->
                         <div class="section-content">
                             
+                            <p>
+                            The “Advanced Dataflow” extension is a set of additional adapters and parsers to increase the 
+                                Magento Dataflow flexibility. As you may know, Magento migration processes are introduced 
+                                with profiles. Each profile is a combination of actions (adapters / parsers / mappers) to 
+                                transfer data from one format into another. The adapters and parsers variety makes the 
+                                migration process flexible. Magento enables customers and products (with or without an 
+                                inventory) to be exported / imported using CSV or Excel XML formats. 
+                                The “Advanced Dataflow” extends default bounds to cover more needs. The most 
+                                essential “Advanced Dataflow” feature is the order import and export. 
+                                It appends orders to list of available entities to migrate.
+                            </p>
+                            <p>Read more about <a href="http://docs.magento.com/m1/ce/user_guide/store-operations/dataflow.html">Dataflow HERE</a></p>
+                            <p>
+                                Magento Dataflow is a data exchange framework that can be used by both merchants and developers. 
+                                The basic Dataflow tool includes preconfigured profiles that make it easy to import and export product and 
+                                customer data. The profiles can be used as they are, or be modified to meet your needs. You can create 
+                                additional profiles for operations that are performed on a regular basis. For more sophisticated applications, 
+                                Advanced Profiles can be defined in XML to perform custom data exchange operations.
+                            </p>
+                            <h2>The following instructions show how to use Dataflow profiles to export all product data, and import new product images.</h2>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-profiles_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <h2>Step 1: Export All Products</h2>
+                            <ol>
+                            <li>
+                            <p>Before you begin, make sure that all changes to the product data have been saved.</p>
+                            </li>
+                            <li>
+                            <p>On the Admin menu, select System &gt; Import/Export &gt; Dataflow - Profiles.</p>
+                            </li>
+                            <li>
+                            <p>In the list of profiles, select Export All Products.</p>
+                            </li>
+                            <li>
+                            <p>In the panel on the left, click  Run Profile.
+                            <img src="dataflow-run-profile_thumb_0_0.png" alt="Run Profile" style="max-width:100%"></p>
+                            </li>
+                            <li>
+                            <p>To begin the process, click the Run Profile in Popup button.
+                            <img src="dataflow-run-profile-in-popup_thumb_0_0.png" alt="Run Profile in Popup" style="max-width:100%"></p>
+                            </li>
+                            <li>
+                            <p>Wait a few moments for the profile to begin execution. The length of time it takes to complete the process depends on the size of the database. Do not close the window.
+                            <img src="dataflow-profile-execution_thumb_0_0.png" alt="Profile Execution" style="max-width:100%"></p>
+                            </li>
+                            <li>
+                            <p>When the process is complete,you can find the exported CSV file in the following location on the server:</p>
+                            <pre><code class="hljs sql">[magento-<span class="hljs-operator"><span class="hljs-keyword">install</span>-dir]/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">export</span>/export_all_products.csv
+                            </span></code></pre>
+                            </li>
+                            </ol>
+                            <p>
+                                Here’s how the exported data file looks from the command line of the server:
+                            </p>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-export-all-products-command-line_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <ol start="8">
+                            <li>Use an SFTP utility to download the export_all_products.csv file from the server to your desktop.
+                            <img src="dataflow-export-download_thumb_0_0.png" alt="Downloaded File" style="max-width:100%">
+                            </li>
+                            <li>Then, open the file in any editor that supports UTF-8 encoding, such as <a href="http://notepad-plus-plus.org/">Notepad++</a> or <a href="https://www.openoffice.org/">OpenOffice Calc</a>. To open the CSV file in OpenOffice Calc, specify a comma as the separator, and double quotes as the text delimiter.</li>
+                            </ol>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="export-csv-open-office-comma_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <p>
+                                export-csv-open-office-comma_thumb_0_0.png
+                            </p>
+                            <p>
+                                The CSV data appears in the spreadsheet as rows of product records organized into columns of attributes, 
+                                with the Attribute Code in the header of each column.
+                            </p>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="export-product-csv-openoffice_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <h2>Step 2: Copy the Product Images to the Server</h2>
+                            <p>
+                                The CSV file contains a path to each product image, but the actual image files must be uploaded to the server. 
+                                To make the images available to import, place them in the media/import directory.
+                            </p>
+                            <pre><code class="hljs sql">[magento-<span class="hljs-operator"><span class="hljs-keyword">install</span>-dir]/media/<span class="hljs-keyword">import</span>
+                            </span></code></pre>
+                            <p>
+                                Use your SFTP utility to copy the product images that you want to import to the media/import folder.
+                            </p>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-images-sftp_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <p>
+                                dataflow-import-images-sftp_thumb_0_0.png
+                            </p>
+                            <h2>Step 3: Edit the CSV File</h2>
+                            <ol>
+                            <li>Edit the data as needed.</li>
+                            <li>Save your changes to the CSV file.</li>
+                            </ol>
+                            <p>
+                                For this example, we will add three new images to SKU #hdb005. Because this is the only product record that 
+                                we’re going to update, the others can be deleted from the CSV file.
+                            </p>
+                            <p>
+                                Currently, this product has only one image that is used for the base image, small image, and thumbnail. 
+                                Because we’re going to now offer this product in three colors, we need to upload an image for each color, 
+                                and replace the image that’s currently assigned to the product. Because this is a simple product, 
+                                we can later use Custom Options to add an option for each color.
+                            </p>
+                            <p>
+                                Magento creates a directory structure of product image files that is organized alphabetically. 
+                                You can see that path before each image file name in the CSV data. However, when you import images, 
+                                you must never include that path before the file name. The only thing you have to do is enter a 
+                                forward slash before the file name of each image that you want to import. Magento takes care of the rest. 
+                                For this example, we need to add the three image files that were uploaded to the media/import folder.
+                            </p>
+                            <pre><code class="hljs">/hdb005_HOTP_600.jpg
+
+                            /hdb005_MARM
+
+                            /hdb005_SALM_600.jpg
+                            </code></pre>
+                            <p>
+                                In the data, we will replace the original image file name, and add the other two image file references on separate blank lines. just below the original row. You must also enter the SKU on each additional line, to associate the images with the product.
+                            </p>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-images-csv-data_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <p>
+                                dataflow-import-images-csv-data_thumb_0_0.png
+                            </p>
+                            <h2>Step 4: Import the Products</h2>
+                            <ol>
+                            <li>On the Admin menu, select System &gt; Import/Export &gt; Dataflow - Profiles.</li>
+                            <li>In the list of profiles, select Import All Products.</li>
+                            </ol>
+                            <p>
+                                This general-purpose profile can be used to import or update any number or product records.
+                            </p>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-all-products_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <p>
+                                dataflow-import-all-products_thumb_0_0.png
+                            </p>
+                            <ol start="3">
+                            <li>In the panel on the left, select Upload File.</li>
+                            </ol>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-upload-file_thumb_0_0.png" />
+                            <div class="space"></div>
+                            <p>
+                                dataflow-import-upload-file_thumb_0_0.png
+                            </p>
+                            <ol start="4">
+                            <li>Because we’re uploading only one file, click the Browse button for File 1. Then, find the file on your computer and click to select it. The path to the file appears in the input box.</li>
+                            <li>Click the Save and Continue Edit button.</li>
+                            </ol>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-browse.png" />
+                            <div class="space"></div>
+                            <p>
+                                dataflow-import-browse.png
+                            </p>
+                            <ol start="6">
+                            <li>In the panel on the left, select Run Profile.</li>
+                            <li>Select the CSV file that you edited. If there are several files in the list, make sure to select the right one. Then, click the Run Profile in Popup button.</li>
+                            </ol>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-run-profile.png" />
+                            <div class="space"></div>
+                            <p>
+                               Run Profile
+                            </p>
+                            <ol start="8">
+                            <li>Wait a few moments for the profile to begin the import process. Do not close the window or 
+                                interrupt the process. Look for the “Finished Profile Execution” message at the bottom of 
+                                the list when the import process is complete. If you receive an error message, correct 
+                                the problem in the CSV file, and try again.</li>
+                            </ol>
+                            <div class="space"></div>
+                            <img class="img-responsive" src="dataflow-import-complete.png" />
+                            <div class="space"></div>
+                            <p>
+                                dataflow-import-complete.png
+                            </p>
+                            <h2>Step 5: Update the Index</h2>
+                            <p>
+                                Usually the index needs to be updated after changes are made to product data. If you receive a message that the 
+                                indexes are out of date, click the link and update the index.
+                            </p>
                             
-                            <p class="lead">
-                                When scaling your business, you will most likely encounter the management of multiple 
-                                Magento® warehouses. It can also pose a problem when you already have two or more store houses. 
-                                Magento only let's you ship items from a single storage warehouse. Therefore, you can’t manage 
-                                your multiple global warehouses.
-                            </p>
-                            <p>
-                                We offer you our solution. Merchant Protocol implements the Multi-Warehouse extension with 
-                                improved functionalities, providing you with more options and features. This irreplaceable 
-                                tool extends the capabilities of your multiple warehouses management.
-                            </p>
-                            <p>
-                                Use the power of this Magento extension to organize your stock and multi-depot. You'll be able 
-                                to solve a wide range of tasks, including inventory management and improving warehouse performance. 
-                                Enjoy all the advantages of dealing with our powerful module.
-                            </p>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                         </div>
