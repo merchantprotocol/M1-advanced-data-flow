@@ -52,7 +52,7 @@
 		<created_at_timestamp>1306427078</created_at_timestamp>
 		<custbalance_amount></custbalance_amount>
 		<customer_dob></customer_dob>
-		<customer_email>john.doe@innoexts.com</customer_email>
+		<customer_email>john.doe@mageplugins.net</customer_email>
 		<customer_firstname>John</customer_firstname>
 		<customer_gender>123</customer_gender>
 		<customer_group_id>1</customer_group_id>
@@ -133,7 +133,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -155,7 +155,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -609,7 +609,7 @@
 		<created_at_timestamp>1306427100</created_at_timestamp>
 		<custbalance_amount></custbalance_amount>
 		<customer_dob></customer_dob>
-		<customer_email>john.doe@innoexts.com</customer_email>
+		<customer_email>john.doe@mageplugins.net</customer_email>
 		<customer_firstname>John</customer_firstname>
 		<customer_gender>123</customer_gender>
 		<customer_group_id>1</customer_group_id>
@@ -690,7 +690,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -712,7 +712,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -908,7 +908,7 @@
 		<created_at_timestamp>1306427131</created_at_timestamp>
 		<custbalance_amount></custbalance_amount>
 		<customer_dob></customer_dob>
-		<customer_email>john.doe@innoexts.com</customer_email>
+		<customer_email>john.doe@mageplugins.net</customer_email>
 		<customer_firstname>John</customer_firstname>
 		<customer_gender>123</customer_gender>
 		<customer_group_id>1</customer_group_id>
@@ -989,7 +989,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -1011,7 +1011,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -1271,7 +1271,7 @@
 		<created_at_timestamp>1307291329</created_at_timestamp>
 		<custbalance_amount></custbalance_amount>
 		<customer_dob></customer_dob>
-		<customer_email>john.doe@innoexts.com</customer_email>
+		<customer_email>john.doe@mageplugins.net</customer_email>
 		<customer_firstname>John</customer_firstname>
 		<customer_gender></customer_gender>
 		<customer_group_id>1</customer_group_id>
@@ -1352,7 +1352,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>
@@ -1374,7 +1374,7 @@
 			<country_id>US</country_id>
 			<country_iso2>US</country_iso2>
 			<country_iso3>USA</country_iso3>
-			<email>john.doe@innoexts.com</email>
+			<email>john.doe@mageplugins.net</email>
 			<fax></fax>
 			<firstname>John</firstname>
 			<lastname>Doe</lastname>

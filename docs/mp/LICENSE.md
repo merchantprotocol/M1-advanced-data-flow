@@ -6,7 +6,7 @@ Date of Issuance: January 1st, 2016
 
 #### 1.1 PARTIES
 
-Merchant Protocol located at 113 Cherry St #15329, Seattle WA 98104, herein referred to as "Company"; and Client in use of Company's products or Services, herein referred to as "Client", collectively referred to as "Parties".
+Mage Plugins located at 113 Cherry St #15329, Seattle WA 98104, herein referred to as "Company"; and Client in use of Company's products or Services, herein referred to as "Client", collectively referred to as "Parties".
 
 Client wishes to be provided with and use the products and Services, defined herein, by Company and Company agrees to provide the products and Services to the Client in accordance with this agreement.
 

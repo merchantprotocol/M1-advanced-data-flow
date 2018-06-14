@@ -12,10 +12,10 @@ read UNINSTALL
 
 if [ "$UNINSTALL" == "y" ]; then
 
-	rm -fr $CWD/app/code/local/Innoexts/AdvancedDataflow/
+	rm -fr $CWD/app/code/local/MP/AdvancedDataflow/
 	rm -fr $CWD/app/design/adminhtml/default/default/template/advanceddataflow/
-	rm -f $CWD/app/etc/modules/Innoexts_AdvancedDataflow.xml
-	rm -f $CWD/app/locale/en_US/Innoexts_AdvancedDataflow.csv
+	rm -f $CWD/app/etc/modules/MP_AdvancedDataflow.xml
+	rm -f $CWD/app/locale/en_US/MP_AdvancedDataflow.csv
 	
 	rm -fr $CWD/var/cache
 

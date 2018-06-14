@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="app/code/community/MP/AdvancedDataflow/Block/Adminhtml/System/Convert/Gui"/>
+	<buildpathentry kind="src" path="app/code/community/MP/AdvancedDataflow/Helper"/>
+	<buildpathentry kind="src" path="app/code/community/MP/AdvancedDataflow/Model"/>
+	<buildpathentry kind="src" path="app/code/community/MP/AdvancedDataflow/sql/advanceddataflow_setup"/>
+	<buildpathentry kind="src" path="app/design/adminhtml/default/default/template/advanceddataflow/system/convert/profile"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>

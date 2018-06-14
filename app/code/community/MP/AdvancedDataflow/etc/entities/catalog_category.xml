@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mage Plugins
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mage Plugins Commercial License (MPCL 1.0)
+ * that is bundled with this package in the file LICENSE.md.
+ * It is also available through the world-wide-web at this URL:
+ * https://mageplugins.net/commercial-license/
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to mageplugins@gmail.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to https://www.mageplugins.net for more information.
+ *
+ * @category   MP
+ * @package    MP_AdvancedDataflow
+ * @copyright  Copyright (c) 2006-2018 Mage Plugins Inc. and affiliates (https://mageplugins.net/)
+ * @license    https://mageplugins.net/commercial-license/  Mage Plugins Commercial License (MPCL 1.0)
+ */
+-->
+<config>
+    <entities>
+        <catalog_category eav="1">
+	        <model>catalog/category</model>
+	        <collection_model>catalog/category_collection</collection_model>
+	        <table>catalog/category</table>
+	        <attributes>
+	            <name translate="title">
+	                <title>Name</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>10</sort_order>
+	                <static>0</static>
+	                <primary>1</primary>
+	            </name>
+	            <description translate="title">
+	                <title>Description</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>20</sort_order>
+	                <static>0</static>
+	            </description>
+	            <image translate="title">
+	                <title>Image</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>30</sort_order>
+	                <static>0</static>
+	            </image>
+	            <thumbnail translate="title">
+	                <title>Thumbnail Image</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>40</sort_order>
+	                <static>0</static>
+	            </thumbnail>
+	            <meta_title translate="title">
+	                <title>Page Title</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>50</sort_order>
+	                <static>0</static>
+	            </meta_title>
+	            <meta_keywords translate="title">
+	                <title>Meta Keywords</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>60</sort_order>
+	                <static>0</static>
+	            </meta_keywords>
+	            <meta_description translate="title">
+	                <title>Meta Description</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>70</sort_order>
+	                <static>0</static>
+	            </meta_description>
+	            <is_active translate="title">
+	                <title>Is Active</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>80</sort_order>
+	                <static>0</static>
+	            </is_active>
+	            <include_in_menu translate="title">
+	                <title>Include in Navigation Menu</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>90</sort_order>
+	                <static>0</static>
+	            </include_in_menu>
+	            <url_key translate="title">
+	                <title>URL Key</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>100</sort_order>
+	                <static>0</static>
+	            </url_key>
+	            <url_path translate="title">
+	                <title>URL Path</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>110</sort_order>
+	                <static>0</static>
+	            </url_path>
+	            <display_mode translate="title">
+	                <title>Display Mode</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_category_attribute_source_displaymode</source>
+	                <actions><all/></actions>
+	                <sort_order>120</sort_order>
+	                <static>0</static>
+	            </display_mode>
+	            <landing_page translate="title">
+	                <title>CMS Block</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_category_attribute_source_landingpage</source>
+	                <actions><all/></actions>
+	                <sort_order>130</sort_order>
+	                <static>0</static>
+	            </landing_page>
+	            <is_anchor translate="title">
+	                <title>Is Anchor</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>140</sort_order>
+	                <static>0</static>
+	            </is_anchor>
+	            <available_sort_by translate="title">
+	                <title>Available Product Listing Sort By</title>
+	                <type>multiselect</type>
+	                <source>advanceddataflow/catalog_entity_category_attribute_source_sortby</source>
+	                <actions><all/></actions>
+	                <sort_order>150</sort_order>
+	                <static>0</static>
+	            </available_sort_by>
+	            <default_sort_by translate="title">
+	                <title>Default Product Listing Sort By</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_category_attribute_source_sortby</source>
+	                <actions><all/></actions>
+	                <sort_order>160</sort_order>
+	                <static>0</static>
+	            </default_sort_by>
+	            <filter_price_range translate="title">
+	                <title>Layered Navigation Price Step</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>170</sort_order>
+	                <static>0</static>
+	            </filter_price_range>
+	            <custom_use_parent_settings translate="title">
+	                <title>Use Parent Category Settings</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>180</sort_order>
+	                <static>0</static>
+	            </custom_use_parent_settings>
+	            <custom_apply_to_products translate="title">
+	                <title>Apply To Products</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>190</sort_order>
+	                <static>0</static>
+	            </custom_apply_to_products>
+	            <custom_design translate="title">
+	                <title>Custom Design</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_category_attribute_source_customdesign</source>
+	                <actions><all/></actions>
+	                <sort_order>200</sort_order>
+	                <static>0</static>
+	            </custom_design>
+	            <custom_design_from translate="title">
+	                <title>Active From</title>
+	                <type>datetime</type>
+	                <actions><all/></actions>
+	                <sort_order>210</sort_order>
+	                <static>0</static>
+	            </custom_design_from>
+	            <custom_design_to translate="title">
+	                <title>Active To</title>
+	                <type>datetime</type>
+	                <actions><all/></actions>
+	                <sort_order>220</sort_order>
+	                <static>0</static>
+	            </custom_design_to>
+	            <page_layout translate="title">
+	                <title>Page Layout</title>
+	                <type>select</type>
+	                <source>advanceddataflow/catalog_entity_category_attribute_source_pagelayout</source>
+	                <actions><all/></actions>
+	                <sort_order>230</sort_order>
+	                <static>0</static>
+	            </page_layout>
+	            <custom_layout_update translate="title">
+	                <title>Custom Layout Update</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>240</sort_order>
+	                <static>0</static>
+	            </custom_layout_update>
+	            <level translate="title">
+	                <title>Level</title>
+	                <type>integer</type>
+	                <actions><export/></actions>
+	                <sort_order>250</sort_order>
+	                <static>0</static>
+	            </level>
+	        </attributes>
+	    </catalog_category>
+    </entities>
+</config>

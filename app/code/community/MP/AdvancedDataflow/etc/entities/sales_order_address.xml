@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mage Plugins
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mage Plugins Commercial License (MPCL 1.0)
+ * that is bundled with this package in the file LICENSE.md.
+ * It is also available through the world-wide-web at this URL:
+ * https://mageplugins.net/commercial-license/
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to mageplugins@gmail.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to https://www.mageplugins.net for more information.
+ *
+ * @category   MP
+ * @package    MP_AdvancedDataflow
+ * @copyright  Copyright (c) 2006-2018 Mage Plugins Inc. and affiliates (https://mageplugins.net/)
+ * @license    https://mageplugins.net/commercial-license/  Mage Plugins Commercial License (MPCL 1.0)
+ */
+-->
+<config>
+    <entities>
+        <sales_order_address eav="1">
+            <model>sales/order_address</model>
+            <collection_model>sales/order_address_collection</collection_model>
+            <table>sales/order_address</table>
+            <attributes>
+                <entity_id translate="title">
+                    <title>Entity Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>10</sort_order>
+                    <enabled>1</enabled>
+                </entity_id>
+                <parent_id translate="title">
+                    <title>Parent Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>20</sort_order>
+                    <enabled>1</enabled>
+                </parent_id>
+                <customer_address_id translate="title">
+                    <title>Customer Address Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>30</sort_order>
+                    <enabled>1</enabled>
+                </customer_address_id>
+                <quote_address_id translate="title">
+                    <title>Quote Address Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>40</sort_order>
+                    <enabled>1</enabled>
+                </quote_address_id>
+                <customer_id translate="title">
+                    <title>Customer Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>50</sort_order>
+                    <enabled>1</enabled>
+                </customer_id>
+                <address_id translate="title">
+                    <title>Address Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>60</sort_order>
+                    <enabled>1</enabled>
+                </address_id>
+                <gift_message_id translate="title">
+                    <title>Gift Message Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>70</sort_order>
+                    <enabled>1</enabled>
+                </gift_message_id>
+                <tax_id translate="title">
+                    <title>Tax Id</title>
+                    <type>integer</type>
+                    <actions><export/></actions>
+                    <sort_order>80</sort_order>
+                    <enabled>1</enabled>
+                </tax_id>
+                <address_type translate="title">
+                    <title>Address Type</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>90</sort_order>
+                    <enabled>1</enabled>
+                </address_type>
+                <prefix translate="title">
+                    <title>Prefix</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>100</sort_order>
+                    <enabled>1</enabled>
+                </prefix>
+                <firstname translate="title">
+                    <title>Firstname</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>110</sort_order>
+                    <enabled>1</enabled>
+                </firstname>
+                <middlename translate="title">
+                    <title>Middlename</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>120</sort_order>
+                    <enabled>1</enabled>
+                </middlename>
+                <lastname translate="title">
+                    <title>Lastname</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>130</sort_order>
+                    <enabled>1</enabled>
+                </lastname>
+                <suffix translate="title">
+                    <title>Suffix</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>140</sort_order>
+                    <enabled>1</enabled>
+                </suffix>
+                <country_id translate="title">
+                    <title>Country Id</title>
+                    <type>select</type>
+                    <source>advanceddataflow/customer_entity_address_attribute_source_country</source>
+                    <actions><export/></actions>
+                    <sort_order>150</sort_order>
+                    <enabled>1</enabled>
+                </country_id>
+                <region_id translate="title">
+                    <title>Region Id</title>
+                    <type>select</type>
+                    <source>advanceddataflow/customer_entity_address_attribute_source_region</source>
+                    <actions><export/></actions>
+                    <sort_order>160</sort_order>
+                    <enabled>1</enabled>
+                </region_id>
+                <region translate="title">
+                    <title>Region</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>170</sort_order>
+                    <enabled>1</enabled>
+                </region>
+                <email translate="title">
+                    <title>Email</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>180</sort_order>
+                    <enabled>1</enabled>
+                </email>
+                <company translate="title">
+                    <title>Company</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>190</sort_order>
+                    <enabled>1</enabled>
+                </company>
+                <street translate="title">
+                    <title>Street</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>200</sort_order>
+                    <enabled>1</enabled>
+                </street>
+                <city translate="title">
+                    <title>City</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>210</sort_order>
+                    <enabled>1</enabled>
+                </city>
+                <postcode translate="title">
+                    <title>Postcode</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>220</sort_order>
+                    <enabled>1</enabled>
+                </postcode>
+                <telephone translate="title">
+                    <title>Telephone</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>230</sort_order>
+                    <enabled>1</enabled>
+                </telephone>
+                <fax translate="title">
+                    <title>Fax</title>
+                    <type>string</type>
+                    <actions><export/></actions>
+                    <sort_order>240</sort_order>
+                    <enabled>1</enabled>
+                </fax>
+            </attributes>
+        </sales_order_address>
+    </entities>
+</config>

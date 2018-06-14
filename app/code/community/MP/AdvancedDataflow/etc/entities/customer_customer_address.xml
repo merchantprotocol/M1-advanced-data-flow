@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mage Plugins
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mage Plugins Commercial License (MPCL 1.0)
+ * that is bundled with this package in the file LICENSE.md.
+ * It is also available through the world-wide-web at this URL:
+ * https://mageplugins.net/commercial-license/
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to mageplugins@gmail.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to https://www.mageplugins.net for more information.
+ *
+ * @category   MP
+ * @package    MP_AdvancedDataflow
+ * @copyright  Copyright (c) 2006-2018 Mage Plugins Inc. and affiliates (https://mageplugins.net/)
+ * @license    https://mageplugins.net/commercial-license/  Mage Plugins Commercial License (MPCL 1.0)
+ */
+-->
+<config>
+    <entities>
+        <customer_customer_address eav="1">
+	        <model>customer/address</model>
+	        <collection_model>customer/address_collection</collection_model>
+	        <table>customer/customer_address</table>
+	        <attributes>
+	            <prefix translate="title">
+	                <title>Prefix</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>10</sort_order>
+	                <static>0</static>
+	            </prefix>
+	            <firstname translate="title">
+	                <title>First Name</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>20</sort_order>
+	                <static>0</static>
+	            </firstname>
+	            <middlename translate="title">
+	                <title>Middle Name</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>30</sort_order>
+	                <static>0</static>
+	            </middlename>
+	            <lastname translate="title">
+	                <title>Last Name</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>40</sort_order>
+	                <static>0</static>
+	            </lastname>
+	            <suffix translate="title">
+	                <title>Suffix</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>50</sort_order>
+	                <static>0</static>
+	            </suffix>
+	            <company translate="title">
+	                <title>Company</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>60</sort_order>
+	                <static>0</static>
+	            </company>
+	            <street>
+	                <title>Street Address</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>70</sort_order>
+	                <static>0</static>
+	            </street>
+	            <city>
+	                <title>City</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>80</sort_order>
+	                <static>0</static>
+	            </city>
+	            <country_id>
+	                <title>Country</title>
+	                <type>select</type>
+	                <source>advanceddataflow/customer_entity_address_attribute_source_country</source>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>90</sort_order>
+	                <static>0</static>
+	            </country_id>
+	            <region>
+	                <title>State/Province</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>100</sort_order>
+	                <static>0</static>
+	            </region>
+	            <region_id>
+	                <title>State/Province</title>
+	                <type>select</type>
+	                <source>advanceddataflow/customer_entity_address_attribute_source_region</source>
+	                <actions><all/></actions>
+	                <sort_order>110</sort_order>
+	                <static>0</static>
+	            </region_id>
+	            <postcode>
+	                <title>Zip/Postal Code</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>120</sort_order>
+	                <static>0</static>
+	            </postcode>
+	            <telephone>
+	                <title>Telephone</title>
+	                <type>string</type>
+	                <required><all>1</all></required>
+	                <actions><all/></actions>
+	                <sort_order>130</sort_order>
+	                <static>0</static>
+	            </telephone>
+	            <fax>
+	                <title>Fax</title>
+	                <type>string</type>
+	                <actions><all/></actions>
+	                <sort_order>140</sort_order>
+	                <static>0</static>
+	            </fax>
+	            <is_shipping translate="title">
+	                <title>Default Shipping Address</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>150</sort_order>
+	                <static>0</static>
+	            </is_shipping>
+	            <is_billing translate="title">
+	                <title>Default Billing Address</title>
+	                <type>boolean</type>
+	                <actions><all/></actions>
+	                <sort_order>160</sort_order>
+	                <static>0</static>
+	            </is_billing>
+	        </attributes>
+	    </customer_customer_address>
+    </entities>
+</config>
